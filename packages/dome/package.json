@@ -1,0 +1,32 @@
+{
+  "name": "dome",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": "zengbotao <2898487084@qq.com>",
+  "homepage": "https://github.com/zengbotao/lerna-pracitice#readme",
+  "license": "ISC",
+  "main": "lib/dome.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmmirror.com/"
+  },
+  "devDependencies":{
+    "lodash-es": "4.17.21"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zengbotao/lerna-pracitice.git"
+  },
+  "scripts": {
+    "test": "node ./__tests__/dome.test.js"
+  },
+  "bugs": {
+    "url": "https://github.com/zengbotao/lerna-pracitice/issues"
+  }
+}

@@ -1,6 +1,7 @@
 {
-  "lerna": "2.7.0",
-  "version": "independent",
+  "version": "1.0.0",
+  "npmClient": "pnpm",
+  "useWorkspaces": true, 
   "changelog": {
     "labels": {
       "tag: new feature": ":rocket: New Feature",
@@ -12,12 +13,12 @@
     },
     "cacheDir": ".changelog"
   },
-  "packages": [
-    "packages/*"
-  ],
   "commands": {
     "publish": {
       "message": "chore(release): publish %v"
-    }
+    },
+     "packages": [
+      "packages/*"
+    ]
   }
 }
