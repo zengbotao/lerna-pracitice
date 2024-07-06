@@ -34,6 +34,7 @@
     "url": "https://github.com/zengbotao/lerna-pracitice/issues"
   },
   "dependencies": {
+    "dome": "^1.0.0",
     "lib": "link:D:/leranNote/BaiduSyncdisk/qian/lerna-pracitice/packages/dome/lib"
   }
 }
