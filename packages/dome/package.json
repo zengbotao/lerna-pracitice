@@ -5,6 +5,9 @@
   "author": "zengbotao <2898487084@qq.com>",
   "homepage": "https://github.com/zengbotao/lerna-pracitice#readme",
   "license": "ISC",
+  "bin": {
+    "dome": "./lib/dome.js"
+  },
   "main": "lib/dome.js",
   "directories": {
     "lib": "lib",
@@ -16,8 +19,9 @@
   "publishConfig": {
     "registry": "https://registry.npmmirror.com/"
   },
-  "devDependencies":{
-    "lodash-es": "4.17.21"
+  "devDependencies": {
+    "lodash-es": "4.17.21",
+    "module-1": "workspace:^"
   },
   "repository": {
     "type": "git",
@@ -28,5 +32,8 @@
   },
   "bugs": {
     "url": "https://github.com/zengbotao/lerna-pracitice/issues"
+  },
+  "dependencies": {
+    "lib": "link:D:/leranNote/BaiduSyncdisk/qian/lerna-pracitice/packages/dome/lib"
   }
 }

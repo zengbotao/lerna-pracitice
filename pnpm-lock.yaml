@@ -79,10 +79,17 @@ importers:
         version: 2.7.1
 
   packages/dome:
+    dependencies:
+      lib:
+        specifier: link:D:/leranNote/BaiduSyncdisk/qian/lerna-pracitice/packages/dome/lib
+        version: link:lib
     devDependencies:
       lodash-es:
         specifier: 4.17.21
         version: 4.17.21
+      module-1:
+        specifier: workspace:^
+        version: link:../module-1
 
   packages/module-1:
     dependencies:
