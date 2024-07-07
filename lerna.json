@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "npmClient": "pnpm",
-  "useWorkspaces": true, 
+  "packages": [],
   "changelog": {
     "labels": {
       "tag: new feature": ":rocket: New Feature",
@@ -17,8 +17,6 @@
     "publish": {
       "message": "chore(release): publish %v"
     },
-     "packages": [
-      "packages/*"
-    ]
+    "packages": ["packages/*"]
   }
 }
