@@ -19,7 +19,8 @@
     "directory": "packages/markdownlint-config"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com",
+    "access": "public"
   },
   "bugs": {
     "url": "https://github.com/zengbotao/lerna-pracitice/issues"

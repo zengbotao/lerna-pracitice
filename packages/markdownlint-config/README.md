@@ -2,7 +2,7 @@
  * @Description:
  * @Autor: zengbotao@myhexin.com
  * @Date: 2024-07-07 10:00:57
- * @LastEditTime: 2024-07-07 12:18:42
+ * @LastEditTime: 2024-07-07 12:20:46
 -->
 
 # `markdownlint-config`
@@ -69,6 +69,6 @@ lerna ERR! E402 You must sign up for private packages
 解决：在package.json中加上
 ```json
 “publishConfig”: {
-“access”: “public”
+"access": "public"
 }
 ```
