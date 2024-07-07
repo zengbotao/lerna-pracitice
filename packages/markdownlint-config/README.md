@@ -2,7 +2,7 @@
  * @Description:
  * @Autor: zengbotao@myhexin.com
  * @Date: 2024-07-07 10:00:57
- * @LastEditTime: 2024-07-07 10:24:03
+ * @LastEditTime: 2024-07-07 10:35:44
 -->
 
 # `markdownlint-config`
@@ -57,3 +57,5 @@ lerna 问题根据提示来，需不需要"useWorkspaces": true,
     "packages": ["packages/*"]
   }
 ```
+husky - Git hooks installedpack: info lifecycle lerna-pracitice@undefined 
+lerna ERR! E401 [UNAUTHORIZED] Login first

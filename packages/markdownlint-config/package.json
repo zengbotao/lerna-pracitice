@@ -13,17 +13,19 @@
   "files": [
     "lib"
   ],
-  "publishConfig": {
-    "registry": "https://registry.npmmirror.com/"
-  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zengbotao/lerna-pracitice.git"
+    "url": "git@github.com:zengbotao/lerna-pracitice.git",
+    "directory": "packages/markdownlint-config"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   },
   "bugs": {
     "url": "https://github.com/zengbotao/lerna-pracitice/issues"
   },
   "devDependencies": {
     "markdownlint": "^0.34.0"
-  }
+  },
+  "gitHead": "c4842ba39a9d3d5655d1e58325edecfdf6ac2f1e"
 }
