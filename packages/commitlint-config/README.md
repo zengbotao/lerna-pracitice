@@ -2,7 +2,7 @@
  * @Description:
  * @Autor: zengbotao@myhexin.com
  * @Date: 2024-07-07 10:00:57
- * @LastEditTime: 2024-07-07 14:56:38
+ * @LastEditTime: 2024-07-07 15:00:59
 -->
 
 ## self create
@@ -31,7 +31,7 @@ npm i @commitlint/cli @wavesdean/commitlint-config --save-dev
 ## Usage
 
 ```js
-pnpm i -D  @wavesdean/markdownlint-config markdownlint
+pnpm i -D  @wavesdean/commitlint-config @commitlint/cli
 
 //主目录添加`commitlint.config.js` 中继承本包
 {
