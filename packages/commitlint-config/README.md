@@ -2,7 +2,7 @@
  * @Description:
  * @Autor: zengbotao@myhexin.com
  * @Date: 2024-07-07 10:00:57
- * @LastEditTime: 2024-07-07 15:00:59
+ * @LastEditTime: 2024-07-07 15:26:52
 -->
 
 ## self create
@@ -34,7 +34,7 @@ npm i @commitlint/cli @wavesdean/commitlint-config --save-dev
 pnpm i -D  @wavesdean/commitlint-config @commitlint/cli
 
 //主目录添加`commitlint.config.js` 中继承本包
-{
+module.exports ={
   "extends": "@wavesdean/markdownlint-config"
 }
 ```
@@ -51,6 +51,7 @@ npm install husky --save-dev
 然后执行添加`commit-msg`:
 
 ```bash
+husky install
 npx husky add .husky/commit-msg 'npx commitlint --edit $1'
 ```
 
