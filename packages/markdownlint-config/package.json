@@ -1,5 +1,5 @@
 {
-  "name": "markdownlint-config-zbt",
+  "name": "@wavesdean/markdownlint-config",
   "version": "1.0.1-alpha.0",
   "description": "markdownlint-config",
   "author": "zengbotao <2898487084@qq.com>",
@@ -27,5 +27,5 @@
   "devDependencies": {
     "markdownlint": "^0.34.0"
   },
-  "gitHead": "2f484e7038c6239de1a5eaa91df41452af7acce7"
+  "gitHead": "78b7bd1460a1d3e2a72a44a2cedd75954db0066a"
 }

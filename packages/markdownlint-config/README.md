@@ -24,7 +24,7 @@ pnpm add -D markdownlint --filter markdownlint-config
 
 ```js
 {
-  "extends": "markdownlint-config-zbt"
+  "extends": "@wavesdean/markdownlint-config"
 }
 ```
 
@@ -37,7 +37,7 @@ markdownlint README.md
 ## Usage
 
 ```js
-pnpm add -D  markdownlint-config-zbt markdownlint --filter markdownlint-config
+pnpm add -D  @wavesdean/markdownlint-config markdownlint --filter markdownlint-config
 
 //主目录添加`.markdownlint.json` 中继承本包
 {
