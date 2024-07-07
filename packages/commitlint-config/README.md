@@ -2,7 +2,7 @@
  * @Description:
  * @Autor: zengbotao@myhexin.com
  * @Date: 2024-07-07 10:00:57
- * @LastEditTime: 2024-07-07 15:35:08
+ * @LastEditTime: 2024-07-07 15:37:08
 -->
 
 ## self create
@@ -24,14 +24,14 @@ pnpm add -D conventional-changelog-conventionalcommits --filter commitlint-confi
 ```
 
 ```bash
-npm i @commitlint/cli @wavesdean/commitlint-config --save-dev
+pnpm i -save-dev  @wavesdean/commitlint-config @commitlint/cli conventional-changelog-conventionalcommits
 
 ```
 
 ## Usage
 
 ```js
-pnpm i -D  @wavesdean/commitlint-config @commitlint/cli
+pnpm i -save-dev  @wavesdean/commitlint-config @commitlint/cli conventional-changelog-conventionalcommits
 
 //主目录添加`commitlint.config.js` 中继承本包
 module.exports ={
