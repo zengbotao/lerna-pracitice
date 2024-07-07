@@ -2,7 +2,7 @@
  * @Description:
  * @Autor: zengbotao@myhexin.com
  * @Date: 2024-07-07 10:00:57
- * @LastEditTime: 2024-07-07 15:26:52
+ * @LastEditTime: 2024-07-07 15:35:08
 -->
 
 ## self create
@@ -35,7 +35,7 @@ pnpm i -D  @wavesdean/commitlint-config @commitlint/cli
 
 //主目录添加`commitlint.config.js` 中继承本包
 module.exports ={
-  "extends": "@wavesdean/markdownlint-config"
+  "extends": "@wavesdean/commitlint-config"
 }
 ```
 # 设置 git hook
