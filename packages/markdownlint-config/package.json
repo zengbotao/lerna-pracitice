@@ -1,6 +1,6 @@
 {
   "name": "markdownlint-config-zbt",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "description": "markdownlint-config",
   "author": "zengbotao <2898487084@qq.com>",
   "homepage": "https://github.com/zengbotao/lerna-pracitice#readme",
@@ -27,5 +27,5 @@
   "devDependencies": {
     "markdownlint": "^0.34.0"
   },
-  "gitHead": "c4842ba39a9d3d5655d1e58325edecfdf6ac2f1e"
+  "gitHead": "2f484e7038c6239de1a5eaa91df41452af7acce7"
 }
