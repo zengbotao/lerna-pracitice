@@ -2,7 +2,7 @@
  * @Description:
  * @Autor: zengbotao@myhexin.com
  * @Date: 2024-07-07 10:00:57
- * @LastEditTime: 2024-07-07 12:08:22
+ * @LastEditTime: 2024-07-07 12:18:42
 -->
 
 # `markdownlint-config`
@@ -64,4 +64,11 @@ lerna ERR! E401 [UNAUTHORIZED] Login first
 ```bash
 npm login
 lerna publish
+```
+lerna ERR! E402 You must sign up for private packages
+解决：在package.json中加上
+```json
+“publishConfig”: {
+“access”: “public”
+}
 ```
