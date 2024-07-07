@@ -2,20 +2,19 @@
  * @Description:
  * @Autor: zengbotao@myhexin.com
  * @Date: 2024-07-07 10:00:57
- * @LastEditTime: 2024-07-07 12:20:46
+ * @LastEditTime: 2024-07-07 12:29:56
 -->
 
 # `markdownlint-config`
 
 > TODO: description
 
-## create
+## self create
 
 ```bash
 lerna create markdownlint-config
 pnpm add -D markdownlint --filter markdownlint-config
-#添加名为index.json的config，修改packsge.json中的name以及"main": "index.json"
-
+#添加名为index.json的config，修改packsge.json中的name,main.publishConfig,repository
 ```
 
 ## dev test
@@ -37,13 +36,15 @@ markdownlint README.md
 ## Usage
 
 ```js
-pnpm add -D  @wavesdean/markdownlint-config markdownlint --filter markdownlint-config
+pnpm i -D  @wavesdean/markdownlint-config markdownlint
 
 //主目录添加`.markdownlint.json` 中继承本包
 {
-  "extends": "markdownlint-config-encode"
+  "extends": "@wavesdean/markdownlint-config"
 }
 ```
+
+run markdownlint "\*.md"
 
 ## issue
 
@@ -65,8 +66,10 @@ lerna ERR! E401 [UNAUTHORIZED] Login first
 npm login
 lerna publish
 ```
+
 lerna ERR! E402 You must sign up for private packages
-解决：在package.json中加上
+解决：在 package.json 中加上
+
 ```json
 “publishConfig”: {
 "access": "public"
