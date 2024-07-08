@@ -14,23 +14,3 @@
 https://article.juejin.cn/post/6964360888430264351
 https://blog.csdn.net/xgangzai/article/details/115423425
 
-pnpm link <dir> 和 pnpm link --dir <dir> 之间的区别
-pnpm link <dir> 将包从 <dir> 链接到执行命令的包的 node_modules。pnpm link --dir <dir> 将包从当前工作目录链接到 <dir>。
-
-# The current directory is foo
-
-pnpm link ../bar
-
-- foo
-  - node_modules
-    - bar -> ../../bar
-- bar
-
-# The current directory is bar
-
-pnpm link --dir ../foo
-
-- foo
-  - node_modules
-    - bar -> ../../bar
-- bar
