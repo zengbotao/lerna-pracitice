@@ -1,0 +1,20 @@
+{
+    "name": "zengbotao",
+    "short_name": "zengbotao",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#fff",
+    "description": "zengbotao's blog",
+    "icons": [{
+      "src": "/assets/img/logo.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    }],
+    "related_applications": [{
+      "platform": "web"
+    }, {
+      "platform": "play",
+      "url": "https://zbt.ailiwen.com.cn/"
+    }]
+  }
+  

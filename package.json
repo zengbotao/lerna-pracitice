@@ -4,9 +4,18 @@
     "prepare": "husky install ",
     "init": "pnpm install --no-frozen-lockfile",
     "clean": "lerna clean && rm -rf node_modules",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "deploy": "deploy.sh",
     "publish": "lerna publish"
   },
+  "dependencies": {
+    "@vssue/api-github-v4": "^1.4.7",
+    "vuepress": "^1.9.7"
+  },
   "devDependencies": {
+    "@vuepress/plugin-pwa": "^1.9.7",
+    "@vuepress/theme-blog": "^2.3.3",
     "@commitlint/cli": "^17.6.1",
     "husky": "^8.0.3",
     "lerna": "^6.6.2",
