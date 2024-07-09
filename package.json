@@ -6,7 +6,7 @@
     "clean": "lerna clean && rm -rf node_modules",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "deploy": "deploy.sh",
+    "deploy": "bash deploy.sh",
     "publish": "lerna publish"
   },
   "devDependencies": {
