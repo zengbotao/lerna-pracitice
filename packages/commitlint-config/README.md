@@ -37,6 +37,9 @@ pnpm i -save-dev  @wavesdean/commitlint-config @commitlint/cli conventional-chan
 module.exports ={
   "extends": "@wavesdean/commitlint-config"
 }
+
+//配置脚本
+//"changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
 ```
 # 设置 git hook
 

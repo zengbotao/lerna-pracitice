@@ -17,6 +17,9 @@ importers:
       '@vuepress/theme-default':
         specifier: 2.0.0-rc.37
         version: 2.0.0-rc.37(typescript@5.5.3)(vuepress@2.0.0-rc.14(@vuepress/bundler-vite@2.0.0-rc.14(@types/node@20.5.1)(sass@1.77.6)(typescript@5.5.3))(typescript@5.5.3)(vue@3.4.31(typescript@5.5.3)))
+      '@wavesdean/commitlint-config':
+        specifier: ^1.0.3
+        version: 1.0.3
       conventional-changelog-conventionalcommits:
         specifier: ^8.0.0
         version: 8.0.0
@@ -916,6 +919,9 @@ packages:
 
   '@vueuse/shared@10.11.0':
     resolution: {integrity: sha512-fyNoIXEq3PfX1L3NkNhtVQUSRtqYwJtJg+Bp9rIzculIZWHTkKSysujrOk2J+NrRulLTQH9+3gGSfYLWSEWU1A==}
+
+  '@wavesdean/commitlint-config@1.0.3':
+    resolution: {integrity: sha512-xfn5BGJ8JQ3LvaNkSMY8qp9o7L+RqcfTW5t+w8aUS1pAj3+DUECqJD+WYwj+iSfKAdxGm7E8CZDJ8nsol6zVEQ==}
 
   '@yarnpkg/lockfile@1.1.0':
     resolution: {integrity: sha512-GpSwvyXOcOOlV70vbnzjj4fW5xW/FdUF6nQEt1ENy7m4ZCczi1+/buVUPAqmGfqznsORNFzUMjctTIp8a9tuCQ==}
@@ -4755,6 +4761,8 @@ snapshots:
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
+
+  '@wavesdean/commitlint-config@1.0.3': {}
 
   '@yarnpkg/lockfile@1.1.0': {}
 

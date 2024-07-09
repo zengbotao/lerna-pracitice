@@ -1,9 +1,3 @@
-/*
- * @Description: 
- * @Autor: zengbotao@myhexin.com
- * @Date: 2024-07-07 14:50:26
- * @LastEditTime: 2024-07-07 14:50:37
- */
 module.exports = {
   parserPreset: 'conventional-changelog-conventionalcommits',
   rules: {

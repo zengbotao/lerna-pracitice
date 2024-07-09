@@ -12,9 +12,10 @@
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.8.1",
+    "@commitlint/cli": "^17.6.1",
     "@vuepress/bundler-vite": "2.0.0-rc.14",
     "@vuepress/theme-default": "2.0.0-rc.37",
+    "@wavesdean/commitlint-config": "^1.0.3",
     "conventional-changelog-conventionalcommits": "^8.0.0",
     "husky": "^8.0.3",
     "lerna": "^6.6.2",
