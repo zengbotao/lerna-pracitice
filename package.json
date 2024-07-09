@@ -9,18 +9,16 @@
     "deploy": "deploy.sh",
     "publish": "lerna publish"
   },
-  "dependencies": {
-    "@vssue/api-github-v4": "^1.4.7",
-    "vuepress": "^1.9.7"
-  },
   "devDependencies": {
-    "@vuepress/plugin-pwa": "^1.9.7",
-    "@vuepress/theme-blog": "^2.3.3",
     "@commitlint/cli": "^17.6.1",
+    "@vuepress/bundler-vite": "2.0.0-rc.14",
+    "@vuepress/theme-default": "2.0.0-rc.37",
     "husky": "^8.0.3",
     "lerna": "^6.6.2",
     "markdownlint": "^0.28.1",
     "pnpm": "^8.6.0",
-    "rimraf": "^3.0.2"
+    "rimraf": "^3.0.2",
+    "vue": "^3.4.31",
+    "vuepress": "2.0.0-rc.14"
   }
 }

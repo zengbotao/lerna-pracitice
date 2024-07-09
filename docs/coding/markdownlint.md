@@ -1,11 +1,4 @@
-<!--
- * @Author: zengbotao 2898487084@qq.com
- * @Date: 2024-07-08 21:52:17
- * @LastEditors: zengbotao 2898487084@qq.com
- * @LastEditTime: 2024-07-08 21:58:59
- * @FilePath: \lerna-pracitice\docs\coding\markdownlint.md
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
--->
+
 ## self create
 
 ```bash

@@ -1,9 +1,3 @@
----
-actionLink: /guide/
-layout: index
-title: About
-showMessage: false
----
 # 个人信息
 
  - 曾波涛/男/1997
