@@ -13,6 +13,7 @@
     "@commitlint/cli": "^17.6.1",
     "@vuepress/bundler-vite": "2.0.0-rc.14",
     "@vuepress/theme-default": "2.0.0-rc.37",
+    "conventional-changelog-conventionalcommits": "^8.0.0",
     "husky": "^8.0.3",
     "lerna": "^6.6.2",
     "markdownlint": "^0.28.1",
