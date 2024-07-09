@@ -19,3 +19,4 @@ https://blog.csdn.net/xgangzai/article/details/115423425
 # docs 部署
 https://zhuanlan.zhihu.com/p/376817494
 https://blog.csdn.net/qq_45487080/article/details/121345434
+.temp dist test
