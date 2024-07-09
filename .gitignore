@@ -6,7 +6,5 @@ node_modules
 *.log
 tests
 .cache
-/.temp/
-/dist/
 lib
-/docs/.vuepress/.temp
+
