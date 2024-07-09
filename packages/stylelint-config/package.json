@@ -1,0 +1,31 @@
+{
+  "name": "@wavesdean/stylelint-config",
+  "version": "1.0.4",
+  "description": "stylelint-config",
+  "author": "zengbotao <2898487084@qq.com>",
+  "homepage": "https://github.com/zengbotao/lerna-pracitice#readme",
+  "license": "ISC",
+  "main": "index.json",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:zengbotao/lerna-pracitice.git",
+    "directory": "packages/stylelint-config"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "public"
+  },
+  "bugs": {
+    "url": "https://github.com/zengbotao/lerna-pracitice/issues"
+  },
+  "peerDependencies": {
+    "stylelint": ">=8.3.0",
+    "stylelint-scss": ">=2.0.0"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0",
+    "stylelint": "^14.3.0",
+    "stylelint-scss": "^4.1.0"
+  },
+  "gitHead": "501f3c3351fc60678e8ac430a035c561baf560c8"
+}

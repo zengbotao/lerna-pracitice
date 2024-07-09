@@ -14,17 +14,44 @@ export default defineUserConfig({
     author: 'zengbotao',
     sidebar: [
       {
-        text: '工程规范',
+        text: 'npm包',
+        prefix: '/npm/',
+        link: '/npm/',
+        children: [
+          {
+            text: 'commitlint-config手册',
+            link: 'commitlint.md',
+          },
+          {
+            text: 'markdownlint-config手册',
+            link: 'markdownlint.md',
+          },
+        ],
+      },
+      {
+        text: '编码规范',
         prefix: '/coding/',
         link: '/coding/',
         children: [
           {
-            text: 'commitlint-config',
-            link: 'commitlint.md',
+            text: 'css规范',
+            link: 'css.md',
           },
           {
-            text: 'markdownlint-config',
-            link: 'markdownlint.md',
+            text: 'html规范',
+            link: 'html.md',
+          },
+          {
+            text: 'JavaScript规范',
+            link: 'JavaScript.md',
+          },
+          {
+            text: 'node规范',
+            link: 'node.md',
+          },
+          {
+            text: 'typescript规范',
+            link: 'typescript.md',
           },
         ],
       },

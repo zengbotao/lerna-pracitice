@@ -1,4 +1,3 @@
-
 ## self create
 
 ```bash
@@ -27,10 +26,15 @@ pnpm i -save-dev  @wavesdean/commitlint-config @commitlint/cli conventional-chan
 ```js
 pnpm i -save-dev  @wavesdean/commitlint-config @commitlint/cli conventional-changelog-conventionalcommits
 
-//主目录添加`commitlint.config.js` 中继承本包
+"@commitlint/cli": "^19.3.0",
+"conventional-changelog-conventionalcommits": "^8.0.0",
+"husky": "^9.0.11"
+
+//主目录添加`c` 中继承本包
 module.exports ={
-  "extends": "@wavesdean/commitlint-config"
+  "extends": ["@wavesdean/commitlint-config"]
 }
+
 ```
 # 设置 git hook
 
@@ -45,8 +49,13 @@ npm install husky --save-dev
 然后执行添加`commit-msg`:
 
 ```bash
-husky install
-npx husky add .husky/commit-msg 'npx commitlint --edit $1'
-```
+npx husky install
+npx husky add .husky/commit-msg 
 
+#!/usr/bin/env sh
+
+npx --no -- commitlint --edit 
+```
+chore: run tests on travis ci
+fix(server): send cors headers
 更多信息可参考 [commitlint 文档](https://commitlint.js.org/#/guides-local-setup?id=install-husky)。
