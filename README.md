@@ -20,3 +20,8 @@ https://blog.csdn.net/xgangzai/article/details/115423425
 https://zhuanlan.zhihu.com/p/376817494
 https://blog.csdn.net/qq_45487080/article/details/121345434
 .temp dist test
+
+Error: The deploy step encountered an error: The process '/usr/bin/git' fail
+https://blog.csdn.net/ibigboy/article/details/126402267
+
+github设置pages Custom domain 
