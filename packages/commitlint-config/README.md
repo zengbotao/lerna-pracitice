@@ -42,8 +42,6 @@ module.exports ={
   "extends": ["@wavesdean/commitlint-config"]
 }
 
-//配置脚本
-//"changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
 ```
 # 设置 git hook
 
@@ -65,5 +63,6 @@ npx husky add .husky/commit-msg
 
 npx --no -- commitlint --edit 
 ```
-
+chore: run tests on travis ci
+fix(server): send cors headers
 更多信息可参考 [commitlint 文档](https://commitlint.js.org/#/guides-local-setup?id=install-husky)。
