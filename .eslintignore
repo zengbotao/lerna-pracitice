@@ -7,4 +7,10 @@
 **/public/**
 **/report/**
 **/server/**
+**/__tests__/fixtures/**
+**/cli-lint/test/**
+
+# 忽略文件
 **/webpack.config*.js
+**/tsconfig.json
+**/.eslintrc.js

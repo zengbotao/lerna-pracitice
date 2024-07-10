@@ -1,4 +1,4 @@
-var hero = {
+const hero = {
   firstName: 'Kevin',
   lastName: 'Flynn',
 };

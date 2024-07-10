@@ -1,5 +1,5 @@
 // 'no-var'
-var fs = require('fs');
+const fs = require('fs');
 
 // 'node/prefer-global/buffer'
 // 'quotes'

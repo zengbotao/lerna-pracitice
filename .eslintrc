@@ -1,5 +1,7 @@
 {
+  "extends": ["@wavesdean/eslint-config"],
   "rules": {
-    "semi": ["error", "always"]
+    "prefer-const": "off",
+    "no-unused-vars": "off"
   }
 }
