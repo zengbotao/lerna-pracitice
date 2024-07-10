@@ -4,7 +4,7 @@ import { defineUserConfig } from 'vuepress';
 
 export default defineUserConfig({
   bundler: viteBundler(),
-  title: 'zengbotao-pk',
+  title: 'zengbotao',
   theme: defaultTheme({
     navbar: [
       { text: '关于我', link: '/about/jianli.md' },
@@ -14,7 +14,7 @@ export default defineUserConfig({
     author: 'zengbotao',
     sidebar: [
       {
-        text: 'npm包',
+        text: 'zbt的npm包',
         prefix: '/npm/',
         link: '/npm/',
         children: [
@@ -25,6 +25,14 @@ export default defineUserConfig({
           {
             text: 'markdownlint-config手册',
             link: 'markdownlint.md',
+          },
+          {
+            text: 'stylelint-config手册',
+            link: 'stylelint.md',
+          },
+          {
+            text: 'eslint-config手册',
+            link: 'eslint.md',
           },
         ],
       },

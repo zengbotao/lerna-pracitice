@@ -1,10 +1,3 @@
-<!--
- * @Description:
- * @Autor: zengbotao@myhexin.com
- * @Date: 2024-07-07 10:00:57
- * @LastEditTime: 2024-07-07 15:37:08
--->
-
 ## self create
 
 ```bash
