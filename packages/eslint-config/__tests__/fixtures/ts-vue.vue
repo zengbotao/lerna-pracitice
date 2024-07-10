@@ -1,5 +1,5 @@
 <template>
-  <div style="margin: 20px;">
+  <div style="margin: 20px">
     <textarea>{{ value }}</textarea>
     <img class="image-viewer__thumbnails" :src="imageUrl" @click="clickHandler" />
     <div v-show="visible" class="image-viewer__wrapper">
@@ -23,7 +23,7 @@ export default class ImageViewer extends Vue {
   closeHandler() {
     this.visible = false;
 
-      const foo: number = 1
+    const foo: number = 1;
   }
 
   clickHandler() {
@@ -32,5 +32,4 @@ export default class ImageViewer extends Vue {
 }
 </script>
 
-<style lang="scss">
-</style>
+<style lang="scss"></style>

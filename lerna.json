@@ -3,7 +3,6 @@
   "npmClient": "pnpm",
   "useWorkspaces": true,
   "packages": ["packages/*"],
-  "version": "independent",
   "changelog": {
     "labels": {
       "tag: new feature": ":rocket: New Feature",

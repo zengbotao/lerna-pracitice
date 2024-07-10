@@ -3,7 +3,7 @@ var fs = require('fs');
 
 // 'node/prefer-global/buffer'
 // 'quotes'
-const { Buffer } = require("buffer");
+const { Buffer } = require('buffer');
 // 'node/no-new-require'
 // 'new-cap'
 const util = new require('util');
@@ -12,7 +12,7 @@ const util = new require('util');
 console.log(util);
 // 'semi'
 // 'no-unused-vars'
-const b = Buffer.alloc(16)
+const b = Buffer.alloc(16);
 
 // 'node/prefer-promises/fs'
 fs.readFile('../node.ts', 'utf-8', (err, data) => {

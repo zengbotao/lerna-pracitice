@@ -1,3 +1,3 @@
-module.exports ={
-  extends: ["@wavesdean/commitlint-config"]
-}
+module.exports = {
+  extends: ['@wavesdean/commitlint-config'],
+};

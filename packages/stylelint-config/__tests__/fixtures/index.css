@@ -1,26 +1,33 @@
 .foo {
-    color: #abc;
+  color: #abc;
 }
 
-.selector{padding-left: 15px;}
+.selector {
+  padding-left: 15px;
+}
 
 .selector1 {
-  padding-left :15px;
+  padding-left: 15px;
 
-  background-size: 0,0;
+  background-size: 0, 0;
 }
 
-.selector2 {padding-left: 15px;
+.selector2 {
+  padding-left: 15px;
 }
 .selector3 {
-  padding-left: 15px;}
+  padding-left: 15px;
+}
 
-.selector4 { color: pink; top: 3px; }
+.selector4 {
+  color: pink;
+  top: 3px;
+}
 
 .selector5 {
   width: 0rem;
 
-  color: #AAA;
+  color: #aaa;
   background: #aaaaaa;
 }
 

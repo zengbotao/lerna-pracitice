@@ -150,7 +150,7 @@ const err = new Error();
 throw 'an ' + err;
 
 const err = new Error();
-throw `${err}`
+throw `${err}`;
 
 // good
 throw new Error();
@@ -283,8 +283,7 @@ class Jedi {
 
 const luke = new Jedi();
 
-luke.jump()
-  .setHeight(20);
+luke.jump().setHeight(20);
 ```
 
 ## 参考资料

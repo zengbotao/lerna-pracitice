@@ -1,14 +1,44 @@
-<template><div><h1 id="typescript-编码规范" tabindex="-1"><a class="header-anchor" href="#typescript-编码规范"><span>TypeScript 编码规范</span></a></h1>
-<div class="custom-container tip"><p class="custom-container-title">TIP</p>
-<p><code v-pre>TypeScript</code> 是微软开发的一款开源编程语言，它是 <code v-pre>JavaScript</code> 的超集，因此其编码规约和配套 <code v-pre>Lint</code> 工具也与<RouteLink to="/coding/javascript.html">JavaScript 编码规范</RouteLink>一脉相承。</p>
-</div>
-<h2 id="编码风格" tabindex="-1"><a class="header-anchor" href="#编码风格"><span>编码风格</span></a></h2>
-<p><img src="@source/coding/img/typescript.svg" alt="typescript style"></p>
-<ul>
-<li>
-<p>【强制】重载的函数必须写在一起 <a href="https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/adjacent-overload-signatures.md" target="_blank" rel="noopener noreferrer">@typescript-eslint/adjacent-overload-signatures</a></p>
-<p>自然相关的项组合在一起将提高代码可读性和组织性。</p>
-<div class="language-typescript line-numbers-mode" data-highlighter="prismjs" data-ext="ts" data-title="ts"><pre v-pre class="language-typescript"><code><span class="line"><span class="token comment">// bad</span></span>
+<template>
+  <div>
+    <h1 id="typescript-编码规范" tabindex="-1">
+      <a class="header-anchor" href="#typescript-编码规范"><span>TypeScript 编码规范</span></a>
+    </h1>
+    <div class="custom-container tip">
+      <p class="custom-container-title">TIP</p>
+      <p>
+        <code v-pre>TypeScript</code> 是微软开发的一款开源编程语言，它是
+        <code v-pre>JavaScript</code> 的超集，因此其编码规约和配套
+        <code v-pre>Lint</code> 工具也与<RouteLink to="/coding/javascript.html"
+          >JavaScript 编码规范</RouteLink
+        >一脉相承。
+      </p>
+    </div>
+    <h2 id="编码风格" tabindex="-1">
+      <a class="header-anchor" href="#编码风格"><span>编码风格</span></a>
+    </h2>
+    <p><img src="@source/coding/img/typescript.svg" alt="typescript style" /></p>
+    <ul>
+      <li>
+        <p>
+          【强制】重载的函数必须写在一起
+          <a
+            href="https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/adjacent-overload-signatures.md"
+            target="_blank"
+            rel="noopener noreferrer"
+            >@typescript-eslint/adjacent-overload-signatures</a
+          >
+        </p>
+        <p>自然相关的项组合在一起将提高代码可读性和组织性。</p>
+        <div
+          class="language-typescript line-numbers-mode"
+          data-highlighter="prismjs"
+          data-ext="ts"
+          data-title="ts"
+        >
+          <pre
+            v-pre
+            class="language-typescript"
+          ><code><span class="line"><span class="token comment">// bad</span></span>
 <span class="line"><span class="token keyword">declare</span> <span class="token keyword">namespace</span> Foo <span class="token punctuation">{</span></span>
 <span class="line">  <span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span>s<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span><span class="token punctuation">;</span></span>
 <span class="line">  <span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span>n<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span><span class="token punctuation">;</span></span>
@@ -24,7 +54,34 @@
 <span class="line">  <span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">bar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span><span class="token punctuation">;</span></span>
 <span class="line"><span class="token punctuation">}</span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-typescript line-numbers-mode" data-highlighter="prismjs" data-ext="ts" data-title="ts"><pre v-pre class="language-typescript"><code><span class="line"><span class="token comment">// bad</span></span>
+          <div class="line-numbers" aria-hidden="true" style="counter-reset: line-number 0">
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+          </div>
+        </div>
+        <div
+          class="language-typescript line-numbers-mode"
+          data-highlighter="prismjs"
+          data-ext="ts"
+          data-title="ts"
+        >
+          <pre
+            v-pre
+            class="language-typescript"
+          ><code><span class="line"><span class="token comment">// bad</span></span>
 <span class="line"><span class="token keyword">type</span> <span class="token class-name">Foo</span> <span class="token operator">=</span> <span class="token punctuation">{</span></span>
 <span class="line">  <span class="token function">foo</span><span class="token punctuation">(</span>s<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span><span class="token punctuation">;</span></span>
 <span class="line">  <span class="token function">foo</span><span class="token punctuation">(</span>n<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span><span class="token punctuation">;</span></span>
@@ -68,7 +125,62 @@
 <span class="line">  <span class="token function">bar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span><span class="token punctuation">}</span></span>
 <span class="line"><span class="token punctuation">}</span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-typescript line-numbers-mode" data-highlighter="prismjs" data-ext="ts" data-title="ts"><pre v-pre class="language-typescript"><code><span class="line"><span class="token comment">// bad</span></span>
+          <div class="line-numbers" aria-hidden="true" style="counter-reset: line-number 0">
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+          </div>
+        </div>
+        <div
+          class="language-typescript line-numbers-mode"
+          data-highlighter="prismjs"
+          data-ext="ts"
+          data-title="ts"
+        >
+          <pre
+            v-pre
+            class="language-typescript"
+          ><code><span class="line"><span class="token comment">// bad</span></span>
 <span class="line"><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span>s<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span><span class="token punctuation">;</span></span>
 <span class="line"><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span>n<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span><span class="token punctuation">;</span></span>
 <span class="line"><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">bar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span><span class="token punctuation">;</span></span>
@@ -80,12 +192,48 @@
 <span class="line"><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span>n<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span><span class="token punctuation">;</span></span>
 <span class="line"><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span>sn<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token operator">|</span> <span class="token builtin">number</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span><span class="token punctuation">;</span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-<li>
-<p>【推荐】简单数组类型的定义使用 <code v-pre>T[]</code>，复杂类型使用 <code v-pre>Array&lt;T&gt;</code> <a href="https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/array-type.md" target="_blank" rel="noopener noreferrer">@typescript-eslint/array-type</a></p>
-<p>对数组类型的定义使用相同的规范将帮助开发者更快地理解和阅读类型。</p>
-<p>简单类型（数字、字符串、布尔等）请使用 <code v-pre>T[]</code> 或 <code v-pre>readonly T[]</code> ，其他复杂类型（联合、交叉、对象、函数等）请使用 <code v-pre>Array&lt;T&gt;</code> 或 <code v-pre>ReadonlyArray&lt;T&gt;</code></p>
-<div class="language-typescript line-numbers-mode" data-highlighter="prismjs" data-ext="ts" data-title="ts"><pre v-pre class="language-typescript"><code><span class="line"><span class="token comment">// bad</span></span>
+          <div class="line-numbers" aria-hidden="true" style="counter-reset: line-number 0">
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <p>
+          【推荐】简单数组类型的定义使用 <code v-pre>T[]</code>，复杂类型使用
+          <code v-pre>Array&lt;T&gt;</code>
+          <a
+            href="https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/array-type.md"
+            target="_blank"
+            rel="noopener noreferrer"
+            >@typescript-eslint/array-type</a
+          >
+        </p>
+        <p>对数组类型的定义使用相同的规范将帮助开发者更快地理解和阅读类型。</p>
+        <p>
+          简单类型（数字、字符串、布尔等）请使用 <code v-pre>T[]</code> 或
+          <code v-pre>readonly T[]</code> ，其他复杂类型（联合、交叉、对象、函数等）请使用
+          <code v-pre>Array&lt;T&gt;</code> 或 <code v-pre>ReadonlyArray&lt;T&gt;</code>
+        </p>
+        <div
+          class="language-typescript line-numbers-mode"
+          data-highlighter="prismjs"
+          data-ext="ts"
+          data-title="ts"
+        >
+          <pre
+            v-pre
+            class="language-typescript"
+          ><code><span class="line"><span class="token comment">// bad</span></span>
 <span class="line"><span class="token keyword">const</span> a<span class="token operator">:</span> <span class="token punctuation">(</span><span class="token builtin">string</span> <span class="token operator">|</span> <span class="token builtin">number</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span></span>
 <span class="line"><span class="token keyword">const</span> b<span class="token operator">:</span> <span class="token punctuation">{</span> prop<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token punctuation">}</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">{</span> prop<span class="token operator">:</span> <span class="token string">'a'</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span></span>
 <span class="line"><span class="token keyword">const</span> c<span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span></span>
@@ -101,17 +249,71 @@
 <span class="line"><span class="token keyword">const</span> e<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'b'</span><span class="token punctuation">]</span><span class="token punctuation">;</span></span>
 <span class="line"><span class="token keyword">const</span> f<span class="token operator">:</span> <span class="token keyword">readonly</span> <span class="token builtin">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'b'</span><span class="token punctuation">]</span><span class="token punctuation">;</span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-<li>
-<p>【推荐】使用 <code v-pre>TypeScript</code> 注释指令时需跟随描述说明 <a href="https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/ban-ts-comment.md" target="_blank" rel="noopener noreferrer">@typescript-eslint/ban-ts-comment</a></p>
-<p>TS 提供了一些指令注释，可用于忽略 <code v-pre>TypeScript</code> 编译器在编译阶段的错误，如下：</p>
-<div class="language-typescript line-numbers-mode" data-highlighter="prismjs" data-ext="ts" data-title="ts"><pre v-pre class="language-typescript"><code><span class="line"><span class="token comment">// @ts-expect-error</span></span>
+          <div class="line-numbers" aria-hidden="true" style="counter-reset: line-number 0">
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <p>
+          【推荐】使用 <code v-pre>TypeScript</code> 注释指令时需跟随描述说明
+          <a
+            href="https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/ban-ts-comment.md"
+            target="_blank"
+            rel="noopener noreferrer"
+            >@typescript-eslint/ban-ts-comment</a
+          >
+        </p>
+        <p>
+          TS 提供了一些指令注释，可用于忽略
+          <code v-pre>TypeScript</code> 编译器在编译阶段的错误，如下：
+        </p>
+        <div
+          class="language-typescript line-numbers-mode"
+          data-highlighter="prismjs"
+          data-ext="ts"
+          data-title="ts"
+        >
+          <pre
+            v-pre
+            class="language-typescript"
+          ><code><span class="line"><span class="token comment">// @ts-expect-error</span></span>
 <span class="line"><span class="token comment">// @ts-ignore</span></span>
 <span class="line"><span class="token comment">// @ts-nocheck</span></span>
 <span class="line"><span class="token comment">// @ts-check</span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>我们允许在代码中使用指令注释，但需要跟随一定长度的描述说明。</p>
-<div class="language-typescript line-numbers-mode" data-highlighter="prismjs" data-ext="ts" data-title="ts"><pre v-pre class="language-typescript"><code><span class="line"><span class="token comment">// bad</span></span>
+          <div class="line-numbers" aria-hidden="true" style="counter-reset: line-number 0">
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+          </div>
+        </div>
+        <p>我们允许在代码中使用指令注释，但需要跟随一定长度的描述说明。</p>
+        <div
+          class="language-typescript line-numbers-mode"
+          data-highlighter="prismjs"
+          data-ext="ts"
+          data-title="ts"
+        >
+          <pre
+            v-pre
+            class="language-typescript"
+          ><code><span class="line"><span class="token comment">// bad</span></span>
 <span class="line"><span class="token comment">// @ts-expect-error</span></span>
 <span class="line"><span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'my code'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span>
 <span class="line"></span>
@@ -125,11 +327,45 @@
 <span class="line"><span class="token comment">// @ts-ignore: It's ok to ignore this compile error</span></span>
 <span class="line"><span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'my code'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-<li>
-<p>【强制】禁止使用 <code v-pre>// tslint:&lt;rule-flag&gt;</code> 等 <code v-pre>tslint</code> 注释 <a href="https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/ban-tslint-comment.md" target="_blank" rel="noopener noreferrer">@typescript-eslint/ban-tslint-comment</a></p>
-<p><code v-pre>tslint</code> 已经被废弃，对应的指令注释也不应再出现。</p>
-<div class="language-typescript line-numbers-mode" data-highlighter="prismjs" data-ext="ts" data-title="ts"><pre v-pre class="language-typescript"><code><span class="line"><span class="token comment">// bad</span></span>
+          <div class="line-numbers" aria-hidden="true" style="counter-reset: line-number 0">
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <p>
+          【强制】禁止使用 <code v-pre>// tslint:&lt;rule-flag&gt;</code> 等
+          <code v-pre>tslint</code> 注释
+          <a
+            href="https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/ban-tslint-comment.md"
+            target="_blank"
+            rel="noopener noreferrer"
+            >@typescript-eslint/ban-tslint-comment</a
+          >
+        </p>
+        <p><code v-pre>tslint</code> 已经被废弃，对应的指令注释也不应再出现。</p>
+        <div
+          class="language-typescript line-numbers-mode"
+          data-highlighter="prismjs"
+          data-ext="ts"
+          data-title="ts"
+        >
+          <pre
+            v-pre
+            class="language-typescript"
+          ><code><span class="line"><span class="token comment">// bad</span></span>
 <span class="line"><span class="token comment">/* tslint:disable */</span></span>
 <span class="line"><span class="token comment">/* tslint:enable */</span></span>
 <span class="line"><span class="token comment">/* tslint:disable:rule1 rule2 rule3... */</span></span>
@@ -138,14 +374,53 @@
 <span class="line"><span class="token function">someCode</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// tslint:disable-line</span></span>
 <span class="line"><span class="token comment">// tslint:disable-next-line:rule1 rule2 rule3...</span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-<li>
-<p>【推荐】如果类的属性是一个字面量，则推荐使用只读属性 <code v-pre>readonly</code> 而不是 <code v-pre>getter</code> <a href="https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/class-literal-property-style.md" target="_blank" rel="noopener noreferrer">@typescript-eslint/class-literal-property-style</a></p>
-<p>类上所有返回「字面量」的 <code v-pre>getter</code> 方法，都推荐使用 <code v-pre>readonly</code> 修饰符来代替，字面量包含字符串、模板字符串、数字、<code v-pre>bigint</code>、正则和 <code v-pre>null。</code></p>
-<blockquote>
-<p>说明：在一些特殊场景，编写代码的最终用户是 <code v-pre>JavaScript</code> 开发者时，可以使用 <code v-pre>getter</code> 来保证字段无法被重新定义和覆盖，因为 <code v-pre>readonly</code> 修饰符只作用于 <code v-pre>TypeScript</code> 编译阶段。</p>
-</blockquote>
-<div class="language-typescript line-numbers-mode" data-highlighter="prismjs" data-ext="ts" data-title="ts"><pre v-pre class="language-typescript"><code><span class="line"><span class="token comment">// bad</span></span>
+          <div class="line-numbers" aria-hidden="true" style="counter-reset: line-number 0">
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <p>
+          【推荐】如果类的属性是一个字面量，则推荐使用只读属性 <code v-pre>readonly</code> 而不是
+          <code v-pre>getter</code>
+          <a
+            href="https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/class-literal-property-style.md"
+            target="_blank"
+            rel="noopener noreferrer"
+            >@typescript-eslint/class-literal-property-style</a
+          >
+        </p>
+        <p>
+          类上所有返回「字面量」的 <code v-pre>getter</code> 方法，都推荐使用
+          <code v-pre>readonly</code> 修饰符来代替，字面量包含字符串、模板字符串、数字、<code v-pre
+            >bigint</code
+          >、正则和 <code v-pre>null。</code>
+        </p>
+        <blockquote>
+          <p>
+            说明：在一些特殊场景，编写代码的最终用户是
+            <code v-pre>JavaScript</code> 开发者时，可以使用
+            <code v-pre>getter</code> 来保证字段无法被重新定义和覆盖，因为
+            <code v-pre>readonly</code> 修饰符只作用于 <code v-pre>TypeScript</code> 编译阶段。
+          </p>
+        </blockquote>
+        <div
+          class="language-typescript line-numbers-mode"
+          data-highlighter="prismjs"
+          data-ext="ts"
+          data-title="ts"
+        >
+          <pre
+            v-pre
+            class="language-typescript"
+          ><code><span class="line"><span class="token comment">// bad</span></span>
 <span class="line"><span class="token keyword">class</span> <span class="token class-name">Mx</span> <span class="token punctuation">{</span></span>
 <span class="line">  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">get</span> <span class="token function">myField1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span></span>
 <span class="line">    <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span></span>
@@ -165,24 +440,95 @@
 <span class="line">  <span class="token punctuation">}</span></span>
 <span class="line"><span class="token punctuation">}</span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-<li>
-<p>【强制】类型断言必须使用 <code v-pre>as Type</code> <a href="https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/consistent-type-assertions.md" target="_blank" rel="noopener noreferrer">@typescript-eslint/consistent-type-assertions</a></p>
-<p>类型断言（<code v-pre>type assertiions</code>）也可称作类型转换（<code v-pre>type casting</code>），本质上是对 <code v-pre>TypeScript</code> 类型系统的人为干预：</p>
-<ol>
-<li>强制对类型的断言统一使用 <code v-pre>as Type</code> 风格而非 <code v-pre>&lt;Type&gt;</code> ，后者容易与 <code v-pre>JSX</code> 产生混淆。</li>
-<li>对象字面量禁止类型断言，断言成 <code v-pre>any</code> 除外，对象字面量应该直接声明。</li>
-</ol>
-<blockquote>
-<p><code v-pre>TypeScript 3.4</code> 中引入的 <code v-pre>const</code> 断言在本规则中不受约束，<code v-pre>let x = 'hello' as const;</code> 和 <code v-pre>let x = &lt;const&gt;'hello';</code> 都是允许的。</p>
-</blockquote>
-<div class="language-typescript line-numbers-mode" data-highlighter="prismjs" data-ext="ts" data-title="ts"><pre v-pre class="language-typescript"><code><span class="line"><span class="token comment">// bad</span></span>
+          <div class="line-numbers" aria-hidden="true" style="counter-reset: line-number 0">
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <p>
+          【强制】类型断言必须使用 <code v-pre>as Type</code>
+          <a
+            href="https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/consistent-type-assertions.md"
+            target="_blank"
+            rel="noopener noreferrer"
+            >@typescript-eslint/consistent-type-assertions</a
+          >
+        </p>
+        <p>
+          类型断言（<code v-pre>type assertiions</code>）也可称作类型转换（<code v-pre
+            >type casting</code
+          >），本质上是对 <code v-pre>TypeScript</code> 类型系统的人为干预：
+        </p>
+        <ol>
+          <li>
+            强制对类型的断言统一使用 <code v-pre>as Type</code> 风格而非
+            <code v-pre>&lt;Type&gt;</code> ，后者容易与 <code v-pre>JSX</code> 产生混淆。
+          </li>
+          <li>
+            对象字面量禁止类型断言，断言成 <code v-pre>any</code> 除外，对象字面量应该直接声明。
+          </li>
+        </ol>
+        <blockquote>
+          <p>
+            <code v-pre>TypeScript 3.4</code> 中引入的
+            <code v-pre>const</code> 断言在本规则中不受约束，<code v-pre
+              >let x = 'hello' as const;</code
+            >
+            和 <code v-pre>let x = &lt;const&gt;'hello';</code> 都是允许的。
+          </p>
+        </blockquote>
+        <div
+          class="language-typescript line-numbers-mode"
+          data-highlighter="prismjs"
+          data-ext="ts"
+          data-title="ts"
+        >
+          <pre
+            v-pre
+            class="language-typescript"
+          ><code><span class="line"><span class="token comment">// bad</span></span>
 <span class="line"><span class="token keyword">const</span> foo <span class="token operator">=</span> <span class="token operator">&lt;</span><span class="token builtin">string</span><span class="token operator">></span><span class="token string">'bar'</span><span class="token punctuation">;</span></span>
 <span class="line"></span>
 <span class="line"><span class="token comment">// good</span></span>
 <span class="line"><span class="token keyword">const</span> foo <span class="token operator">=</span> <span class="token string">'bar'</span> <span class="token keyword">as</span> <span class="token builtin">string</span><span class="token punctuation">;</span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-typescript line-numbers-mode" data-highlighter="prismjs" data-ext="ts" data-title="ts"><pre v-pre class="language-typescript"><code><span class="line"><span class="token comment">// bad</span></span>
+          <div class="line-numbers" aria-hidden="true" style="counter-reset: line-number 0">
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+          </div>
+        </div>
+        <div
+          class="language-typescript line-numbers-mode"
+          data-highlighter="prismjs"
+          data-ext="ts"
+          data-title="ts"
+        >
+          <pre
+            v-pre
+            class="language-typescript"
+          ><code><span class="line"><span class="token comment">// bad</span></span>
 <span class="line"><span class="token keyword">const</span> x <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token operator">...</span> <span class="token punctuation">}</span> <span class="token keyword">as</span> <span class="token constant">T</span><span class="token punctuation">;</span></span>
 <span class="line"><span class="token keyword">const</span> y <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token operator">...</span> <span class="token punctuation">}</span> <span class="token keyword">as</span> object<span class="token punctuation">;</span></span>
 <span class="line"></span>
@@ -191,11 +537,39 @@
 <span class="line"><span class="token keyword">const</span> y <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token operator">...</span> <span class="token punctuation">}</span> <span class="token keyword">as</span> <span class="token builtin">any</span><span class="token punctuation">;</span></span>
 <span class="line"><span class="token keyword">const</span> z <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token operator">...</span> <span class="token punctuation">}</span> <span class="token keyword">as</span> <span class="token builtin">unknown</span><span class="token punctuation">;</span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-<li>
-<p>【推荐】优先使用 <code v-pre>interface</code> 定义类型 <a href="https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/consistent-type-definitions.md" target="_blank" rel="noopener noreferrer">@typescript-eslint/consistent-type-definitions</a></p>
-<p>interface 支持 extend/implement/union 等等类型能力，同时也可以用于描述普通对象。</p>
-<div class="language-typescript line-numbers-mode" data-highlighter="prismjs" data-ext="ts" data-title="ts"><pre v-pre class="language-typescript"><code><span class="line"><span class="token comment">// bad</span></span>
+          <div class="line-numbers" aria-hidden="true" style="counter-reset: line-number 0">
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <p>
+          【推荐】优先使用 <code v-pre>interface</code> 定义类型
+          <a
+            href="https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/consistent-type-definitions.md"
+            target="_blank"
+            rel="noopener noreferrer"
+            >@typescript-eslint/consistent-type-definitions</a
+          >
+        </p>
+        <p>interface 支持 extend/implement/union 等等类型能力，同时也可以用于描述普通对象。</p>
+        <div
+          class="language-typescript line-numbers-mode"
+          data-highlighter="prismjs"
+          data-ext="ts"
+          data-title="ts"
+        >
+          <pre
+            v-pre
+            class="language-typescript"
+          ><code><span class="line"><span class="token comment">// bad</span></span>
 <span class="line"><span class="token keyword">type</span> <span class="token class-name"><span class="token constant">T</span></span> <span class="token operator">=</span> <span class="token punctuation">{</span> x<span class="token operator">:</span> <span class="token builtin">number</span> <span class="token punctuation">}</span><span class="token punctuation">;</span></span>
 <span class="line"></span>
 <span class="line"><span class="token comment">// good</span></span>
@@ -205,11 +579,43 @@
 <span class="line">  x<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">;</span></span>
 <span class="line"><span class="token punctuation">}</span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-<li>
-<p>【推荐】设置类成员的可访问性 <a href="https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/explicit-member-accessibility.md" target="_blank" rel="noopener noreferrer">@typescript-eslint/explicit-member-accessibility</a></p>
-<p>将非公开成员的可访问性设置为「私有」，可以增强代码可理解性，同时也能避免一些非法调用，公开的成员可省略 <code v-pre>public</code> 修饰符。</p>
-<div class="language-typescript line-numbers-mode" data-highlighter="prismjs" data-ext="ts" data-title="ts"><pre v-pre class="language-typescript"><code><span class="line"><span class="token comment">// bad</span></span>
+          <div class="line-numbers" aria-hidden="true" style="counter-reset: line-number 0">
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <p>
+          【推荐】设置类成员的可访问性
+          <a
+            href="https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/explicit-member-accessibility.md"
+            target="_blank"
+            rel="noopener noreferrer"
+            >@typescript-eslint/explicit-member-accessibility</a
+          >
+        </p>
+        <p>
+          将非公开成员的可访问性设置为「私有」，可以增强代码可理解性，同时也能避免一些非法调用，公开的成员可省略
+          <code v-pre>public</code> 修饰符。
+        </p>
+        <div
+          class="language-typescript line-numbers-mode"
+          data-highlighter="prismjs"
+          data-ext="ts"
+          data-title="ts"
+        >
+          <pre
+            v-pre
+            class="language-typescript"
+          ><code><span class="line"><span class="token comment">// bad</span></span>
 <span class="line"><span class="token keyword">class</span> <span class="token class-name">Foo</span> <span class="token punctuation">{</span></span>
 <span class="line">  <span class="token keyword">static</span> foo <span class="token operator">=</span> <span class="token string">'foo'</span><span class="token punctuation">;</span></span>
 <span class="line">  <span class="token keyword">static</span> <span class="token function">getFoo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span></span>
@@ -244,10 +650,64 @@
 <span class="line"><span class="token punctuation">}</span></span>
 <span class="line"></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-<li>
-<p>【强制】<code v-pre>interface/type</code> 类型中使用一致的成员分隔符 <code v-pre>;</code> <a href="https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/member-delimiter-style.md" target="_blank" rel="noopener noreferrer">@typescript-eslint/member-delimiter-style</a></p>
-<div class="language-typescript line-numbers-mode" data-highlighter="prismjs" data-ext="ts" data-title="ts"><pre v-pre class="language-typescript"><code><span class="line"><span class="token comment">// bad: comma style(JSON style)</span></span>
+          <div class="line-numbers" aria-hidden="true" style="counter-reset: line-number 0">
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <p>
+          【强制】<code v-pre>interface/type</code> 类型中使用一致的成员分隔符 <code v-pre>;</code>
+          <a
+            href="https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/member-delimiter-style.md"
+            target="_blank"
+            rel="noopener noreferrer"
+            >@typescript-eslint/member-delimiter-style</a
+          >
+        </p>
+        <div
+          class="language-typescript line-numbers-mode"
+          data-highlighter="prismjs"
+          data-ext="ts"
+          data-title="ts"
+        >
+          <pre
+            v-pre
+            class="language-typescript"
+          ><code><span class="line"><span class="token comment">// bad: comma style(JSON style)</span></span>
 <span class="line"><span class="token keyword">interface</span> <span class="token class-name">Foo</span> <span class="token punctuation">{</span></span>
 <span class="line">  name<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span></span>
 <span class="line">  <span class="token function">greet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span><span class="token punctuation">,</span></span>
@@ -281,15 +741,78 @@
 <span class="line"><span class="token punctuation">}</span><span class="token punctuation">;</span></span>
 <span class="line"></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-<li>
-<p>【推荐】类的成员应按照固定的先后顺序排列 <a href="https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/member-ordering.md" target="_blank" rel="noopener noreferrer">@typescript-eslint/member-ordering</a></p>
-<ol>
-<li>类的静态方法 / 属性（<code v-pre>static</code>）优先于实例的方法 / 属性（<code v-pre>instance</code>）</li>
-<li>属性（<code v-pre>field</code>）优先于构造函数（<code v-pre>constructor</code>），优先于方法（<code v-pre>method</code>）</li>
-<li>公开的成员（<code v-pre>public</code>）优先于受保护的成员（<code v-pre>protected</code>），优先于私有的成员（<code v-pre>private</code>）</li>
-</ol>
-<div class="language-typescript line-numbers-mode" data-highlighter="prismjs" data-ext="ts" data-title="ts"><pre v-pre class="language-typescript"><code><span class="line"><span class="token comment">// good</span></span>
+          <div class="line-numbers" aria-hidden="true" style="counter-reset: line-number 0">
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <p>
+          【推荐】类的成员应按照固定的先后顺序排列
+          <a
+            href="https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/member-ordering.md"
+            target="_blank"
+            rel="noopener noreferrer"
+            >@typescript-eslint/member-ordering</a
+          >
+        </p>
+        <ol>
+          <li>
+            类的静态方法 / 属性（<code v-pre>static</code>）优先于实例的方法 / 属性（<code v-pre
+              >instance</code
+            >）
+          </li>
+          <li>
+            属性（<code v-pre>field</code>）优先于构造函数（<code v-pre>constructor</code
+            >），优先于方法（<code v-pre>method</code>）
+          </li>
+          <li>
+            公开的成员（<code v-pre>public</code>）优先于受保护的成员（<code v-pre>protected</code
+            >），优先于私有的成员（<code v-pre>private</code>）
+          </li>
+        </ol>
+        <div
+          class="language-typescript line-numbers-mode"
+          data-highlighter="prismjs"
+          data-ext="ts"
+          data-title="ts"
+        >
+          <pre
+            v-pre
+            class="language-typescript"
+          ><code><span class="line"><span class="token comment">// good</span></span>
 <span class="line"><span class="token keyword">class</span> <span class="token class-name">Foo</span> <span class="token punctuation">{</span></span>
 <span class="line">  <span class="token keyword">public</span> <span class="token keyword">static</span> foo1 <span class="token operator">=</span> <span class="token string">'foo1'</span><span class="token punctuation">;</span></span>
 <span class="line">  <span class="token keyword">protected</span> <span class="token keyword">static</span> foo2 <span class="token operator">=</span> <span class="token string">'foo2'</span><span class="token punctuation">;</span></span>
@@ -313,11 +836,54 @@
 <span class="line">  <span class="token punctuation">}</span></span>
 <span class="line"><span class="token punctuation">}</span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-<li>
-<p>【推荐】接口中的方法使用属性的方式定义 <a href="https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/method-signature-style.md" target="_blank" rel="noopener noreferrer">@typescript-eslint/method-signature-style</a></p>
-<p>使用属性去定义接口中的方法，可以获得更严格的检查。</p>
-<div class="language-typescript line-numbers-mode" data-highlighter="prismjs" data-ext="ts" data-title="ts"><pre v-pre class="language-typescript"><code><span class="line"><span class="token comment">// bad</span></span>
+          <div class="line-numbers" aria-hidden="true" style="counter-reset: line-number 0">
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <p>
+          【推荐】接口中的方法使用属性的方式定义
+          <a
+            href="https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/method-signature-style.md"
+            target="_blank"
+            rel="noopener noreferrer"
+            >@typescript-eslint/method-signature-style</a
+          >
+        </p>
+        <p>使用属性去定义接口中的方法，可以获得更严格的检查。</p>
+        <div
+          class="language-typescript line-numbers-mode"
+          data-highlighter="prismjs"
+          data-ext="ts"
+          data-title="ts"
+        >
+          <pre
+            v-pre
+            class="language-typescript"
+          ><code><span class="line"><span class="token comment">// bad</span></span>
 <span class="line"><span class="token keyword">interface</span> <span class="token class-name"><span class="token constant">T1</span></span> <span class="token punctuation">{</span></span>
 <span class="line">  <span class="token function">func</span><span class="token punctuation">(</span>arg<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">;</span></span>
 <span class="line"><span class="token punctuation">}</span></span>
@@ -344,11 +910,62 @@
 <span class="line">    <span class="token punctuation">(</span><span class="token punctuation">(</span>arg<span class="token operator">:</span> <span class="token builtin">boolean</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span>
 <span class="line"><span class="token punctuation">}</span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-<li>
-<p>【推荐】禁止使用容易混淆的非空断言 <a href="https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-confusing-non-null-assertion.md" target="_blank" rel="noopener noreferrer">@typescript-eslint/no-confusing-non-null-assertion</a></p>
-<p>在相等比较运算符（<code v-pre>==</code> 或 <code v-pre>===</code>）前使用非空断言（<code v-pre>!</code>）很容易和不等运算符（<code v-pre>!=</code> 或 <code v-pre>!==</code>）混淆，不建议使用。</p>
-<div class="language-typescript line-numbers-mode" data-highlighter="prismjs" data-ext="ts" data-title="ts"><pre v-pre class="language-typescript"><code><span class="line"><span class="token keyword">interface</span> <span class="token class-name">Foo</span> <span class="token punctuation">{</span></span>
+          <div class="line-numbers" aria-hidden="true" style="counter-reset: line-number 0">
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <p>
+          【推荐】禁止使用容易混淆的非空断言
+          <a
+            href="https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-confusing-non-null-assertion.md"
+            target="_blank"
+            rel="noopener noreferrer"
+            >@typescript-eslint/no-confusing-non-null-assertion</a
+          >
+        </p>
+        <p>
+          在相等比较运算符（<code v-pre>==</code> 或 <code v-pre>===</code>）前使用非空断言（<code
+            v-pre
+            >!</code
+          >）很容易和不等运算符（<code v-pre>!=</code> 或 <code v-pre>!==</code>）混淆，不建议使用。
+        </p>
+        <div
+          class="language-typescript line-numbers-mode"
+          data-highlighter="prismjs"
+          data-ext="ts"
+          data-title="ts"
+        >
+          <pre
+            v-pre
+            class="language-typescript"
+          ><code><span class="line"><span class="token keyword">interface</span> <span class="token class-name">Foo</span> <span class="token punctuation">{</span></span>
 <span class="line">  bar<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span></span>
 <span class="line">  num<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">;</span></span>
 <span class="line"><span class="token punctuation">}</span></span>
@@ -363,11 +980,47 @@
 <span class="line"><span class="token keyword">const</span> isEqualsBar <span class="token operator">=</span> foo<span class="token punctuation">.</span>bar <span class="token operator">==</span> <span class="token string">'hello'</span><span class="token punctuation">;</span></span>
 <span class="line"><span class="token keyword">const</span> isEqualsNum <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">+</span> foo<span class="token punctuation">.</span>num<span class="token operator">!</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">2</span><span class="token punctuation">;</span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-<li>
-<p>【推荐】避免定义空的接口类型 <a href="https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-empty-interface.md" target="_blank" rel="noopener noreferrer">@typescript-eslint/no-empty-interface</a></p>
-<p>空的接口类型等效于空对象，若它只继承另一个接口类型，那么该类型与被继承的类型等效。在代码中应减少定义无意义的接口类型。</p>
-<div class="language-typescript line-numbers-mode" data-highlighter="prismjs" data-ext="ts" data-title="ts"><pre v-pre class="language-typescript"><code><span class="line"><span class="token comment">// bad</span></span>
+          <div class="line-numbers" aria-hidden="true" style="counter-reset: line-number 0">
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <p>
+          【推荐】避免定义空的接口类型
+          <a
+            href="https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-empty-interface.md"
+            target="_blank"
+            rel="noopener noreferrer"
+            >@typescript-eslint/no-empty-interface</a
+          >
+        </p>
+        <p>
+          空的接口类型等效于空对象，若它只继承另一个接口类型，那么该类型与被继承的类型等效。在代码中应减少定义无意义的接口类型。
+        </p>
+        <div
+          class="language-typescript line-numbers-mode"
+          data-highlighter="prismjs"
+          data-ext="ts"
+          data-title="ts"
+        >
+          <pre
+            v-pre
+            class="language-typescript"
+          ><code><span class="line"><span class="token comment">// bad</span></span>
 <span class="line"><span class="token comment">// an empty interface</span></span>
 <span class="line"><span class="token class-name"><span class="token keyword">interface</span></span> Foo <span class="token punctuation">{</span><span class="token punctuation">}</span></span>
 <span class="line"></span>
@@ -392,11 +1045,55 @@
 <span class="line"><span class="token comment">// in this case the interface can be used as a replacement of a union type.</span></span>
 <span class="line"><span class="token keyword">interface</span> <span class="token class-name">Baz</span> <span class="token keyword">extends</span> <span class="token class-name">Foo</span><span class="token punctuation">,</span> Bar <span class="token punctuation">{</span><span class="token punctuation">}</span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-<li>
-<p>【推荐】初始化为 <code v-pre>number/string/boolean</code> 的变量或参数应避免显式的类型声明 <a href="https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-inferrable-types.md" target="_blank" rel="noopener noreferrer">@typescript-eslint/no-inferrable-types</a></p>
-<p>对于容易类型推倒出的变量、参数，再次的显式声明类型会带来代码冗余。</p>
-<div class="language-typescript line-numbers-mode" data-highlighter="prismjs" data-ext="ts" data-title="ts"><pre v-pre class="language-typescript"><code><span class="line"><span class="token comment">// bad</span></span>
+          <div class="line-numbers" aria-hidden="true" style="counter-reset: line-number 0">
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <p>
+          【推荐】初始化为 <code v-pre>number/string/boolean</code> 的变量或参数应避免显式的类型声明
+          <a
+            href="https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-inferrable-types.md"
+            target="_blank"
+            rel="noopener noreferrer"
+            >@typescript-eslint/no-inferrable-types</a
+          >
+        </p>
+        <p>对于容易类型推倒出的变量、参数，再次的显式声明类型会带来代码冗余。</p>
+        <div
+          class="language-typescript line-numbers-mode"
+          data-highlighter="prismjs"
+          data-ext="ts"
+          data-title="ts"
+        >
+          <pre
+            v-pre
+            class="language-typescript"
+          ><code><span class="line"><span class="token comment">// bad</span></span>
 <span class="line"><span class="token keyword">const</span> foo<span class="token operator">:</span> <span class="token builtin">number</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span></span>
 <span class="line"><span class="token keyword">const</span> bar<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span></span>
 <span class="line"><span class="token keyword">class</span> <span class="token class-name">Foo</span> <span class="token punctuation">{</span></span>
@@ -412,12 +1109,55 @@
 <span class="line"><span class="token punctuation">}</span></span>
 <span class="line"><span class="token keyword">function</span> <span class="token function">fn</span><span class="token punctuation">(</span>a <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">,</span> b <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-<li>
-<p>【强制】禁止无意义的 <code v-pre>void</code> 类型 <a href="https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-invalid-void-type.md" target="_blank" rel="noopener noreferrer">@typescript-eslint/no-invalid-void-type</a></p>
-<p>禁止在返回类型或泛型类型参数之外使用 <code v-pre>void</code> 类型，而且在返回类型中不应再与其他类型做联合或交叉。</p>
-<p><code v-pre>void</code> 类型代表「无」或函数「不返回任何值」，隐式未定义类型代表函数返回「未定义的值 undefined」，所以 <code v-pre>void</code> 类型无法与除了 <code v-pre>never</code> 外的其他类型做联合、交叉。</p>
-<div class="language-typescript line-numbers-mode" data-highlighter="prismjs" data-ext="ts" data-title="ts"><pre v-pre class="language-typescript"><code><span class="line"><span class="token comment">// bad</span></span>
+          <div class="line-numbers" aria-hidden="true" style="counter-reset: line-number 0">
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <p>
+          【强制】禁止无意义的 <code v-pre>void</code> 类型
+          <a
+            href="https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-invalid-void-type.md"
+            target="_blank"
+            rel="noopener noreferrer"
+            >@typescript-eslint/no-invalid-void-type</a
+          >
+        </p>
+        <p>
+          禁止在返回类型或泛型类型参数之外使用
+          <code v-pre>void</code> 类型，而且在返回类型中不应再与其他类型做联合或交叉。
+        </p>
+        <p>
+          <code v-pre>void</code>
+          类型代表「无」或函数「不返回任何值」，隐式未定义类型代表函数返回「未定义的值
+          undefined」，所以 <code v-pre>void</code> 类型无法与除了
+          <code v-pre>never</code> 外的其他类型做联合、交叉。
+        </p>
+        <div
+          class="language-typescript line-numbers-mode"
+          data-highlighter="prismjs"
+          data-ext="ts"
+          data-title="ts"
+        >
+          <pre
+            v-pre
+            class="language-typescript"
+          ><code><span class="line"><span class="token comment">// bad</span></span>
 <span class="line"><span class="token keyword">type</span> <span class="token class-name">PossibleValues</span> <span class="token operator">=</span> <span class="token builtin">string</span> <span class="token operator">|</span> <span class="token builtin">number</span> <span class="token operator">|</span> <span class="token keyword">void</span><span class="token punctuation">;</span></span>
 <span class="line"><span class="token keyword">type</span> <span class="token class-name">MorePossibleValues</span> <span class="token operator">=</span> <span class="token builtin">string</span> <span class="token operator">|</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token builtin">number</span> <span class="token operator">&amp;</span> <span class="token builtin">any</span><span class="token punctuation">)</span> <span class="token operator">|</span> <span class="token punctuation">(</span><span class="token builtin">string</span> <span class="token operator">|</span> <span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span>
 <span class="line"><span class="token keyword">function</span> <span class="token function">logSomething</span><span class="token punctuation">(</span>thing<span class="token operator">:</span> <span class="token keyword">void</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span></span>
@@ -438,11 +1178,57 @@
 <span class="line"><span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">promiseMeSomething</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token keyword">void</span><span class="token operator">></span> <span class="token punctuation">{</span><span class="token punctuation">}</span></span>
 <span class="line"><span class="token keyword">type</span> <span class="token class-name">stillVoid</span> <span class="token operator">=</span> <span class="token keyword">void</span> <span class="token operator">|</span> <span class="token builtin">never</span><span class="token punctuation">;</span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-<li>
-<p>【强制】禁止使用 <code v-pre>namespace</code> 来定义命名空间 <a href="https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-namespace.md" target="_blank" rel="noopener noreferrer">@typescript-eslint/no-namespace</a></p>
-<p>自定义 <code v-pre>TypeScript</code> 模块（<code v-pre>module</code>）和命名空间（<code v-pre>namespace</code>）已经不再推荐使用，首选 <code v-pre>ES2015</code> 的模块语法来导入导出。此规则仍然允许定义外部的模块或命名空间。</p>
-<div class="language-typescript line-numbers-mode" data-highlighter="prismjs" data-ext="ts" data-title="ts"><pre v-pre class="language-typescript"><code><span class="line"><span class="token comment">// bad</span></span>
+          <div class="line-numbers" aria-hidden="true" style="counter-reset: line-number 0">
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <p>
+          【强制】禁止使用 <code v-pre>namespace</code> 来定义命名空间
+          <a
+            href="https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-namespace.md"
+            target="_blank"
+            rel="noopener noreferrer"
+            >@typescript-eslint/no-namespace</a
+          >
+        </p>
+        <p>
+          自定义 <code v-pre>TypeScript</code> 模块（<code v-pre>module</code>）和命名空间（<code
+            v-pre
+            >namespace</code
+          >）已经不再推荐使用，首选
+          <code v-pre>ES2015</code> 的模块语法来导入导出。此规则仍然允许定义外部的模块或命名空间。
+        </p>
+        <div
+          class="language-typescript line-numbers-mode"
+          data-highlighter="prismjs"
+          data-ext="ts"
+          data-title="ts"
+        >
+          <pre
+            v-pre
+            class="language-typescript"
+          ><code><span class="line"><span class="token comment">// bad</span></span>
 <span class="line"><span class="token keyword">module</span> foo <span class="token punctuation">{</span><span class="token punctuation">}</span></span>
 <span class="line"><span class="token keyword">namespace</span> foo <span class="token punctuation">{</span><span class="token punctuation">}</span></span>
 <span class="line">  </span>
@@ -457,11 +1243,49 @@
 <span class="line">  <span class="token keyword">namespace</span> foo <span class="token punctuation">{</span><span class="token punctuation">}</span></span>
 <span class="line"><span class="token punctuation">}</span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-<li>
-<p>【强制】禁止在 <code v-pre>optional chaining</code> 之后使用 <code v-pre>non-null</code> 断言 <a href="https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-non-null-asserted-optional-chain.md" target="_blank" rel="noopener noreferrer">@typescript-eslint/no-non-null-asserted-optional-chain</a></p>
-<p><code v-pre>optional chaining</code> 被设计为返回 <code v-pre>undefined</code>，在之后使用非空断言是错误的，会引入严重的类型安全问题。</p>
-<div class="language-typescript line-numbers-mode" data-highlighter="prismjs" data-ext="ts" data-title="ts"><pre v-pre class="language-typescript"><code><span class="line"><span class="token comment">// bad</span></span>
+          <div class="line-numbers" aria-hidden="true" style="counter-reset: line-number 0">
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <p>
+          【强制】禁止在 <code v-pre>optional chaining</code> 之后使用
+          <code v-pre>non-null</code> 断言
+          <a
+            href="https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-non-null-asserted-optional-chain.md"
+            target="_blank"
+            rel="noopener noreferrer"
+            >@typescript-eslint/no-non-null-asserted-optional-chain</a
+          >
+        </p>
+        <p>
+          <code v-pre>optional chaining</code> 被设计为返回
+          <code v-pre>undefined</code>，在之后使用非空断言是错误的，会引入严重的类型安全问题。
+        </p>
+        <div
+          class="language-typescript line-numbers-mode"
+          data-highlighter="prismjs"
+          data-ext="ts"
+          data-title="ts"
+        >
+          <pre
+            v-pre
+            class="language-typescript"
+          ><code><span class="line"><span class="token comment">// bad</span></span>
 <span class="line">foo<span class="token operator">?.</span>bar<span class="token operator">!</span><span class="token punctuation">;</span></span>
 <span class="line">foo<span class="token operator">?.</span>bar<span class="token operator">!</span><span class="token punctuation">.</span>baz<span class="token punctuation">;</span></span>
 <span class="line">foo<span class="token operator">?.</span><span class="token function">bar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">!</span><span class="token punctuation">;</span></span>
@@ -480,20 +1304,88 @@
 <span class="line">foo<span class="token operator">?.</span>bar<span class="token operator">!</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span>
 <span class="line">foo<span class="token operator">?.</span>bar<span class="token operator">!</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>baz<span class="token punctuation">;</span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-<li>
-<p>【推荐】使用 <code v-pre>ES2015 import</code> 语法引入模块 <a href="https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-require-imports.md" target="_blank" rel="noopener noreferrer">@typescript-eslint/no-require-imports</a></p>
-<div class="language-typescript line-numbers-mode" data-highlighter="prismjs" data-ext="ts" data-title="ts"><pre v-pre class="language-typescript"><code><span class="line"><span class="token comment">// bad</span></span>
+          <div class="line-numbers" aria-hidden="true" style="counter-reset: line-number 0">
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <p>
+          【推荐】使用 <code v-pre>ES2015 import</code> 语法引入模块
+          <a
+            href="https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-require-imports.md"
+            target="_blank"
+            rel="noopener noreferrer"
+            >@typescript-eslint/no-require-imports</a
+          >
+        </p>
+        <div
+          class="language-typescript line-numbers-mode"
+          data-highlighter="prismjs"
+          data-ext="ts"
+          data-title="ts"
+        >
+          <pre
+            v-pre
+            class="language-typescript"
+          ><code><span class="line"><span class="token comment">// bad</span></span>
 <span class="line"><span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token keyword">require</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span>
 <span class="line"></span>
 <span class="line"><span class="token comment">// good</span></span>
 <span class="line"><span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> fs <span class="token keyword">from</span> <span class="token string">'fs'</span><span class="token punctuation">;</span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-<li>
-<p>【推荐】不建议将 <code v-pre>this</code> 赋值给其他变量 <a href="https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-this-alias.md" target="_blank" rel="noopener noreferrer">@typescript-eslint/no-this-alias</a></p>
-<p>通过变量赋值为 <code v-pre>this</code> 的方式来管理函数作用域不是我们推荐的最佳实践，应使用箭头函数保留函数作用域。此规则中允许对 this 的解构赋值。</p>
-<div class="language-typescript line-numbers-mode" data-highlighter="prismjs" data-ext="ts" data-title="ts"><pre v-pre class="language-typescript"><code><span class="line"><span class="token comment">// bad</span></span>
+          <div class="line-numbers" aria-hidden="true" style="counter-reset: line-number 0">
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <p>
+          【推荐】不建议将 <code v-pre>this</code> 赋值给其他变量
+          <a
+            href="https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-this-alias.md"
+            target="_blank"
+            rel="noopener noreferrer"
+            >@typescript-eslint/no-this-alias</a
+          >
+        </p>
+        <p>
+          通过变量赋值为
+          <code v-pre>this</code>
+          的方式来管理函数作用域不是我们推荐的最佳实践，应使用箭头函数保留函数作用域。此规则中允许对
+          this 的解构赋值。
+        </p>
+        <div
+          class="language-typescript line-numbers-mode"
+          data-highlighter="prismjs"
+          data-ext="ts"
+          data-title="ts"
+        >
+          <pre
+            v-pre
+            class="language-typescript"
+          ><code><span class="line"><span class="token comment">// bad</span></span>
 <span class="line"><span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span></span>
 <span class="line">  <span class="token keyword">const</span> self <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span></span>
 <span class="line">  <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span></span>
@@ -508,10 +1400,44 @@
 <span class="line">  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span>
 <span class="line"><span class="token punctuation">}</span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-<li>
-<p>【推荐】当变量的值与类型声明相等时，优先使用 <code v-pre>as const</code> <a href="https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-as-const.md" target="_blank" rel="noopener noreferrer">@typescript-eslint/prefer-as-const</a></p>
-<div class="language-typescript line-numbers-mode" data-highlighter="prismjs" data-ext="ts" data-title="ts"><pre v-pre class="language-typescript"><code><span class="line"><span class="token comment">// bad</span></span>
+          <div class="line-numbers" aria-hidden="true" style="counter-reset: line-number 0">
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <p>
+          【推荐】当变量的值与类型声明相等时，优先使用 <code v-pre>as const</code>
+          <a
+            href="https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-as-const.md"
+            target="_blank"
+            rel="noopener noreferrer"
+            >@typescript-eslint/prefer-as-const</a
+          >
+        </p>
+        <div
+          class="language-typescript line-numbers-mode"
+          data-highlighter="prismjs"
+          data-ext="ts"
+          data-title="ts"
+        >
+          <pre
+            v-pre
+            class="language-typescript"
+          ><code><span class="line"><span class="token comment">// bad</span></span>
 <span class="line"><span class="token keyword">let</span> bar<span class="token operator">:</span> <span class="token number">2</span> <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span></span>
 <span class="line"><span class="token keyword">let</span> foo <span class="token operator">=</span> <span class="token operator">&lt;</span><span class="token string">'bar'</span><span class="token operator">></span><span class="token string">'bar'</span><span class="token punctuation">;</span></span>
 <span class="line"><span class="token keyword">let</span> foo <span class="token operator">=</span> <span class="token punctuation">{</span> bar<span class="token operator">:</span> <span class="token string">'baz'</span> <span class="token keyword">as</span> <span class="token string">'baz'</span> <span class="token punctuation">}</span><span class="token punctuation">;</span></span>
@@ -524,31 +1450,120 @@
 <span class="line"><span class="token keyword">let</span> foo <span class="token operator">=</span> <span class="token operator">&lt;</span><span class="token builtin">string</span><span class="token operator">></span><span class="token string">'bar'</span><span class="token punctuation">;</span></span>
 <span class="line"><span class="token keyword">let</span> foo <span class="token operator">=</span> <span class="token punctuation">{</span> bar<span class="token operator">:</span> <span class="token string">'baz'</span> <span class="token punctuation">}</span><span class="token punctuation">;</span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-<li>
-<p>【强制】禁止使用 <code v-pre>module</code> 来定义命名空间 <a href="https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-namespace-keyword.md" target="_blank" rel="noopener noreferrer">@typescript-eslint/prefer-namespace-keyword</a></p>
-<p><code v-pre>module</code> 已经成为 JS 语言的关键字，应避免 <code v-pre>TypeScript</code> 模块与 <code v-pre>ES2015</code> 模块混淆。<code v-pre>declare module</code> 不做限制。</p>
-<div class="language-typescript line-numbers-mode" data-highlighter="prismjs" data-ext="ts" data-title="ts"><pre v-pre class="language-typescript"><code><span class="line"><span class="token comment">// bad</span></span>
+          <div class="line-numbers" aria-hidden="true" style="counter-reset: line-number 0">
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <p>
+          【强制】禁止使用 <code v-pre>module</code> 来定义命名空间
+          <a
+            href="https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-namespace-keyword.md"
+            target="_blank"
+            rel="noopener noreferrer"
+            >@typescript-eslint/prefer-namespace-keyword</a
+          >
+        </p>
+        <p>
+          <code v-pre>module</code> 已经成为 JS 语言的关键字，应避免
+          <code v-pre>TypeScript</code> 模块与 <code v-pre>ES2015</code> 模块混淆。<code v-pre
+            >declare module</code
+          >
+          不做限制。
+        </p>
+        <div
+          class="language-typescript line-numbers-mode"
+          data-highlighter="prismjs"
+          data-ext="ts"
+          data-title="ts"
+        >
+          <pre
+            v-pre
+            class="language-typescript"
+          ><code><span class="line"><span class="token comment">// bad</span></span>
 <span class="line"><span class="token keyword">module</span> Foo <span class="token punctuation">{</span><span class="token punctuation">}</span></span>
 <span class="line"></span>
 <span class="line"><span class="token comment">// good</span></span>
 <span class="line"><span class="token keyword">declare</span> <span class="token keyword">module</span> Foo <span class="token punctuation">{</span><span class="token punctuation">}</span></span>
 <span class="line"><span class="token keyword">declare</span> <span class="token keyword">namespace</span> Foo <span class="token punctuation">{</span><span class="token punctuation">}</span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-<li>
-<p>【强制】字符串字面量使用单引号包裹 <a href="https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/quotes.md" target="_blank" rel="noopener noreferrer">@typescript-eslint/quotes</a></p>
-<div class="language-typescript line-numbers-mode" data-highlighter="prismjs" data-ext="ts" data-title="ts"><pre v-pre class="language-typescript"><code><span class="line"><span class="token comment">// bad</span></span>
+          <div class="line-numbers" aria-hidden="true" style="counter-reset: line-number 0">
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <p>
+          【强制】字符串字面量使用单引号包裹
+          <a
+            href="https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/quotes.md"
+            target="_blank"
+            rel="noopener noreferrer"
+            >@typescript-eslint/quotes</a
+          >
+        </p>
+        <div
+          class="language-typescript line-numbers-mode"
+          data-highlighter="prismjs"
+          data-ext="ts"
+          data-title="ts"
+        >
+          <pre
+            v-pre
+            class="language-typescript"
+          ><code><span class="line"><span class="token comment">// bad</span></span>
 <span class="line"><span class="token keyword">const</span> foo <span class="token operator">=</span> <span class="token string">"bar"</span><span class="token punctuation">;</span></span>
 <span class="line"></span>
 <span class="line"><span class="token comment">// good</span></span>
 <span class="line"><span class="token keyword">const</span> foo <span class="token operator">=</span> <span class="token string">'bar'</span><span class="token punctuation">;</span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-<li>
-<p>【推荐】 加号 <code v-pre>+</code> 连接的两侧同为数字或同为字符串 <a href="https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/restrict-plus-operands.md" target="_blank" rel="noopener noreferrer">@typescript-eslint/restrict-plus-operands</a></p>
-<p>数字与字符串的连接往往会导致一些预期外的问题。</p>
-<div class="language-typescript line-numbers-mode" data-highlighter="prismjs" data-ext="ts" data-title="ts"><pre v-pre class="language-typescript"><code><span class="line"><span class="token comment">// bad</span></span>
+          <div class="line-numbers" aria-hidden="true" style="counter-reset: line-number 0">
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <p>
+          【推荐】 加号 <code v-pre>+</code> 连接的两侧同为数字或同为字符串
+          <a
+            href="https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/restrict-plus-operands.md"
+            target="_blank"
+            rel="noopener noreferrer"
+            >@typescript-eslint/restrict-plus-operands</a
+          >
+        </p>
+        <p>数字与字符串的连接往往会导致一些预期外的问题。</p>
+        <div
+          class="language-typescript line-numbers-mode"
+          data-highlighter="prismjs"
+          data-ext="ts"
+          data-title="ts"
+        >
+          <pre
+            v-pre
+            class="language-typescript"
+          ><code><span class="line"><span class="token comment">// bad</span></span>
 <span class="line"><span class="token keyword">var</span> foo <span class="token operator">=</span> <span class="token string">'5.5'</span> <span class="token operator">+</span> <span class="token number">5</span><span class="token punctuation">;</span></span>
 <span class="line"><span class="token keyword">var</span> foo <span class="token operator">=</span> <span class="token number">1n</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span></span>
 <span class="line"></span>
@@ -556,25 +1571,80 @@
 <span class="line"><span class="token keyword">var</span> foo <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span><span class="token string">'5.5'</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">10</span><span class="token punctuation">;</span></span>
 <span class="line"><span class="token keyword">var</span> foo <span class="token operator">=</span> <span class="token number">1n</span> <span class="token operator">+</span> <span class="token number">1n</span><span class="token punctuation">;</span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-<li>
-<p>【强制】禁止使用三斜杠语法 <code v-pre>///</code> 导入文件 <a href="https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/triple-slash-reference.md" target="_blank" rel="noopener noreferrer">@typescript-eslint/triple-slash-reference</a></p>
-<p>三斜杠语法已经被废弃，声明文件（d.ts）以外禁止使用。</p>
-<div class="language-typescript line-numbers-mode" data-highlighter="prismjs" data-ext="ts" data-title="ts"><pre v-pre class="language-typescript"><code><span class="line"><span class="token comment">// bad</span></span>
+          <div class="line-numbers" aria-hidden="true" style="counter-reset: line-number 0">
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <p>
+          【强制】禁止使用三斜杠语法 <code v-pre>///</code> 导入文件
+          <a
+            href="https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/triple-slash-reference.md"
+            target="_blank"
+            rel="noopener noreferrer"
+            >@typescript-eslint/triple-slash-reference</a
+          >
+        </p>
+        <p>三斜杠语法已经被废弃，声明文件（d.ts）以外禁止使用。</p>
+        <div
+          class="language-typescript line-numbers-mode"
+          data-highlighter="prismjs"
+          data-ext="ts"
+          data-title="ts"
+        >
+          <pre
+            v-pre
+            class="language-typescript"
+          ><code><span class="line"><span class="token comment">// bad</span></span>
 <span class="line"><span class="token comment">/// &lt;reference path="./my-module" /></span></span>
 <span class="line"></span>
 <span class="line"><span class="token comment">// good</span></span>
 <span class="line"><span class="token keyword">import</span> myModule <span class="token keyword">from</span> <span class="token string">'./my-module'</span><span class="token punctuation">;</span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-<li>
-<p>【强制】类型声明时应正确添加空格间距 <a href="https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/type-annotation-spacing.md" target="_blank" rel="noopener noreferrer">@typescript-eslint/type-annotation-spacing</a></p>
-<p><code v-pre>TypeScript</code> 类型声明周围添加合适的间距可以有效的提升代码可读性，我们约定：</p>
-<ol>
-<li>冒号前无空格，冒号后保留一个空格</li>
-<li>箭头前后都保留一个空格</li>
-</ol>
-<div class="language-typescript line-numbers-mode" data-highlighter="prismjs" data-ext="ts" data-title="ts"><pre v-pre class="language-typescript"><code><span class="line"><span class="token comment">// bad</span></span>
+          <div class="line-numbers" aria-hidden="true" style="counter-reset: line-number 0">
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <p>
+          【强制】类型声明时应正确添加空格间距
+          <a
+            href="https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/type-annotation-spacing.md"
+            target="_blank"
+            rel="noopener noreferrer"
+            >@typescript-eslint/type-annotation-spacing</a
+          >
+        </p>
+        <p>
+          <code v-pre>TypeScript</code>
+          类型声明周围添加合适的间距可以有效的提升代码可读性，我们约定：
+        </p>
+        <ol>
+          <li>冒号前无空格，冒号后保留一个空格</li>
+          <li>箭头前后都保留一个空格</li>
+        </ol>
+        <div
+          class="language-typescript line-numbers-mode"
+          data-highlighter="prismjs"
+          data-ext="ts"
+          data-title="ts"
+        >
+          <pre
+            v-pre
+            class="language-typescript"
+          ><code><span class="line"><span class="token comment">// bad</span></span>
 <span class="line"><span class="token keyword">let</span> foo<span class="token operator">:</span><span class="token builtin">string</span> <span class="token operator">=</span> <span class="token string">'bar'</span><span class="token punctuation">;</span></span>
 <span class="line"><span class="token keyword">let</span> foo <span class="token operator">:</span><span class="token builtin">string</span> <span class="token operator">=</span> <span class="token string">'bar'</span><span class="token punctuation">;</span></span>
 <span class="line"><span class="token keyword">let</span> foo <span class="token operator">:</span> <span class="token builtin">string</span> <span class="token operator">=</span> <span class="token string">'bar'</span><span class="token punctuation">;</span></span>
@@ -608,10 +1678,63 @@
 <span class="line"></span>
 <span class="line"><span class="token keyword">type</span> <span class="token class-name">Foo</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-<li>
-<p>【强制】<code v-pre>interface</code> 和 <code v-pre>type</code> 定义时必须声明成员的类型 <a href="https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/typedef.md" target="_blank" rel="noopener noreferrer">@typescript-eslint/typedef</a></p>
-<div class="language-typescript line-numbers-mode" data-highlighter="prismjs" data-ext="ts" data-title="ts"><pre v-pre class="language-typescript"><code><span class="line"><span class="token comment">// bad</span></span>
+          <div class="line-numbers" aria-hidden="true" style="counter-reset: line-number 0">
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <p>
+          【强制】<code v-pre>interface</code> 和 <code v-pre>type</code> 定义时必须声明成员的类型
+          <a
+            href="https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/typedef.md"
+            target="_blank"
+            rel="noopener noreferrer"
+            >@typescript-eslint/typedef</a
+          >
+        </p>
+        <div
+          class="language-typescript line-numbers-mode"
+          data-highlighter="prismjs"
+          data-ext="ts"
+          data-title="ts"
+        >
+          <pre
+            v-pre
+            class="language-typescript"
+          ><code><span class="line"><span class="token comment">// bad</span></span>
 <span class="line"><span class="token keyword">type</span> <span class="token class-name">Members</span> <span class="token operator">=</span> <span class="token punctuation">{</span></span>
 <span class="line">  member<span class="token punctuation">;</span></span>
 <span class="line">  otherMember<span class="token punctuation">;</span></span>
@@ -623,10 +1746,41 @@
 <span class="line">  otherMember<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span></span>
 <span class="line"><span class="token punctuation">}</span><span class="token punctuation">;</span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-<li>
-<p>【推荐】定义函数时，优先使用参数的联合类型而不是函数的类型重载 <a href="https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/unified-signatures.md" target="_blank" rel="noopener noreferrer">@typescript-eslint/unified-signatures</a></p>
-<div class="language-typescript line-numbers-mode" data-highlighter="prismjs" data-ext="ts" data-title="ts"><pre v-pre class="language-typescript"><code><span class="line"><span class="token comment">// bad</span></span>
+          <div class="line-numbers" aria-hidden="true" style="counter-reset: line-number 0">
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <p>
+          【推荐】定义函数时，优先使用参数的联合类型而不是函数的类型重载
+          <a
+            href="https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/unified-signatures.md"
+            target="_blank"
+            rel="noopener noreferrer"
+            >@typescript-eslint/unified-signatures</a
+          >
+        </p>
+        <div
+          class="language-typescript line-numbers-mode"
+          data-highlighter="prismjs"
+          data-ext="ts"
+          data-title="ts"
+        >
+          <pre
+            v-pre
+            class="language-typescript"
+          ><code><span class="line"><span class="token comment">// bad</span></span>
 <span class="line"><span class="token keyword">function</span> <span class="token function">f</span><span class="token punctuation">(</span>x<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span><span class="token punctuation">;</span></span>
 <span class="line"><span class="token keyword">function</span> <span class="token function">f</span><span class="token punctuation">(</span>x<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span><span class="token punctuation">;</span></span>
 <span class="line"><span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span><span class="token punctuation">;</span></span>
@@ -636,8 +1790,19 @@
 <span class="line"><span class="token keyword">function</span> <span class="token function">f</span><span class="token punctuation">(</span>x<span class="token operator">:</span> <span class="token builtin">number</span> <span class="token operator">|</span> <span class="token builtin">string</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span><span class="token punctuation">;</span></span>
 <span class="line"><span class="token keyword">function</span> <span class="token function">f</span><span class="token punctuation">(</span>x<span class="token operator">?</span><span class="token operator">:</span> <span class="token operator">...</span><span class="token builtin">number</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span><span class="token punctuation">;</span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-</ul>
-</div></template>
-
-
+          <div class="line-numbers" aria-hidden="true" style="counter-reset: line-number 0">
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</template>

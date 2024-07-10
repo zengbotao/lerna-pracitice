@@ -4,7 +4,6 @@
 `TypeScript` 是微软开发的一款开源编程语言，它是 `JavaScript` 的超集，因此其编码规约和配套 `Lint` 工具也与[JavaScript 编码规范](./javascript.md)一脉相承。
 :::
 
-
 ## 编码风格
 
 ![typescript style](./img//typescript.svg)
@@ -21,7 +20,7 @@
     export function bar(): void;
     export function foo(sn: string | number): void;
   }
-  
+
   // good
   declare namespace Foo {
     export function foo(s: string): void;
@@ -39,21 +38,21 @@
     bar(): void;
     foo(sn: string | number): void;
   };
-  
+
   interface Foo {
     foo(s: string): void;
     foo(n: number): void;
     bar(): void;
     foo(sn: string | number): void;
   }
-  
+
   class Foo {
     foo(s: string): void;
     foo(n: number): void;
     bar(): void {}
     foo(sn: string | number): void {}
   }
-  
+
   // good
   type Foo = {
     foo(s: string): void;
@@ -61,14 +60,14 @@
     foo(sn: string | number): void;
     bar(): void;
   };
-  
+
   interface Foo {
     foo(s: string): void;
     foo(n: number): void;
     foo(sn: string | number): void;
     bar(): void;
   }
-  
+
   class Foo {
     foo(s: string): void;
     foo(n: number): void;
@@ -83,7 +82,7 @@
   export function foo(n: number): void;
   export function bar(): void;
   export function foo(sn: string | number): void;
-  
+
   // good
   export function bar(): void;
   export function foo(s: string): void;
@@ -105,7 +104,7 @@
   const d: Array<MyType> = ['a', 'b'];
   const e: Array<string> = ['a', 'b'];
   const f: ReadonlyArray<string> = ['a', 'b'];
-  
+
   // good
   const a: Array<string | number> = ['a', 1];
   const b: Array<{ prop: string }> = [{ prop: 'a' }];
@@ -132,14 +131,14 @@
   // bad
   // @ts-expect-error
   console.log('my code');
-  
+
   // @ts-ignore
   console.log('my code');
-  
+
   // good
   // @ts-expect-error: Unreachable code here
   console.log('my code');
-  
+
   // @ts-ignore: It's ok to ignore this compile error
   console.log('my code');
   ```
@@ -175,7 +174,7 @@
       return 'hello world';
     }
   }
-  
+
   // good
   class Mx {
     public readonly myField1 = 1;
@@ -196,12 +195,10 @@
 
   > `TypeScript 3.4` 中引入的 `const` 断言在本规则中不受约束，`let x = 'hello' as const;` 和 `let x = <const>'hello';` 都是允许的。
 
-  
-
   ```typescript
   // bad
   const foo = <string>'bar';
-  
+
   // good
   const foo = 'bar' as string;
   ```
@@ -210,7 +207,7 @@
   // bad
   const x = { ... } as T;
   const y = { ... } as object;
-  
+
   // good
   const x: T = { ... };
   const y = { ... } as any;
@@ -224,7 +221,7 @@
   ```typescript
   // bad
   type T = { x: number };
-  
+
   // good
   type T = string;
   type Foo = string | {};
@@ -254,7 +251,7 @@
       console.log(value);
     }
   }
-  
+
   // good
   class Foo {
     private static foo = 'foo';
@@ -271,7 +268,6 @@
       console.log(value);
     }
   }
-  
   ```
 
 - 【强制】`interface/type` 类型中使用一致的成员分隔符 `;` [@typescript-eslint/member-delimiter-style](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/member-delimiter-style.md)
@@ -279,37 +275,36 @@
   ```typescript
   // bad: comma style(JSON style)
   interface Foo {
-    name: string,
-    greet(): void,
+    name: string;
+    greet(): void;
   }
-  
+
   type Bar = {
-    name: string,
-    greet(): void,
+    name: string;
+    greet(): void;
   };
-  
+
   // bad: line break style
   interface Foo {
-    name: string
-    greet(): void
+    name: string;
+    greet(): void;
   }
-  
+
   type Bar = {
-    name: string
-    greet(): void
+    name: string;
+    greet(): void;
   };
-  
+
   // good
   interface Foo {
     name: string;
     greet(): void;
   }
-  
+
   type Bar = {
     name: string;
     greet(): void;
   };
-  
   ```
 
 - 【推荐】类的成员应按照固定的先后顺序排列 [@typescript-eslint/member-ordering](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/member-ordering.md)
@@ -361,7 +356,7 @@
     func(arg: string): void;
     func(arg: boolean): void;
   }
-  
+
   // good
   interface T1 {
     func: (arg: string) => number;
@@ -371,9 +366,7 @@
   };
   // 属性方法实现重载
   interface T3 {
-    func: ((arg: number) => void) &
-      ((arg: string) => void) &
-      ((arg: boolean) => void);
+    func: ((arg: number) => void) & ((arg: string) => void) & ((arg: boolean) => void);
   }
   ```
 
@@ -395,7 +388,7 @@
   // good
   const foo: Foo = getFoo();
   const isEqualsBar = foo.bar == 'hello';
-  const isEqualsNum = (1 + foo.num!) == 2;
+  const isEqualsNum = 1 + foo.num! == 2;
   ```
 
 - 【推荐】避免定义空的接口类型 [@typescript-eslint/no-empty-interface](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-empty-interface.md)
@@ -406,24 +399,24 @@
   // bad
   // an empty interface
   interface Foo {}
-  
+
   // an interface with only one supertype (Bar === Foo)
   interface Bar extends Foo {}
-  
+
   // an interface with an empty list of supertypes
   interface Baz {}
-  
+
   // good
   // an interface with any number of members
   interface Foo {
     name: string;
   }
-  
+
   // same as above
   interface Bar {
     age: number;
   }
-  
+
   // an interface with more than one supertype
   // in this case the interface can be used as a replacement of a union type.
   interface Baz extends Foo, Bar {}
@@ -441,7 +434,7 @@
     prop: number = 5;
   }
   function fn(a: number = 5, b: boolean = true) {}
-  
+
   // good
   const foo = 1;
   const bar = '';
@@ -471,7 +464,7 @@
   class MyClass {
     private readonly propName: void;
   }
-  
+
   // good
   type NoOp = () => void;
   function noop(): void {}
@@ -488,7 +481,7 @@
   // bad
   module foo {}
   namespace foo {}
-    
+
   // good
   declare module 'foo' {}
   declare module foo {}
@@ -512,7 +505,7 @@
   foo?.bar()!;
   foo?.bar!();
   foo?.bar!().baz;
-  
+
   // good
   foo?.bar;
   (foo?.bar).baz;
@@ -531,7 +524,7 @@
   ```typescript
   // bad
   const fs = require('fs');
-  
+
   // good
   import * as fs from 'fs';
   ```
@@ -548,7 +541,7 @@
       self.doWork();
     });
   }
-  
+
   // good
   function foo() {
     setTimeout(() => {
@@ -564,7 +557,7 @@
   let bar: 2 = 2;
   let foo = <'bar'>'bar';
   let foo = { bar: 'baz' as 'baz' };
-  
+
   // good
   let foo = 'bar';
   let foo = 'bar' as const;
@@ -581,7 +574,7 @@
   ```typescript
   // bad
   module Foo {}
-  
+
   // good
   declare module Foo {}
   declare namespace Foo {}
@@ -591,8 +584,8 @@
 
   ```typescript
   // bad
-  const foo = "bar";
-  
+  const foo = 'bar';
+
   // good
   const foo = 'bar';
   ```
@@ -618,7 +611,7 @@
   ```typescript
   // bad
   /// <reference path="./my-module" />
-  
+
   // good
   import myModule from './my-module';
   ```
@@ -632,37 +625,37 @@
 
   ```typescript
   // bad
-  let foo:string = 'bar';
-  let foo :string = 'bar';
-  let foo : string = 'bar';
-  
-  function foo():string {}
-  function foo() :string {}
-  function foo() : string {}
-  
-  class Foo {
-    name:string;
-  }
-  
-  class Foo {
-    name :string;
-  }
-  
-  class Foo {
-    name : string;
-  }
-  
-  type Foo = ()=> {};
-  
-  // good
   let foo: string = 'bar';
-  
+  let foo: string = 'bar';
+  let foo: string = 'bar';
+
   function foo(): string {}
-  
+  function foo(): string {}
+  function foo(): string {}
+
   class Foo {
     name: string;
   }
-  
+
+  class Foo {
+    name: string;
+  }
+
+  class Foo {
+    name: string;
+  }
+
+  type Foo = () => {};
+
+  // good
+  let foo: string = 'bar';
+
+  function foo(): string {}
+
+  class Foo {
+    name: string;
+  }
+
   type Foo = () => {};
   ```
 
@@ -674,7 +667,7 @@
     member;
     otherMember;
   };
-  
+
   // good
   type Members = {
     member: boolean;
@@ -690,7 +683,7 @@
   function f(x: string): void;
   f(): void;
   f(...x: number[]): void;
-  
+
   // good
   function f(x: number | string): void;
   function f(x?: ...number[]): void;

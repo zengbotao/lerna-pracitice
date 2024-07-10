@@ -1,11 +1,31 @@
-<template><div><h1 id="html-编码规范" tabindex="-1"><a class="header-anchor" href="#html-编码规范"><span>HTML 编码规范</span></a></h1>
-<h2 id="_1-文档" tabindex="-1"><a class="header-anchor" href="#_1-文档"><span>1. 文档</span></a></h2>
-<h3 id="_1-1-文档类型" tabindex="-1"><a class="header-anchor" href="#_1-1-文档类型"><span>1.1. 文档类型</span></a></h3>
-<ul>
-<li>
-<p>1.1.1.【强制】使用 HTML5 DOCTYPE。</p>
-<p>在 <code v-pre>HTML</code> 文档的开头使用 <code v-pre>&lt;!DOCTYPE html&gt;</code> 来声明文档的 <code v-pre>HTML</code> 版本。</p>
-<div class="language-html line-numbers-mode" data-highlighter="prismjs" data-ext="html" data-title="html"><pre v-pre class="language-html"><code><span class="line"><span class="token comment">&lt;!-- bad - 非 HTML 5 DOCTYPE --></span></span>
+<template>
+  <div>
+    <h1 id="html-编码规范" tabindex="-1">
+      <a class="header-anchor" href="#html-编码规范"><span>HTML 编码规范</span></a>
+    </h1>
+    <h2 id="_1-文档" tabindex="-1">
+      <a class="header-anchor" href="#_1-文档"><span>1. 文档</span></a>
+    </h2>
+    <h3 id="_1-1-文档类型" tabindex="-1">
+      <a class="header-anchor" href="#_1-1-文档类型"><span>1.1. 文档类型</span></a>
+    </h3>
+    <ul>
+      <li>
+        <p>1.1.1.【强制】使用 HTML5 DOCTYPE。</p>
+        <p>
+          在 <code v-pre>HTML</code> 文档的开头使用
+          <code v-pre>&lt;!DOCTYPE html&gt;</code> 来声明文档的 <code v-pre>HTML</code> 版本。
+        </p>
+        <div
+          class="language-html line-numbers-mode"
+          data-highlighter="prismjs"
+          data-ext="html"
+          data-title="html"
+        >
+          <pre
+            v-pre
+            class="language-html"
+          ><code><span class="line"><span class="token comment">&lt;!-- bad - 非 HTML 5 DOCTYPE --></span></span>
 <span class="line"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span> <span class="token name">PUBLIC</span> <span class="token string">"-//W3C//DTD XHTML 1.0 Transitional//EN"</span> <span class="token string">"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"</span><span class="token punctuation">></span></span></span>
 <span class="line"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></span>
 <span class="line"></span>
@@ -13,48 +33,178 @@
 <span class="line"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span></span>
 <span class="line"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-</ul>
-<h3 id="_1-2-语言" tabindex="-1"><a class="header-anchor" href="#_1-2-语言"><span>1.2. 语言</span></a></h3>
-<ul>
-<li>
-<p>1.2.1.【推荐】指定 <code v-pre>html</code> 标签上的 <code v-pre>lang</code> 属性。</p>
-<p><a href="http://w3c.github.io/html/semantics.html#the-html-element" target="_blank" rel="noopener noreferrer">HTML5 规范</a>中提到：</p>
-<blockquote>
-<p>推荐开发者在 <code v-pre>html</code> 元素上指定 <code v-pre>lang</code> 属性，以指出文档的语言。这有助于读屏、翻译等工具的工作。</p>
-</blockquote>
-<p><code v-pre>lang</code> 属性的值由 <code v-pre>language-subtags</code> 组成，在 <a href="http://www.ietf.org/rfc/bcp/bcp47.txt#" target="_blank" rel="noopener noreferrer">BCP47</a> 中定义，<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Global_attributes/lang" target="_blank" rel="noopener noreferrer">了解更多</a>。</p>
-<div class="language-html line-numbers-mode" data-highlighter="prismjs" data-ext="html" data-title="html"><pre v-pre class="language-html"><code><span class="line"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>zh-CN<span class="token punctuation">"</span></span><span class="token punctuation">></span></span></span>
+          <div class="line-numbers" aria-hidden="true" style="counter-reset: line-number 0">
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <h3 id="_1-2-语言" tabindex="-1">
+      <a class="header-anchor" href="#_1-2-语言"><span>1.2. 语言</span></a>
+    </h3>
+    <ul>
+      <li>
+        <p>1.2.1.【推荐】指定 <code v-pre>html</code> 标签上的 <code v-pre>lang</code> 属性。</p>
+        <p>
+          <a
+            href="http://w3c.github.io/html/semantics.html#the-html-element"
+            target="_blank"
+            rel="noopener noreferrer"
+            >HTML5 规范</a
+          >中提到：
+        </p>
+        <blockquote>
+          <p>
+            推荐开发者在 <code v-pre>html</code> 元素上指定
+            <code v-pre>lang</code> 属性，以指出文档的语言。这有助于读屏、翻译等工具的工作。
+          </p>
+        </blockquote>
+        <p>
+          <code v-pre>lang</code> 属性的值由 <code v-pre>language-subtags</code> 组成，在
+          <a href="http://www.ietf.org/rfc/bcp/bcp47.txt#" target="_blank" rel="noopener noreferrer"
+            >BCP47</a
+          >
+          中定义，<a
+            href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Global_attributes/lang"
+            target="_blank"
+            rel="noopener noreferrer"
+            >了解更多</a
+          >。
+        </p>
+        <div
+          class="language-html line-numbers-mode"
+          data-highlighter="prismjs"
+          data-ext="html"
+          data-title="html"
+        >
+          <pre
+            v-pre
+            class="language-html"
+          ><code><span class="line"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>zh-CN<span class="token punctuation">"</span></span><span class="token punctuation">></span></span></span>
 <span class="line"> <span class="token comment">&lt;!-- ... --></span></span>
 <span class="line"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-</ul>
-<h3 id="_1-3-元数据" tabindex="-1"><a class="header-anchor" href="#_1-3-元数据"><span>1.3. 元数据</span></a></h3>
-<ul>
-<li>
-<p>1.3.1.【推荐】使用 <code v-pre>UTF-8</code> 字符编码。</p>
-<p>声明一个明确的字符编码，可以让浏览器更快速高效地确定适合网页内容的渲染方式。</p>
-<p>由于历史原因，不同浏览器采用了不同的字符编码。但对于新业务，如无特殊要求，统一使用 UTF-8 字符编码，以便统一。</p>
-<p>在 HTML 中使用 <code v-pre>&lt;meta charset=&quot;utf-8&quot; /&gt;</code> 声明文档的编码方式：</p>
-<div class="language-html line-numbers-mode" data-highlighter="prismjs" data-ext="html" data-title="html"><pre v-pre class="language-html"><code><span class="line"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span></span>
+          <div class="line-numbers" aria-hidden="true" style="counter-reset: line-number 0">
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <h3 id="_1-3-元数据" tabindex="-1">
+      <a class="header-anchor" href="#_1-3-元数据"><span>1.3. 元数据</span></a>
+    </h3>
+    <ul>
+      <li>
+        <p>1.3.1.【推荐】使用 <code v-pre>UTF-8</code> 字符编码。</p>
+        <p>声明一个明确的字符编码，可以让浏览器更快速高效地确定适合网页内容的渲染方式。</p>
+        <p>
+          由于历史原因，不同浏览器采用了不同的字符编码。但对于新业务，如无特殊要求，统一使用 UTF-8
+          字符编码，以便统一。
+        </p>
+        <p>
+          在 HTML 中使用
+          <code v-pre>&lt;meta charset=&quot;utf-8&quot; /&gt;</code> 声明文档的编码方式：
+        </p>
+        <div
+          class="language-html line-numbers-mode"
+          data-highlighter="prismjs"
+          data-ext="html"
+          data-title="html"
+        >
+          <pre
+            v-pre
+            class="language-html"
+          ><code><span class="line"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span></span>
 <span class="line"> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></span>
 <span class="line"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-<li>
-<p>1.3.2.【推荐】页面提供给移动设备使用时，需要设置 <a href="https://drafts.csswg.org/css-device-adapt/#viewport-meta" target="_blank" rel="noopener noreferrer">viewport</a>。</p>
-<p>设置 <code v-pre>viewport-fit</code> 设置为“cover”来兼容 <code v-pre>iPhone X</code> 的刘海屏，<a href="https://webkit.org/blog/7929/designing-websites-for-iphone-x/" target="_blank" rel="noopener noreferrer">了解更多</a> 。</p>
-<div class="language-html line-numbers-mode" data-highlighter="prismjs" data-ext="html" data-title="html"><pre v-pre class="language-html"><code><span class="line"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>width=device-width, minimum-scale=1.0, viewport-fit=cover<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></span>
+          <div class="line-numbers" aria-hidden="true" style="counter-reset: line-number 0">
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <p>
+          1.3.2.【推荐】页面提供给移动设备使用时，需要设置
+          <a
+            href="https://drafts.csswg.org/css-device-adapt/#viewport-meta"
+            target="_blank"
+            rel="noopener noreferrer"
+            >viewport</a
+          >。
+        </p>
+        <p>
+          设置 <code v-pre>viewport-fit</code> 设置为“cover”来兼容
+          <code v-pre>iPhone X</code> 的刘海屏，<a
+            href="https://webkit.org/blog/7929/designing-websites-for-iphone-x/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >了解更多</a
+          >
+          。
+        </p>
+        <div
+          class="language-html line-numbers-mode"
+          data-highlighter="prismjs"
+          data-ext="html"
+          data-title="html"
+        >
+          <pre
+            v-pre
+            class="language-html"
+          ><code><span class="line"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>width=device-width, minimum-scale=1.0, viewport-fit=cover<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div></li>
-</ul>
-<h3 id="_1-4-资源加载" tabindex="-1"><a class="header-anchor" href="#_1-4-资源加载"><span>1.4. 资源加载</span></a></h3>
-<ul>
-<li>
-<p>1.4.1.【推荐】引入 <code v-pre>CSS</code> 和 <code v-pre>JavaScript</code> 时无需指定 <code v-pre>type</code>。
-根据 <code v-pre>HTML5</code> 规范，引入 <code v-pre>CSS</code> 和 <code v-pre>JavaScript</code> 时通常不需要指明 <code v-pre>type</code>，因为 <a href="https://html.spec.whatwg.org/multipage/obsolete.html#attr-style-type" target="_blank" rel="noopener noreferrer">text/css</a> 和 <a href="https://html.spec.whatwg.org/multipage/scripting.html#attr-script-type" target="_blank" rel="noopener noreferrer">text/javascript</a> 分别是他们的默认值。</p>
-<div class="language-html line-numbers-mode" data-highlighter="prismjs" data-ext="html" data-title="html"><pre v-pre class="language-html"><code><span class="line"><span class="token comment">&lt;!-- bad --></span></span>
+          <div class="line-numbers" aria-hidden="true" style="counter-reset: line-number 0">
+            <div class="line-number"></div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <h3 id="_1-4-资源加载" tabindex="-1">
+      <a class="header-anchor" href="#_1-4-资源加载"><span>1.4. 资源加载</span></a>
+    </h3>
+    <ul>
+      <li>
+        <p>
+          1.4.1.【推荐】引入 <code v-pre>CSS</code> 和 <code v-pre>JavaScript</code> 时无需指定
+          <code v-pre>type</code>。 根据 <code v-pre>HTML5</code> 规范，引入
+          <code v-pre>CSS</code> 和 <code v-pre>JavaScript</code> 时通常不需要指明
+          <code v-pre>type</code>，因为
+          <a
+            href="https://html.spec.whatwg.org/multipage/obsolete.html#attr-style-type"
+            target="_blank"
+            rel="noopener noreferrer"
+            >text/css</a
+          >
+          和
+          <a
+            href="https://html.spec.whatwg.org/multipage/scripting.html#attr-script-type"
+            target="_blank"
+            rel="noopener noreferrer"
+            >text/javascript</a
+          >
+          分别是他们的默认值。
+        </p>
+        <div
+          class="language-html line-numbers-mode"
+          data-highlighter="prismjs"
+          data-ext="html"
+          data-title="html"
+        >
+          <pre
+            v-pre
+            class="language-html"
+          ><code><span class="line"><span class="token comment">&lt;!-- bad --></span></span>
 <span class="line"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text/css<span class="token punctuation">"</span></span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></span>
 <span class="line"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text/css<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token style"><span class="token language-css"></span>
 <span class="line"> <span class="token comment">/* ... */</span></span>
@@ -68,15 +218,68 @@
 <span class="line"></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span></span>
 <span class="line"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-<li>
-<p>1.4.2.【推荐】在 <code v-pre>head</code> 标签内引入 <code v-pre>CSS</code>，在 <code v-pre>body</code> 结束标签前引入 <code v-pre>JS</code>。</p>
-<p>在 <code v-pre>&lt;body&gt;&lt;/body&gt;</code> 中指定外部样式表和嵌入式样式块可能会导致页面的重排和重绘，对页面的渲染造成影响。因此，一般情况下，CSS 应在 <code v-pre>&lt;head&gt;&lt;/head&gt;</code> 标签里引入，<a href="https://developer.yahoo.com/performance/rules.html#css_top" target="_blank" rel="noopener noreferrer">了解更多</a>。</p>
-<blockquote>
-<p>在 <code v-pre>HTTP2</code>（Chrome 浏览器 69 版本之后，<code v-pre>Firefox</code> 和 <code v-pre>Edge</code>）中可以在 <code v-pre>body</code> 中使用 <code v-pre>link</code> 标签引入样式文件，但不推荐在 <code v-pre>body</code> 中使用 <code v-pre>&lt;style&gt;</code> 标签的内联样式。**<code v-pre>&lt;link rel=&quot;stylesheet&quot;&gt;</code>。</p>
-</blockquote>
-<p>除了基础库等必须要在 DOM 加载之前运行的 JavaScript 脚本，其他都在靠近 <code v-pre>body</code> 结束标签前引入，以防止出现页面渲染的阻塞，<a href="https://developer.yahoo.com/performance/rules.html#js_bottom" target="_blank" rel="noopener noreferrer">了解更多</a>。</p>
-<div class="language-html line-numbers-mode" data-highlighter="prismjs" data-ext="html" data-title="html"><pre v-pre class="language-html"><code><span class="line"><span class="token comment">&lt;!-- bad --></span></span>
+          <div class="line-numbers" aria-hidden="true" style="counter-reset: line-number 0">
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <p>
+          1.4.2.【推荐】在 <code v-pre>head</code> 标签内引入 <code v-pre>CSS</code>，在
+          <code v-pre>body</code> 结束标签前引入 <code v-pre>JS</code>。
+        </p>
+        <p>
+          在
+          <code v-pre>&lt;body&gt;&lt;/body&gt;</code>
+          中指定外部样式表和嵌入式样式块可能会导致页面的重排和重绘，对页面的渲染造成影响。因此，一般情况下，CSS
+          应在 <code v-pre>&lt;head&gt;&lt;/head&gt;</code> 标签里引入，<a
+            href="https://developer.yahoo.com/performance/rules.html#css_top"
+            target="_blank"
+            rel="noopener noreferrer"
+            >了解更多</a
+          >。
+        </p>
+        <blockquote>
+          <p>
+            在 <code v-pre>HTTP2</code>（Chrome 浏览器 69 版本之后，<code v-pre>Firefox</code> 和
+            <code v-pre>Edge</code>）中可以在 <code v-pre>body</code> 中使用
+            <code v-pre>link</code> 标签引入样式文件，但不推荐在 <code v-pre>body</code> 中使用
+            <code v-pre>&lt;style&gt;</code> 标签的内联样式。**<code v-pre
+              >&lt;link rel=&quot;stylesheet&quot;&gt;</code
+            >。
+          </p>
+        </blockquote>
+        <p>
+          除了基础库等必须要在 DOM 加载之前运行的 JavaScript 脚本，其他都在靠近
+          <code v-pre>body</code> 结束标签前引入，以防止出现页面渲染的阻塞，<a
+            href="https://developer.yahoo.com/performance/rules.html#js_bottom"
+            target="_blank"
+            rel="noopener noreferrer"
+            >了解更多</a
+          >。
+        </p>
+        <div
+          class="language-html line-numbers-mode"
+          data-highlighter="prismjs"
+          data-ext="html"
+          data-title="html"
+        >
+          <pre
+            v-pre
+            class="language-html"
+          ><code><span class="line"><span class="token comment">&lt;!-- bad --></span></span>
 <span class="line"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span></span>
 <span class="line"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span></span>
 <span class="line"> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span></span>
@@ -108,42 +311,163 @@
 <span class="line"> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span></span>
 <span class="line"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-<li>
-<p>1.4.3.【推荐】外部资源的引用地址跟随页面协议，省略协议部分。</p>
-<div class="language-html line-numbers-mode" data-highlighter="prismjs" data-ext="html" data-title="html"><pre v-pre class="language-html"><code><span class="line"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>//g.cdn.com/lib/style/index-min.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></span>
+          <div class="line-numbers" aria-hidden="true" style="counter-reset: line-number 0">
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <p>1.4.3.【推荐】外部资源的引用地址跟随页面协议，省略协议部分。</p>
+        <div
+          class="language-html line-numbers-mode"
+          data-highlighter="prismjs"
+          data-ext="html"
+          data-title="html"
+        >
+          <pre
+            v-pre
+            class="language-html"
+          ><code><span class="line"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>//g.cdn.com/lib/style/index-min.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div></li>
-<li>
-<p>1.4.4.【推荐】使用 <code v-pre>preload</code> 预加载关键资源，<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Preloading_content" target="_blank" rel="noopener noreferrer">了解更多</a>。</p>
-<div class="language-html line-numbers-mode" data-highlighter="prismjs" data-ext="html" data-title="html"><pre v-pre class="language-html"><code><span class="line"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>preload<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>style.css<span class="token punctuation">"</span></span> <span class="token attr-name">as</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>style<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></span>
+          <div class="line-numbers" aria-hidden="true" style="counter-reset: line-number 0">
+            <div class="line-number"></div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <p>
+          1.4.4.【推荐】使用 <code v-pre>preload</code> 预加载关键资源，<a
+            href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Preloading_content"
+            target="_blank"
+            rel="noopener noreferrer"
+            >了解更多</a
+          >。
+        </p>
+        <div
+          class="language-html line-numbers-mode"
+          data-highlighter="prismjs"
+          data-ext="html"
+          data-title="html"
+        >
+          <pre
+            v-pre
+            class="language-html"
+          ><code><span class="line"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>preload<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>style.css<span class="token punctuation">"</span></span> <span class="token attr-name">as</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>style<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></span>
 <span class="line"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>preload<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>main.js<span class="token punctuation">"</span></span> <span class="token attr-name">as</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>script<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div></li>
-<li>
-<p>1.4.5.【推荐】使用 <code v-pre>dns-prefetch</code> 和 <code v-pre>preconnect</code> 处理 <code v-pre>DNS</code> 解析延迟问题，提高网页加载性能，<a href="https://developer.mozilla.org/zh-CN/docs/Web/Performance/dns-prefetch" target="_blank" rel="noopener noreferrer">了解更多</a>。</p>
-<div class="language-html line-numbers-mode" data-highlighter="prismjs" data-ext="html" data-title="html"><pre v-pre class="language-html"><code><span class="line"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>preconnect<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://fonts.googleapis.com/<span class="token punctuation">"</span></span> <span class="token attr-name">crossorigin</span> <span class="token punctuation">/></span></span></span>
+          <div class="line-numbers" aria-hidden="true" style="counter-reset: line-number 0">
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <p>
+          1.4.5.【推荐】使用 <code v-pre>dns-prefetch</code> 和 <code v-pre>preconnect</code> 处理
+          <code v-pre>DNS</code> 解析延迟问题，提高网页加载性能，<a
+            href="https://developer.mozilla.org/zh-CN/docs/Web/Performance/dns-prefetch"
+            target="_blank"
+            rel="noopener noreferrer"
+            >了解更多</a
+          >。
+        </p>
+        <div
+          class="language-html line-numbers-mode"
+          data-highlighter="prismjs"
+          data-ext="html"
+          data-title="html"
+        >
+          <pre
+            v-pre
+            class="language-html"
+          ><code><span class="line"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>preconnect<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://fonts.googleapis.com/<span class="token punctuation">"</span></span> <span class="token attr-name">crossorigin</span> <span class="token punctuation">/></span></span></span>
 <span class="line"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>dns-prefetch<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://fonts.googleapis.com/<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div></li>
-</ul>
-<h3 id="_1-5-页面标题" tabindex="-1"><a class="header-anchor" href="#_1-5-页面标题"><span>1.5. 页面标题</span></a></h3>
-<ul>
-<li>
-<p>1.5.1.【强制】页面需要指定 title 标签，有且仅有 1 个。</p>
-<div class="language-html line-numbers-mode" data-highlighter="prismjs" data-ext="html" data-title="html"><pre v-pre class="language-html"><code><span class="line"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span></span>
+          <div class="line-numbers" aria-hidden="true" style="counter-reset: line-number 0">
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <h3 id="_1-5-页面标题" tabindex="-1">
+      <a class="header-anchor" href="#_1-5-页面标题"><span>1.5. 页面标题</span></a>
+    </h3>
+    <ul>
+      <li>
+        <p>1.5.1.【强制】页面需要指定 title 标签，有且仅有 1 个。</p>
+        <div
+          class="language-html line-numbers-mode"
+          data-highlighter="prismjs"
+          data-ext="html"
+          data-title="html"
+        >
+          <pre
+            v-pre
+            class="language-html"
+          ><code><span class="line"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span></span>
 <span class="line"> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></span>
 <span class="line"> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>zbt<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span></span>
 <span class="line"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-</ul>
-<h2 id="_2-编码" tabindex="-1"><a class="header-anchor" href="#_2-编码"><span>2. 编码</span></a></h2>
-<h3 id="_2-1-缩进" tabindex="-1"><a class="header-anchor" href="#_2-1-缩进"><span>2.1. 缩进</span></a></h3>
-<ul>
-<li>
-<p>2.1.1.【推荐】统一使用 2 个空格缩进，不要使用 4 个空格或 tab 缩进。</p>
-<div class="language-html line-numbers-mode" data-highlighter="prismjs" data-ext="html" data-title="html"><pre v-pre class="language-html"><code><span class="line"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span></span>
+          <div class="line-numbers" aria-hidden="true" style="counter-reset: line-number 0">
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <h2 id="_2-编码" tabindex="-1">
+      <a class="header-anchor" href="#_2-编码"><span>2. 编码</span></a>
+    </h2>
+    <h3 id="_2-1-缩进" tabindex="-1">
+      <a class="header-anchor" href="#_2-1-缩进"><span>2.1. 缩进</span></a>
+    </h3>
+    <ul>
+      <li>
+        <p>2.1.1.【推荐】统一使用 2 个空格缩进，不要使用 4 个空格或 tab 缩进。</p>
+        <div
+          class="language-html line-numbers-mode"
+          data-highlighter="prismjs"
+          data-ext="html"
+          data-title="html"
+        >
+          <pre
+            v-pre
+            class="language-html"
+          ><code><span class="line"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span></span>
 <span class="line"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span></span>
 <span class="line"> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span></span>
 <span class="line">  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>zbt<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span></span>
@@ -154,50 +478,140 @@
 <span class="line"> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span></span>
 <span class="line"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-</ul>
-<h3 id="_2-2-注释" tabindex="-1"><a class="header-anchor" href="#_2-2-注释"><span>2.2. 注释</span></a></h3>
-<ul>
-<li>
-<p>2.2.1.【强制】在 HTML 注释代码中，不允许出现任何敏感信息。</p>
-<p>常见的敏感信息包括：</p>
-<ul>
-<li>相关敏感信息，例如业务规则</li>
-<li>个人隐私信息，例如邮箱、手机、身份证号码</li>
-<li>AK（accessKey id, accesskey secret）</li>
-<li>证书、密码</li>
-</ul>
-</li>
-<li>
-<p>2.2.2.【推荐】单行注释，需在注释内容和注释符之间需留有一个空格，以增强可读性。</p>
-<div class="language-html line-numbers-mode" data-highlighter="prismjs" data-ext="html" data-title="html"><pre v-pre class="language-html"><code><span class="line"><span class="token comment">&lt;!-- 单行注释 --></span></span>
+          <div class="line-numbers" aria-hidden="true" style="counter-reset: line-number 0">
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <h3 id="_2-2-注释" tabindex="-1">
+      <a class="header-anchor" href="#_2-2-注释"><span>2.2. 注释</span></a>
+    </h3>
+    <ul>
+      <li>
+        <p>2.2.1.【强制】在 HTML 注释代码中，不允许出现任何敏感信息。</p>
+        <p>常见的敏感信息包括：</p>
+        <ul>
+          <li>相关敏感信息，例如业务规则</li>
+          <li>个人隐私信息，例如邮箱、手机、身份证号码</li>
+          <li>AK（accessKey id, accesskey secret）</li>
+          <li>证书、密码</li>
+        </ul>
+      </li>
+      <li>
+        <p>2.2.2.【推荐】单行注释，需在注释内容和注释符之间需留有一个空格，以增强可读性。</p>
+        <div
+          class="language-html line-numbers-mode"
+          data-highlighter="prismjs"
+          data-ext="html"
+          data-title="html"
+        >
+          <pre
+            v-pre
+            class="language-html"
+          ><code><span class="line"><span class="token comment">&lt;!-- 单行注释 --></span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div></li>
-<li>
-<p>2.2.3.【推荐】多行注释，注释符单独占一行，注释内容 2 个空格缩进。</p>
-<div class="language-html line-numbers-mode" data-highlighter="prismjs" data-ext="html" data-title="html"><pre v-pre class="language-html"><code><span class="line"><span class="token comment">&lt;!--</span>
+          <div class="line-numbers" aria-hidden="true" style="counter-reset: line-number 0">
+            <div class="line-number"></div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <p>2.2.3.【推荐】多行注释，注释符单独占一行，注释内容 2 个空格缩进。</p>
+        <div
+          class="language-html line-numbers-mode"
+          data-highlighter="prismjs"
+          data-ext="html"
+          data-title="html"
+        >
+          <pre
+            v-pre
+            class="language-html"
+          ><code><span class="line"><span class="token comment">&lt;!--</span>
 <span class="line">  多行注释</span>
 <span class="line">  多行注释</span>
 <span class="line">--></span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-</ul>
-<h3 id="_2-3-标签" tabindex="-1"><a class="header-anchor" href="#_2-3-标签"><span>2.3. 标签</span></a></h3>
-<ul>
-<li>
-<p>2.3.1.【强制】标签名统一使用小写。</p>
-<div class="language-html line-numbers-mode" data-highlighter="prismjs" data-ext="html" data-title="html"><pre v-pre class="language-html"><code><span class="line"><span class="token comment">&lt;!-- bad --></span></span>
+          <div class="line-numbers" aria-hidden="true" style="counter-reset: line-number 0">
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <h3 id="_2-3-标签" tabindex="-1">
+      <a class="header-anchor" href="#_2-3-标签"><span>2.3. 标签</span></a>
+    </h3>
+    <ul>
+      <li>
+        <p>2.3.1.【强制】标签名统一使用小写。</p>
+        <div
+          class="language-html line-numbers-mode"
+          data-highlighter="prismjs"
+          data-ext="html"
+          data-title="html"
+        >
+          <pre
+            v-pre
+            class="language-html"
+          ><code><span class="line"><span class="token comment">&lt;!-- bad --></span></span>
 <span class="line"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>H1</span><span class="token punctuation">></span></span>Hello, world!<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>H1</span><span class="token punctuation">></span></span></span>
 <span class="line"></span>
 <span class="line"><span class="token comment">&lt;!-- good --></span></span>
 <span class="line"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span>Hello, world!<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-<li>
-<p>2.3.2.【推荐】不要省略自闭合标签结尾处的斜线，且斜线前需留有一个空格。</p>
-<p>虽然 <a href="https://dev.w3.org/html5/spec-author-view/syntax.html#syntax-start-tag" target="_blank" rel="noopener noreferrer">HTML5 规范</a> 中指出结尾的斜线是可选的，但保留它们可以明确表达该标签已闭合的语义，更易于维护和理解。</p>
-<p>同时，在 <code v-pre>React</code> 被广泛使用的今天，这与 <a href="https://react-cn.github.io/react/tips/self-closing-tag.html" target="_blank" rel="noopener noreferrer">JSX 的规范</a> 相一致，JSX 中自闭合标签必须保留结尾的斜线。</p>
-<div class="language-html line-numbers-mode" data-highlighter="prismjs" data-ext="html" data-title="html"><pre v-pre class="language-html"><code><span class="line"><span class="token comment">&lt;!-- bad --></span></span>
+          <div class="line-numbers" aria-hidden="true" style="counter-reset: line-number 0">
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <p>2.3.2.【推荐】不要省略自闭合标签结尾处的斜线，且斜线前需留有一个空格。</p>
+        <p>
+          虽然
+          <a
+            href="https://dev.w3.org/html5/spec-author-view/syntax.html#syntax-start-tag"
+            target="_blank"
+            rel="noopener noreferrer"
+            >HTML5 规范</a
+          >
+          中指出结尾的斜线是可选的，但保留它们可以明确表达该标签已闭合的语义，更易于维护和理解。
+        </p>
+        <p>
+          同时，在 <code v-pre>React</code> 被广泛使用的今天，这与
+          <a
+            href="https://react-cn.github.io/react/tips/self-closing-tag.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            >JSX 的规范</a
+          >
+          相一致，JSX 中自闭合标签必须保留结尾的斜线。
+        </p>
+        <div
+          class="language-html line-numbers-mode"
+          data-highlighter="prismjs"
+          data-ext="html"
+          data-title="html"
+        >
+          <pre
+            v-pre
+            class="language-html"
+          ><code><span class="line"><span class="token comment">&lt;!-- bad --></span></span>
 <span class="line"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>width=device-width, initial-scale=1.0<span class="token punctuation">"</span></span><span class="token punctuation">></span></span></span>
 <span class="line"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>images/foo.png<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>foo<span class="token punctuation">"</span></span><span class="token punctuation">></span></span></span>
 <span class="line"></span>
@@ -205,23 +619,70 @@
 <span class="line"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>width=device-width, initial-scale=1.0<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></span>
 <span class="line"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>images/foo.png<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>foo<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-</ul>
-<h3 id="_2-4-属性" tabindex="-1"><a class="header-anchor" href="#_2-4-属性"><span>2.4. 属性</span></a></h3>
-<ul>
-<li>
-<p>2.4.1.【强制】属性值使用双引号，不要使用单引号。</p>
-<div class="language-html line-numbers-mode" data-highlighter="prismjs" data-ext="html" data-title="html"><pre v-pre class="language-html"><code><span class="line"><span class="token comment">&lt;!-- bad --></span></span>
+          <div class="line-numbers" aria-hidden="true" style="counter-reset: line-number 0">
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <h3 id="_2-4-属性" tabindex="-1">
+      <a class="header-anchor" href="#_2-4-属性"><span>2.4. 属性</span></a>
+    </h3>
+    <ul>
+      <li>
+        <p>2.4.1.【强制】属性值使用双引号，不要使用单引号。</p>
+        <div
+          class="language-html line-numbers-mode"
+          data-highlighter="prismjs"
+          data-ext="html"
+          data-title="html"
+        >
+          <pre
+            v-pre
+            class="language-html"
+          ><code><span class="line"><span class="token comment">&lt;!-- bad --></span></span>
 <span class="line"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">'</span>stylesheet<span class="token punctuation">'</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">'</span>example.css<span class="token punctuation">'</span></span> <span class="token punctuation">/></span></span></span>
 <span class="line"></span>
 <span class="line"><span class="token comment">&lt;!-- good --></span></span>
 <span class="line"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-<li>
-<p>2.4.2.【推荐】不要为 <code v-pre>Boolean</code> 属性添加取值。</p>
-<p>XHTML 需要每个属性声明取值，但是 HTML5 并不需要。一个元素中 <code v-pre>Boolean</code> 属性存在即表示取值 <code v-pre>true</code>，不存在则表示取值 <code v-pre>false</code>，<a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/common-microsyntaxes.html#boolean-attributes" target="_blank" rel="noopener noreferrer">了解更多</a>。</p>
-<div class="language-html line-numbers-mode" data-highlighter="prismjs" data-ext="html" data-title="html"><pre v-pre class="language-html"><code><span class="line"><span class="token comment">&lt;!-- bad --></span></span>
+          <div class="line-numbers" aria-hidden="true" style="counter-reset: line-number 0">
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <p>2.4.2.【推荐】不要为 <code v-pre>Boolean</code> 属性添加取值。</p>
+        <p>
+          XHTML 需要每个属性声明取值，但是 HTML5 并不需要。一个元素中
+          <code v-pre>Boolean</code> 属性存在即表示取值 <code v-pre>true</code>，不存在则表示取值
+          <code v-pre>false</code>，<a
+            href="http://www.whatwg.org/specs/web-apps/current-work/multipage/common-microsyntaxes.html#boolean-attributes"
+            target="_blank"
+            rel="noopener noreferrer"
+            >了解更多</a
+          >。
+        </p>
+        <div
+          class="language-html line-numbers-mode"
+          data-highlighter="prismjs"
+          data-ext="html"
+          data-title="html"
+        >
+          <pre
+            v-pre
+            class="language-html"
+          ><code><span class="line"><span class="token comment">&lt;!-- bad --></span></span>
 <span class="line"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">disabled</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>disabled<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></span>
 <span class="line"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>checkbox<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span> <span class="token attr-name">checked</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>checked<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></span>
 <span class="line"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>select</span><span class="token punctuation">></span></span></span>
@@ -235,25 +696,85 @@
 <span class="line"> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span> <span class="token attr-name">selected</span><span class="token punctuation">></span></span>1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span></span>
 <span class="line"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>select</span><span class="token punctuation">></span></span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-<li>
-<p>2.4.3.【推荐】自定义属性的命名：以 <code v-pre>data-</code> 为前缀。</p>
-<p>建议自定义属性的命名都以 <code v-pre>data-</code> 为前缀，以便区分。</p>
-<div class="language-html line-numbers-mode" data-highlighter="prismjs" data-ext="html" data-title="html"><pre v-pre class="language-html"><code><span class="line"><span class="token comment">&lt;!-- bad --></span></span>
+          <div class="line-numbers" aria-hidden="true" style="counter-reset: line-number 0">
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <p>2.4.3.【推荐】自定义属性的命名：以 <code v-pre>data-</code> 为前缀。</p>
+        <p>建议自定义属性的命名都以 <code v-pre>data-</code> 为前缀，以便区分。</p>
+        <div
+          class="language-html line-numbers-mode"
+          data-highlighter="prismjs"
+          data-ext="html"
+          data-title="html"
+        >
+          <pre
+            v-pre
+            class="language-html"
+          ><code><span class="line"><span class="token comment">&lt;!-- bad --></span></span>
 <span class="line"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">modal</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>toggle<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Example link<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span></span>
 <span class="line"></span>
 <span class="line"><span class="token comment">&lt;!-- good --></span></span>
 <span class="line"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">data-modal</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>toggle<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Example link<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-</ul>
-<h3 id="_2-5-语义化" tabindex="-1"><a class="header-anchor" href="#_2-5-语义化"><span>2.5. 语义化</span></a></h3>
-<ul>
-<li>
-<p>2.5.1.【参考】尽量根据语义使用 HTML 标签。</p>
-<p><code v-pre>HTML</code> 标签（更严谨的叫法是 HTML 元素）都有其语义，例如 <code v-pre>p</code> 标签即“paragraphs”用于章节，<code v-pre>a</code> 标签即“anchors”用于锚点链接，<a href="https://www.w3.org/TR/2018/WD-html53-20181018/fullindex.html#index-elements" target="_blank" rel="noopener noreferrer">了解更多</a>。</p>
-<p>我们应优先选取符合当下所需语义的标签，这既有助于<a href="https://developer.mozilla.org/zh-CN/docs/learn/Accessibility" target="_blank" rel="noopener noreferrer">可访问性（Accessibility）</a>，也可以在 CSS 加载失败时获得较好的展示效果。</p>
-<div class="language-html line-numbers-mode" data-highlighter="prismjs" data-ext="html" data-title="html"><pre v-pre class="language-html"><code><span class="line"><span class="token comment">&lt;!-- bad --></span></span>
+          <div class="line-numbers" aria-hidden="true" style="counter-reset: line-number 0">
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <h3 id="_2-5-语义化" tabindex="-1">
+      <a class="header-anchor" href="#_2-5-语义化"><span>2.5. 语义化</span></a>
+    </h3>
+    <ul>
+      <li>
+        <p>2.5.1.【参考】尽量根据语义使用 HTML 标签。</p>
+        <p>
+          <code v-pre>HTML</code> 标签（更严谨的叫法是 HTML 元素）都有其语义，例如
+          <code v-pre>p</code> 标签即“paragraphs”用于章节，<code v-pre>a</code>
+          标签即“anchors”用于锚点链接，<a
+            href="https://www.w3.org/TR/2018/WD-html53-20181018/fullindex.html#index-elements"
+            target="_blank"
+            rel="noopener noreferrer"
+            >了解更多</a
+          >。
+        </p>
+        <p>
+          我们应优先选取符合当下所需语义的标签，这既有助于<a
+            href="https://developer.mozilla.org/zh-CN/docs/learn/Accessibility"
+            target="_blank"
+            rel="noopener noreferrer"
+            >可访问性（Accessibility）</a
+          >，也可以在 CSS 加载失败时获得较好的展示效果。
+        </p>
+        <div
+          class="language-html line-numbers-mode"
+          data-highlighter="prismjs"
+          data-ext="html"
+          data-title="html"
+        >
+          <pre
+            v-pre
+            class="language-html"
+          ><code><span class="line"><span class="token comment">&lt;!-- bad --></span></span>
 <span class="line"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>list<span class="token punctuation">"</span></span><span class="token punctuation">></span></span></span>
 <span class="line"> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>list-item<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></span>
 <span class="line"> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>list-item<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></span>
@@ -267,15 +788,47 @@
 <span class="line"> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>list-item<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span></span>
 <span class="line"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-</ul>
-<h3 id="_2-6-可访问性" tabindex="-1"><a class="header-anchor" href="#_2-6-可访问性"><span>2.6. 可访问性</span></a></h3>
-<ul>
-<li>
-<p>2.6.1.【参考】注意 <code v-pre>HTML</code> 的可访问性（<code v-pre>Accessibility</code>）。</p>
-<p>网页可访问性使网页内容落实“无障碍”，让不同程度或需求的用户可以顺畅的获取网站上的信息。传统上我们认为这只与残疾人士有关，但提升网站的可访问性也可以让其他用户群体受益，比如使用移动设备的人群或低速网络的人群。</p>
-<p>例如，为 <code v-pre>img</code> 标签设置 <code v-pre>alt</code> 属性：</p>
-<div class="language-html line-numbers-mode" data-highlighter="prismjs" data-ext="html" data-title="html"><pre v-pre class="language-html"><code><span class="line"><span class="token comment">&lt;!-- bad - 缺少 alt 属性，无法被无障碍阅读器识别 --></span></span>
+          <div class="line-numbers" aria-hidden="true" style="counter-reset: line-number 0">
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <h3 id="_2-6-可访问性" tabindex="-1">
+      <a class="header-anchor" href="#_2-6-可访问性"><span>2.6. 可访问性</span></a>
+    </h3>
+    <ul>
+      <li>
+        <p>
+          2.6.1.【参考】注意 <code v-pre>HTML</code> 的可访问性（<code v-pre>Accessibility</code
+          >）。
+        </p>
+        <p>
+          网页可访问性使网页内容落实“无障碍”，让不同程度或需求的用户可以顺畅的获取网站上的信息。传统上我们认为这只与残疾人士有关，但提升网站的可访问性也可以让其他用户群体受益，比如使用移动设备的人群或低速网络的人群。
+        </p>
+        <p>例如，为 <code v-pre>img</code> 标签设置 <code v-pre>alt</code> 属性：</p>
+        <div
+          class="language-html line-numbers-mode"
+          data-highlighter="prismjs"
+          data-ext="html"
+          data-title="html"
+        >
+          <pre
+            v-pre
+            class="language-html"
+          ><code><span class="line"><span class="token comment">&lt;!-- bad - 缺少 alt 属性，无法被无障碍阅读器识别 --></span></span>
 <span class="line"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>hello.jpg<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></span>
 <span class="line"></span>
 <span class="line"><span class="token comment">&lt;!-- good --></span></span>
@@ -287,12 +840,44 @@
 <span class="line"><span class="token comment">&lt;!-- good - 图片无需被无障碍阅读器识别时 --></span></span>
 <span class="line"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>logo.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">role</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>presentation<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>了解更多 HTML 可访问性的知识，可以阅读<a href="https://developer.mozilla.org/zh-CN/docs/learn/Accessibility" target="_blank" rel="noopener noreferrer">这篇 MDN 的文章</a>。</p>
-</li>
-</ul>
-<h2 id="_3-脚手架模板" tabindex="-1"><a class="header-anchor" href="#_3-脚手架模板"><span>3. 脚手架模板</span></a></h2>
-<p>根据以上规约，建议的 <code v-pre>HTML</code> 脚手架模板如下：</p>
-<div class="language-html line-numbers-mode" data-highlighter="prismjs" data-ext="html" data-title="html"><pre v-pre class="language-html"><code><span class="line"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span></span>
+          <div class="line-numbers" aria-hidden="true" style="counter-reset: line-number 0">
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+            <div class="line-number"></div>
+          </div>
+        </div>
+        <p>
+          了解更多 HTML 可访问性的知识，可以阅读<a
+            href="https://developer.mozilla.org/zh-CN/docs/learn/Accessibility"
+            target="_blank"
+            rel="noopener noreferrer"
+            >这篇 MDN 的文章</a
+          >。
+        </p>
+      </li>
+    </ul>
+    <h2 id="_3-脚手架模板" tabindex="-1">
+      <a class="header-anchor" href="#_3-脚手架模板"><span>3. 脚手架模板</span></a>
+    </h2>
+    <p>根据以上规约，建议的 <code v-pre>HTML</code> 脚手架模板如下：</p>
+    <div
+      class="language-html line-numbers-mode"
+      data-highlighter="prismjs"
+      data-ext="html"
+      data-title="html"
+    >
+      <pre
+        v-pre
+        class="language-html"
+      ><code><span class="line"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span></span>
 <span class="line"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>zh-CN<span class="token punctuation">"</span></span><span class="token punctuation">></span></span></span>
 <span class="line"> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span></span>
 <span class="line">  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></span>
@@ -308,11 +893,41 @@
 <span class="line"> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span></span>
 <span class="line"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="参考资料" tabindex="-1"><a class="header-anchor" href="#参考资料"><span>参考资料</span></a></h2>
-<ul>
-<li><a href="http://codeguide.co" target="_blank" rel="noopener noreferrer">Code Guide by @mdo</a></li>
-<li><a href="https://google.github.io/styleguide/htmlcssguide.html" target="_blank" rel="noopener noreferrer">Google HTML/CSS Style Guide</a></li>
-</ul>
-</div></template>
-
-
+      <div class="line-numbers" aria-hidden="true" style="counter-reset: line-number 0">
+        <div class="line-number"></div>
+        <div class="line-number"></div>
+        <div class="line-number"></div>
+        <div class="line-number"></div>
+        <div class="line-number"></div>
+        <div class="line-number"></div>
+        <div class="line-number"></div>
+        <div class="line-number"></div>
+        <div class="line-number"></div>
+        <div class="line-number"></div>
+        <div class="line-number"></div>
+        <div class="line-number"></div>
+        <div class="line-number"></div>
+        <div class="line-number"></div>
+        <div class="line-number"></div>
+      </div>
+    </div>
+    <h2 id="参考资料" tabindex="-1">
+      <a class="header-anchor" href="#参考资料"><span>参考资料</span></a>
+    </h2>
+    <ul>
+      <li>
+        <a href="http://codeguide.co" target="_blank" rel="noopener noreferrer"
+          >Code Guide by @mdo</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://google.github.io/styleguide/htmlcssguide.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Google HTML/CSS Style Guide</a
+        >
+      </li>
+    </ul>
+  </div>
+</template>

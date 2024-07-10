@@ -1,5 +1,5 @@
 <template>
-  <div style="margin: 20px;">
+  <div style="margin: 20px">
     <textarea>{{ value }}</textarea>
   </div>
 </template>
@@ -9,7 +9,7 @@ export default {
   data() {
     const bo = import('./foo');
     return {
-        value: 'value',
+      value: 'value',
     };
   },
 };

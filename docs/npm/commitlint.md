@@ -1,8 +1,8 @@
 ## self create
 
 ```bash
-lerna create commitlint-config 
-pnpm add -D conventional-changelog-conventionalcommits --filter commitlint-config 
+lerna create commitlint-config
+pnpm add -D conventional-changelog-conventionalcommits --filter commitlint-config
 #添加名为index.json的config，修改packsge.json中的name,main.publishConfig,repository
 ```
 
@@ -36,6 +36,7 @@ module.exports ={
 }
 
 ```
+
 # 设置 git hook
 
 可通过 [husky](https://www.npmjs.com/package/husky) 设置在 `git commit` 时触发 `commitlint`。
@@ -50,12 +51,13 @@ npm install husky --save-dev
 
 ```bash
 npx husky install
-npx husky add .husky/commit-msg 
+npx husky add .husky/commit-msg
 
 #!/usr/bin/env sh
 
-npx --no -- commitlint --edit 
+npx --no -- commitlint --edit
 ```
+
 chore: run tests on travis ci
 fix(server): send cors headers
 更多信息可参考 [commitlint 文档](https://commitlint.js.org/#/guides-local-setup?id=install-husky)。

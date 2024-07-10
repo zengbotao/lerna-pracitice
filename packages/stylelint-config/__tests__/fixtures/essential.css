@@ -1,5 +1,6 @@
 @charset "UTF-8";
-@unknown {}
+@unknown {
+}
 
 .a {
   color: #fff1az;
@@ -40,7 +41,7 @@
 @import 'a.css';
 
 .a {
-  background: #000;;
+  background: #000;
   colr: blue;
 }
 // css注释
@@ -51,8 +52,8 @@
   background: #000;
 }
 unknown {
-  content: "first
-    second";
+  content: 'first
+    second';
   width: 10pixels;
-  background: #000
+  background: #000;
 }

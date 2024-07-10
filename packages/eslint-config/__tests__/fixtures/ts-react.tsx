@@ -10,16 +10,12 @@ function Hello({ name, enthusiasmLevel = 1 }: Props) {
     throw new Error('You could be a little more enthusiastic. :D');
   }
 
-  const foo: number = 1
+  const foo: number = 1;
 
   return (
     <div className="hello">
-      <div className="greeting">
-        Hello {name + enthusiasmLevel}
-      </div>
-        <Hi>
-          haha
-        </Hi>
+      <div className="greeting">Hello {name + enthusiasmLevel}</div>
+      <Hi>haha</Hi>
     </div>
   );
 }

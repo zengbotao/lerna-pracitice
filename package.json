@@ -9,6 +9,7 @@
     "deploy": "bash deploy.sh",
     "publish": "lerna publish",
     "lint": "markdownlint README.md",
+    "prettier": "prettier --write .",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
   },
   "devDependencies": {

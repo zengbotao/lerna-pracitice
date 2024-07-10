@@ -1,23 +1,13 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
-import {
-  Breadcrumb,
-  Button,
-  Search,
-  Select,
-  Dropdown,
-  Menu,
-  Notice,
-} from "antd";
-import Layout from "layout";
-import { Translate } from "antd-i18n";
-import * as actions from "../actions/index";
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { Breadcrumb, Button, Search, Select, Dropdown, Menu, Notice } from 'antd';
+import Layout from 'layout';
+import { Translate } from 'antd-i18n';
+import * as actions from '../actions/index';
 
 function scoreAudioCoverFile(imgFile) {
-  const fileName = path
-    .basename(imgFile.name, path.extname(imgFile.name))
-    .toLowerCase();
+  const fileName = path.basename(imgFile.name, path.extname(imgFile.name)).toLowerCase();
   const relevanceScore = {
     cover: 80,
     folder: 80,
@@ -66,20 +56,20 @@ class Root extends Component {
     const subNavData = {
       navs: [
         {
-          key: "home",
-          text: "导航操作区",
+          key: 'home',
+          text: '导航操作区',
           active: true,
-          link: "#",
+          link: '#',
         },
         {
-          key: "permit",
-          text: "权限",
-          link: "#",
+          key: 'permit',
+          text: '权限',
+          link: '#',
         },
         {
-          key: "favorite",
-          text: "常用链接",
-          link: "#",
+          key: 'favorite',
+          text: '常用链接',
+          link: '#',
         },
       ],
     };
@@ -112,10 +102,7 @@ class Root extends Component {
                       <Menu.Item key="close_cr">关闭变更</Menu.Item>
                     </Menu>
                   </Dropdown>
-                  <Dropdown
-                    triggerButton={<Button type="normal">更多</Button>}
-                    triggerType="click"
-                  >
+                  <Dropdown triggerButton={<Button type="normal">更多</Button>} triggerType="click">
                     <Menu onClick={this.onMenuClick}>
                       <Menu.Item key="other_1">更多操作 1</Menu.Item>
                       <Menu.Item key="other_2">更多操作 2</Menu.Item>
@@ -134,19 +121,13 @@ class Root extends Component {
                 </Select>
               </Toolbar.Item>
               <Toolbar.Item>
-                <Search
-                  placeholder="请输入关键词搜索"
-                  onSearch={this.onSearch}
-                />
+                <Search placeholder="请输入关键词搜索" onSearch={this.onSearch} />
               </Toolbar.Item>
             </Toolbar.Right>
           </Toolbar>
         </Section>
         <Section>
-          <Card
-            title="详细内容展示区（Card组件）"
-            extra={<a href="#">更多操作</a>}
-          >
+          <Card title="详细内容展示区（Card组件）" extra={<a href="#">更多操作</a>}>
             <p>
               <a href="#" target="_blank" rel="noreferrer noopener">
                 点击查看设计规范
@@ -166,5 +147,5 @@ class Root extends Component {
 
 export default connect(
   ({ index, ...others }) => ({ ...index, ...others }),
-  (dispatch) => bindActionCreators(actions, dispatch)
+  (dispatch) => bindActionCreators(actions, dispatch),
 )(Root);

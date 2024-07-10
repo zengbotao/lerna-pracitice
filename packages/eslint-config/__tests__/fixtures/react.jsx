@@ -54,7 +54,7 @@ class Root extends Component {
     return (
       <Layout>
         <Nav data={subNavData} />
-         <Section>
+        <Section>
           <Breadcrumb dataSource={breadcrumb} />
         </Section>
         <Section>
@@ -106,11 +106,7 @@ class Root extends Component {
         <Section>
           <Card title="详细内容展示区（Card组件）" extra={<a href="#">更多操作</a>}>
             <p>
-              <a
-                href="#"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
+              <a href="#" target="_blank" rel="noreferrer noopener">
                 点击查看设计规范
               </a>
             </p>
@@ -128,5 +124,5 @@ class Root extends Component {
 
 export default connect(
   ({ index, ...others }) => ({ ...index, ...others }),
-  dispatch => bindActionCreators(actions, dispatch)
+  (dispatch) => bindActionCreators(actions, dispatch),
 )(Root);

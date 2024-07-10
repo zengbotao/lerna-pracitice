@@ -5,7 +5,7 @@
 :::
 
 ## 1. 编码风格
- 
+
 ![javascript style](./img//JavaScript.svg)
 
 详细规则如下：
@@ -38,11 +38,10 @@
 
   ```javascript
   // bad - 导致 Uncaught ReferenceError 报错
-  const chenghuai = {}
-  const huaicheng = {}
-  [chenghuai, huaicheng].forEach((jedi) => {
-    jedi.father = 'vader'
-  })
+  const chenghuai = {};
+  const huaicheng = {}[(chenghuai, huaicheng)].forEach((jedi) => {
+    jedi.father = 'vader';
+  });
 
   // good
   const chenghuai = {};
@@ -52,19 +51,16 @@
   });
 
   // bad - 导致 Uncaught ReferenceError 报错
-  const reaction = "No! That's impossible!"
-  (async function meanwhileOnTheFalcon() {
-  }())
+  const reaction = "No! That's impossible!"((async function meanwhileOnTheFalcon() {})());
 
   // good
   const reaction = "No! That's impossible!";
-  (async function meanwhileOnTheFalcon() {
-  }());
+  (async function meanwhileOnTheFalcon() {})();
 
   // bad - 函数将返回 `undefined` 而不是换行后的值
   function foo() {
-    return
-      'Result want to be returned'
+    return;
+    ('Result want to be returned');
   }
 
   // good
@@ -79,24 +75,16 @@
 
   ```javascript
   // bad
-  const story = [
-      once
-    , upon
-    , aTime
-  ];
+  const story = [once, upon, aTime];
 
   // good
-  const story = [
-    once,
-    upon,
-    aTime,
-  ];
+  const story = [once, upon, aTime];
 
   // bad
   const hero = {
-      firstName: 'Ada'
-    , lastName: 'Lovelace'
-    , superPower: 'computers'
+    firstName: 'Ada',
+    lastName: 'Lovelace',
+    superPower: 'computers',
   };
 
   // good
@@ -132,27 +120,16 @@
   // bad
   const hero = {
     firstName: 'Dana',
-    lastName: 'Scully'
+    lastName: 'Scully',
   };
 
-  const heroes = [
-    'Batman',
-    'Superman'
-  ];
+  const heroes = ['Batman', 'Superman'];
 
-  function createHero(
-    firstName,
-    lastName,
-    inventorOf
-  ) {
+  function createHero(firstName, lastName, inventorOf) {
     // ...
   }
 
-  createHero(
-    firstName,
-    lastName,
-    inventorOf
-  );
+  createHero(firstName, lastName, inventorOf);
 
   // good
   const hero = {
@@ -160,32 +137,16 @@
     lastName: 'Scully',
   };
 
-  const heroes = [
-    'Batman',
-    'Superman',
-  ];
+  const heroes = ['Batman', 'Superman'];
 
-  function createHero(
-    firstName,
-    lastName,
-    inventorOf,
-  ) {
+  function createHero(firstName, lastName, inventorOf) {
     // ...
   }
 
-  createHero(
-    firstName,
-    lastName,
-    inventorOf,
-  );
+  createHero(firstName, lastName, inventorOf);
 
   // good - 需注意，使用扩展运算符的元素后面不能加逗号
-  function createHero(
-    firstName,
-    lastName,
-    inventorOf,
-    ...heroArgs
-  ) {
+  function createHero(firstName, lastName, inventorOf, ...heroArgs) {
     // ...
   }
   ```
@@ -200,9 +161,8 @@
 
   ```javascript
   // bad
-  if (foo)
-    bar();
-    baz(); // 这一行并不在 if 语句里
+  if (foo) bar();
+  baz(); // 这一行并不在 if 语句里
 
   // good
   if (foo) {
@@ -215,8 +175,7 @@
 
   ```javascript
   // bad
-  if (foo)
-    return false;
+  if (foo) return false;
 
   // bad - 允许但不推荐
   if (foo) return false;
@@ -271,7 +230,8 @@
   // bad
   if (condition) {
     // …
-  } else if (otherCondition) {} else {
+  } else if (otherCondition) {
+  } else {
     // …
   }
 
@@ -291,8 +251,7 @@
   // good
   try {
     // …
-  } catch (e) {
-  }
+  } catch (e) {}
   ```
 
 - 1.4.3.【强制】不要使用空代码块。`eslint`: [no-empty](https://eslint.org/docs/rules/no-empty)
@@ -324,7 +283,7 @@
 
   ```javascript
   // bad
-  function test(){
+  function test() {
     console.log('test');
   }
 
@@ -334,7 +293,7 @@
   }
 
   // bad
-  dog.set('attr',{
+  dog.set('attr', {
     age: '1 year',
     breed: 'Bernese Mountain Dog',
   });
@@ -350,8 +309,8 @@
 
   ```javascript
   // bad
-  if(isJedi) {
-    fight ();
+  if (isJedi) {
+    fight();
   }
 
   // good
@@ -364,8 +323,8 @@
 
   ```javascript
   // bad
-  function fight () {
-    console.log ('Swooosh!');
+  function fight() {
+    console.log('Swooosh!');
   }
 
   // good
@@ -378,7 +337,7 @@
 
   ```javascript
   // bad
-  function bar( foo ) {
+  function bar(foo) {
     return foo;
   }
 
@@ -388,8 +347,8 @@
   }
 
   // bad
-  if ( foo ) {
-    console.log( foo );
+  if (foo) {
+    console.log(foo);
   }
 
   // good
@@ -402,8 +361,8 @@
 
   ```javascript
   // bad
-  const foo = [ 1, 2, 3 ];
-  console.log(foo[ 0 ]);
+  const foo = [1, 2, 3];
+  console.log(foo[0]);
 
   // good
   const foo = [1, 2, 3];
@@ -414,7 +373,7 @@
 
   ```javascript
   // bad
-  const foo = {clark: 'kent'};
+  const foo = { clark: 'kent' };
 
   // good
   const foo = { clark: 'kent' };
@@ -424,19 +383,19 @@
 
   ```javascript
   // bad
-  const x=y+5;
+  const x = y + 5;
 
   // good
   const x = y + 5;
 
   // bad
-  const isRight = result === 0? false: true;
+  const isRight = result === 0 ? false : true;
 
   // good
   const isRight = result === 0 ? false : true;
 
   // bad - 一元运算符与操作对象间不应有空格
-  const x = ! y;
+  const x = !y;
 
   // good
   const x = !y;
@@ -464,8 +423,6 @@
   }
   ```
 
-
-
 ### 1.6. 空行
 
 - 1.6.1.【推荐】在文件末尾保留一行空行。`eslint`: [eol-last](https://eslint.org/docs/rules/eol-last)
@@ -492,15 +449,12 @@
   export default foo;↵
   ```
 
-
 - 1.6.2.【强制】块的开始和结束不能是空行。`eslint`: [padded-blocks](https://eslint.org/docs/rules/padded-blocks)
 
   ```javascript
   // bad
   function bar() {
-
     console.log(foo);
-
   }
 
   // good
@@ -510,11 +464,9 @@
 
   // bad
   if (baz) {
-
     console.log(qux);
   } else {
     console.log(foo);
-
   }
 
   // good
@@ -543,20 +495,16 @@
 
   // bad
   const obj = {
-    foo() {
-    },
-    bar() {
-    },
+    foo() {},
+    bar() {},
   };
   return obj;
 
   // good
   const obj = {
-    foo() {
-    },
+    foo() {},
 
-    bar() {
-    },
+    bar() {},
   };
 
   return obj;
@@ -575,18 +523,27 @@
 
   ```javascript
   // bad
-  const foo = jsonData && jsonData.foo && jsonData.foo.bar && jsonData.foo.bar.baz && jsonData.foo.bar.baz.quux && jsonData.foo.bar.baz.quux.xyzzy;
+  const foo =
+    jsonData &&
+    jsonData.foo &&
+    jsonData.foo.bar &&
+    jsonData.foo.bar.baz &&
+    jsonData.foo.bar.baz.quux &&
+    jsonData.foo.bar.baz.quux.xyzzy;
 
   // good
-  const foo = jsonData
-    && jsonData.foo
-    && jsonData.foo.bar
-    && jsonData.foo.bar.baz
-    && jsonData.foo.bar.baz.quux
-    && jsonData.foo.bar.baz.quux.xyzzy;
+  const foo =
+    jsonData &&
+    jsonData.foo &&
+    jsonData.foo.bar &&
+    jsonData.foo.bar.baz &&
+    jsonData.foo.bar.baz.quux &&
+    jsonData.foo.bar.baz.quux.xyzzy;
 
   // bad
-  $.ajax({ method: 'POST', url: 'https://foo.com/', data: { name: 'John' } }).done(() => console.log('Congratulations!')).fail(() => console.log('You have failed this city.'));
+  $.ajax({ method: 'POST', url: 'https://foo.com/', data: { name: 'John' } })
+    .done(() => console.log('Congratulations!'))
+    .fail(() => console.log('You have failed this city.'));
 
   // good
   $.ajax({
@@ -677,7 +634,7 @@
   ```javascript
   // bad
   const foo = 1,
-        bar = 2;
+    bar = 2;
 
   // good
   const foo = 1;
@@ -868,7 +825,7 @@
   ```javascript
   // bad - 本例的结果是 let 仅对 a 起到了预想效果，b 和 c 都成了全局变量
   (function test() {
-    let a = b = c = 1; // 相当于 let a = (b = (c = 1));
+    let a = (b = c = 1); // 相当于 let a = (b = (c = 1));
   })();
 
   console.log(a); // throws ReferenceError
@@ -921,9 +878,11 @@
   const str = new String('foo');
   const bool = new Boolean(false);
   console.log(typeof num, typeof str, typeof bool); // => object, object, object
-  if (num) { // true（对象相当于 true）
+  if (num) {
+    // true（对象相当于 true）
   }
-  if (bool) { // true（对象相当于 true）
+  if (bool) {
+    // true（对象相当于 true）
   }
 
   // good
@@ -931,9 +890,11 @@
   const str = 'foo';
   const bool = false;
   console.log(typeof num, typeof str, typeof bool); // => number, string, boolean
-  if (num) { // false（0 相当于 false）
+  if (num) {
+    // false（0 相当于 false）
   }
-  if (bool) { // false
+  if (bool) {
+    // false
   }
   ```
 
@@ -941,47 +902,47 @@
 
   【数字】使用 `Number()` 或 `parseInt()` ：
 
-    ```javascript
-    const str = '1';
+  ```javascript
+  const str = '1';
 
-    // bad
-    const num = +str;
-    const num = str >> 0;
-    const num = new Number(str);
+  // bad
+  const num = +str;
+  const num = str >> 0;
+  const num = new Number(str);
 
-    // good
-    const num = Number(str);
+  // good
+  const num = Number(str);
 
-    // good
-    const num = parseInt(str, 10);
-    ```
+  // good
+  const num = parseInt(str, 10);
+  ```
 
   【字符串】使用 `String()`：
 
-    ```javascript
-    const num = 1;
+  ```javascript
+  const num = 1;
 
-    // bad
-    const str = new String(num); // typeof str is "object" not "string"
-    const str = num + ''; // invokes num.valueOf()
-    const str = num.toString(); // isn’t guaranteed to return a string
+  // bad
+  const str = new String(num); // typeof str is "object" not "string"
+  const str = num + ''; // invokes num.valueOf()
+  const str = num.toString(); // isn’t guaranteed to return a string
 
-    // good
-    const str = String(num);
-    ```
+  // good
+  const str = String(num);
+  ```
 
   【布尔值】使用 `!!`：
 
-    ```javascript
-    const age = 0;
+  ```javascript
+  const age = 0;
 
-    // bad
-    const hasAge = new Boolean(age);
-    const hasAge = Boolean(age);
+  // bad
+  const hasAge = new Boolean(age);
+  const hasAge = Boolean(age);
 
-    // good
-    const hasAge = !!age;
-    ```
+  // good
+  const hasAge = !!age;
+  ```
 
 - 2.2.3.【推荐】使用 `parseInt()` 方法时总是带上基数。`eslint`: [radix](https://eslint.org/docs/rules/radix)
 
@@ -997,10 +958,10 @@
 
   ```javascript
   // bad
-  parseInt("071"); // => ES5 前的执行环境中得到的是 57
+  parseInt('071'); // => ES5 前的执行环境中得到的是 57
 
   // good
-  parseInt("071", 10); // => 71
+  parseInt('071', 10); // => 71
   ```
 
 - 2.2.4.【强制】避免不必要的布尔类型转换。`eslint`: [no-extra-boolean-cast](https://eslint.org/docs/rules/no-extra-boolean-cast)
@@ -1037,7 +998,7 @@
 
   ```javascript
   // bad
-  const name = "tod";
+  const name = 'tod';
   const name = `tod`; // 模板字符串中应包含变量或换行，否则需用单引号
 
   // good
@@ -1066,7 +1027,7 @@
 
   ```javascript
   // bad
-  const foo = '\'this\' \i\s \"quoted\"';
+  const foo = '\'this\' is "quoted"';
 
   // good
   const foo = '\'this\' is "quoted"';
@@ -1143,7 +1104,7 @@
   }
 
   // bad
-  const array1 = array.map(item => item);
+  const array1 = array.map((item) => item);
 
   // good
   const array1 = [...array];
@@ -1170,7 +1131,7 @@
   const array1 = [1, 2].concat(array);
 
   // good
-  const array1 = [1, 2, ...array]
+  const array1 = [1, 2, ...array];
   ```
 
   用 `...` 替代 `apply`：
@@ -1298,8 +1259,8 @@
   ```javascript
   // bad
   const bad = {
-    'foo': 3,
-    'bar': 4,
+    foo: 3,
+    bar: 4,
     'data-blah': 5,
     'one two': 12,
   };
@@ -1442,7 +1403,7 @@
   const sum = new Function('a', 'b', 'return a + b');
 
   // good
-  const sum = (a, b) => (a + b);
+  const sum = (a, b) => a + b;
   ```
 
 - 2.5.2.【强制】不要在块中使用函数声明。`eslint`: [no-inner-declarations](https://eslint.org/docs/rules/no-inner-declarations)
@@ -1541,7 +1502,7 @@
     });
 
     // good - 函数体只包含一条 `return` 语句时，可以也建议省略大括号和 `return`
-    [1, 2, 3].map(number => `A string containing the ${number + 1}.`);
+    [1, 2, 3].map((number) => `A string containing the ${number + 1}.`);
 
     // good - 也可以选择始终不省略大括号，不使用简写语法糖，以方便后续在函数体内增加语句
     [1, 2, 3].map((number) => {
@@ -1594,7 +1555,7 @@
     });
 
     // good - 使用 return 简写语法、且只有一个参数时，可以也建议省略参数的小括号
-    [1, 2, 3].map(x => x * x);
+    [1, 2, 3].map((x) => x * x);
 
     // good - 也可以选择始终不省略参数的小括号，以方便后续可能要增加参数
     [1, 2, 3].map((x) => x * x);
@@ -1649,12 +1610,12 @@
     a = a || 0;
     b = b || 0;
     return a * b;
-  }
+  };
 
   // good
   const multiple = (a = 0, b = 0) => {
     return a * b;
-  }
+  };
   ```
 
 - 2.5.9.【推荐】有默认值的函数参数需要放到参数列表的最后。
@@ -1684,7 +1645,7 @@
   // bad
   const f1 = function f1(obj) {
     obj.key = 1;
-  }
+  };
   const originalObj = { key: 0 };
   f1(originalObj);
   console.log(originalObj); // => { key: 1 }
@@ -1692,7 +1653,7 @@
   // good
   const f2 = function f2(obj) {
     const key = Object.prototype.hasOwnProperty.call(obj, 'key') ? obj.key : 1;
-  }
+  };
   ```
 
   更不要给参数重新赋值，这可能导致意外的行为和内核优化问题：
@@ -1721,7 +1682,7 @@
   ```javascript
   (function () {
     console.log('Welcome to the Internet. Please follow me.');
-  }());
+  })();
   ```
 
 - 2.5.12.【参考】函数的复杂度不应过高。`eslint`: [complexity](https://eslint.org/docs/rules/complexity)
@@ -1747,7 +1708,16 @@
   function doSomething({ param1, param2, param3, param4, param5, param6, param7, param8 }) {
     // ...
   }
-  doSomething({ param1: 1, param2: 2, param3: 3, param4: 4, param5: 5, param6: 6, param7: 7, param8: 8 });
+  doSomething({
+    param1: 1,
+    param2: 2,
+    param3: 3,
+    param4: 4,
+    param5: 5,
+    param6: 6,
+    param7: 7,
+    param8: 8,
+  });
   ```
 
 - 2.5.14.【强制】`generator` 函数内必须有 `yield` 语句。`eslint`: [require-yield](https://eslint.org/docs/rules/require-yield)
@@ -1807,7 +1777,7 @@
   });
 
   // best
-  const increasedByOne = numbers.map(num => num + 1);
+  const increasedByOne = numbers.map((num) => num + 1);
   ```
 
 ### 2.6. 类
@@ -1823,7 +1793,7 @@
   }
   Person.prototype.growOld = function () {
     this.age += 1;
-  }
+  };
 
   // good
   class Person {
@@ -1861,13 +1831,12 @@
 
 - 2.6.3.【强制】避免不必要的 constructor。
 
-  ES6 class 会提供一个默认的 `constructor`，空 `constructor` 或者只调用父类的  `constructor` 是不必要的。eslint: [no-useless-constructor](https://eslint.org/docs/rules/no-useless-constructor)
+  ES6 class 会提供一个默认的 `constructor`，空 `constructor` 或者只调用父类的 `constructor` 是不必要的。eslint: [no-useless-constructor](https://eslint.org/docs/rules/no-useless-constructor)
 
   ```javascript
   // bad - 以下两种 constructor 可以省略
   class Parent {
-    constructor() {
-    }
+    constructor() {}
 
     method() {
       // ...
@@ -1875,7 +1844,7 @@
   }
 
   class Child extends Parent {
-    constructor (value) {
+    constructor(value) {
       super(value);
     }
 
@@ -1936,7 +1905,7 @@
 
   // good
   class Child extends Parent {
-    constructor (value) {
+    constructor(value) {
       super(value);
       this.name = 'foo';
     }
@@ -1950,15 +1919,21 @@
   ```javascript
   // bad
   class Foo {
-    bar() { console.log('bar'); }
-    bar() { console.log('baz'); }
+    bar() {
+      console.log('bar');
+    }
+    bar() {
+      console.log('baz');
+    }
   }
   const foo = new Foo();
   foo.bar(); // => baz
 
   // good
   class Foo {
-    bar() { console.log('bar'); }
+    bar() {
+      console.log('bar');
+    }
   }
   ```
 
@@ -1987,7 +1962,7 @@
   ```javascript
   // bad
   import React from 'react';
-  import { Component }  from 'react';
+  import { Component } from 'react';
 
   // good
   import React, { Component } from 'react';
@@ -2052,12 +2027,12 @@
   ```javascript
   // bad
   import foo from './foo.js';
-  const FOO = 'FOO'
+  const FOO = 'FOO';
 
   // good
   import foo from './foo.js';
 
-  const FOO = 'FOO'
+  const FOO = 'FOO';
   ```
 
 - 2.7.9.【参考】import 语句的排序。`eslint`: [import/order](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md)
@@ -2105,7 +2080,6 @@
   export default Component;
   ```
 
-
 - 2.7.12.【参考】模块开发者选择EMS和CJS时，需要判断运行时环境：如果你的模块是只面向浏览器的则选择ESM；如果你的模块是只面向Node.js的则选择CJS，并且确定遵循[CJS命名空间规则](https://nodejs.org/api/esm.html#esm_commonjs_namespaces)；如果你的模块是2者都要兼容的，则ESM和CJS都要支持。
 
   Node.js的模块，历史上Node.js遵循的是CommonJS，因此ES6 Module会有比较严重的兼容性问题。暂时没有特别好的解法，只能在Node.js中跟进运行时环境，判断使用模块标准。[讨论issue](https://github.com/nodejs/node/issues/33954)
@@ -2149,7 +2123,6 @@
   num += 1;
   num -= 1;
   ```
-
 
 - 2.8.3.【强制】不要使用 `void` 运算符。`eslint`: [no-void](https://eslint.org/docs/rules/no-void)
 
@@ -2196,19 +2169,19 @@
 
   ```javascript
   // bad
-  const foo = a && b < 0 || c > 0 || d + 1 === 0;
+  const foo = (a && b < 0) || c > 0 || d + 1 === 0;
 
   // good
-  const foo = (a && b < 0) || c > 0 || (d + 1 === 0);
+  const foo = (a && b < 0) || c > 0 || d + 1 === 0;
 
   // bad
-  const bar = a ** b - 5 % d;
+  const bar = a ** b - (5 % d);
 
   // good
-  const bar = (a ** b) - (5 % d);
+  const bar = a ** b - (5 % d);
 
   // bad - 有人可能会误以为执行顺序是 (a || b) && c
-  if (a || b && c) {
+  if (a || (b && c)) {
     return d;
   }
 
@@ -2218,7 +2191,7 @@
   }
 
   // good - 四则运算可以不用小括号包裹
-  const bar = a + b / c * d;
+  const bar = a + (b / c) * d;
   ```
 
 ### 2.9. 控制语句
@@ -2227,7 +2200,7 @@
 
   ```javascript
   // bad
-  switch(foo) {
+  switch (foo) {
     case 1:
       doSomething();
     case 2:
@@ -2237,7 +2210,7 @@
   }
 
   // good
-  switch(foo) {
+  switch (foo) {
     case 1:
       doSomething();
       break;
@@ -2395,22 +2368,27 @@
   - **Null** 被计算为 **false**
   - **布尔值** 被计算为 **布尔的值**
   - **数字** 如果是 **+0、-0 或 NaN** 被计算为 **false**，否则为 **true**
-  - **字符串** 如果是空字符串 `''` 被计算为 **false**，否则为 **true**  
+  - **字符串** 如果是空字符串 `''` 被计算为 **false**，否则为 **true**
 
   ```javascript
-  if ({}) { // => true
+  if ({}) {
+    // => true
   }
 
-  if ([]) { // => true
+  if ([]) {
+    // => true
   }
 
-  if (0) { // => false
+  if (0) {
+    // => false
   }
 
-  if ('0') { // => true
+  if ('0') {
+    // => true
   }
 
-  if ('') { // => false
+  if ('') {
+    // => false
   }
   ```
 
@@ -2443,7 +2421,6 @@
     return Boolean(x);
   }
   ```
-
 
 - 2.10.3.【推荐】禁止使用 `alert`。`eslint`: [no-alert](https://eslint.org/docs/rules/no-alert)
 
@@ -2499,7 +2476,7 @@
 
   ```javascript
   // bad
-  const active = true;  // is current tab
+  const active = true; // is current tab
 
   // good
   // is current tab
@@ -2530,7 +2507,6 @@
 
   // bad - 注释行上面是一个块的顶部时不需要空行
   function getType() {
-
     // set the default type to 'no type'
     const type = this.type || 'no type';
 
@@ -2546,7 +2522,7 @@
   }
   ```
 
-- 3.2.【推荐】多行注释使用 /** ... */，而不是多行的 //。
+- 3.2.【推荐】多行注释使用 /\*_ ... _/，而不是多行的 //。
 
   ```javascript
   // bad
