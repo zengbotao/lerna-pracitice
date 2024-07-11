@@ -1,6 +1,6 @@
 {
   "name": "@wavesdean/eslint-config",
-  "version": "1.0.3",
+  "version": "1.0.7",
   "main": "index.js",
   "description": "@wavesdean/eslint-config JavaScript TypeScript Node 规范",
   "keywords": [

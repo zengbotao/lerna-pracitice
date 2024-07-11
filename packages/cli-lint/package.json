@@ -1,6 +1,6 @@
 {
   "name": "@wavesdean/cli-lint",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "印客教育前端编码规范工程化脚手架",
   "bin": "./lib/cli.js",
   "main": "./lib/index.js",
@@ -47,7 +47,7 @@
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": "^5.0.0",
     "@wavesdean/commitlint-config": "^1.0.3",
-    "@wavesdean/eslint-config": "^1.0.3",
+    "@wavesdean/eslint-config": "^1.0.7",
     "@wavesdean/markdownlint-config": "^1.0.3",
     "@wavesdean/stylelint-config": "^1.0.3",
     "chalk": "^4.1.0",
