@@ -2,7 +2,7 @@
 
 ## 安装
 
-除了本包，你需要同时安装 [ESlint](https://eslint.org/)
+除了本包，你需要同时安装 [ESlint](https://eslint.org/),注意eslint版本8.7.0
 
 ```shell
 $ npm install @wavesdean/eslint-plugin eslint --save-dev

@@ -7,8 +7,9 @@
 **/public/**
 **/report/**
 **/server/**
-**/__tests__/fixtures/**
+**/__tests__/**
 **/cli-lint/test/**
+**/eslint-plugin/test/**
 
 # 忽略文件
 **/webpack.config*.js
