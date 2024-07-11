@@ -75,16 +75,16 @@ importers:
         specifier: ^5.0.0
         version: 5.62.0(eslint@8.57.0)(typescript@4.9.5)
       '@wavesdean/commitlint-config':
-        specifier: workspace:^
-        version: link:../commitlint-config
+        specifier: ^1.0.3
+        version: 1.0.5
       '@wavesdean/eslint-config':
-        specifier: workspace:^
+        specifier: ^1.0.3
         version: link:../eslint-config
       '@wavesdean/markdownlint-config':
-        specifier: workspace:^
-        version: link:../markdownlint-config
+        specifier: ^1.0.3
+        version: 1.0.4
       '@wavesdean/stylelint-config':
-        specifier: workspace:^
+        specifier: ^1.0.3
         version: link:../stylelint-config
       chalk:
         specifier: ^4.1.0
@@ -3693,7 +3693,10 @@ packages:
 
   /@wavesdean/commitlint-config@1.0.5:
     resolution: {integrity: sha512-vot5gpGyFa4sd0wN9eVq1NVxV7T0HlqowBjvADHMoeLVxki31fClHf54CVIvuS0ncdPv8CLM6bjBovVTbgwaJw==}
-    dev: true
+
+  /@wavesdean/markdownlint-config@1.0.4:
+    resolution: {integrity: sha512-TsPsV0RrNMothlg+u2w+U8b1CtsKX+qT52r7kHYGMm6q0ceCkFz7UJODy4eSWitxPwrXXl88HE7JAfSEItjcAw==}
+    dev: false
 
   /@yarnpkg/lockfile@1.1.0:
     resolution: {integrity: sha512-GpSwvyXOcOOlV70vbnzjj4fW5xW/FdUF6nQEt1ENy7m4ZCczi1+/buVUPAqmGfqznsORNFzUMjctTIp8a9tuCQ==}
