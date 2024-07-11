@@ -15,9 +15,9 @@ $ npm install @wavesdean/eslint-plugin eslint --save-dev
 ```js
 // .eslintrc.js
 module.exports = {
-  plugin: ['@wavesdean/eslint-config'],
+  plugin: ['@wavesdean/eslint-plugin'],//先定义插件
   rules: {
-    '@wavesdean/eslint-plugin/no-secret-info': 'error',
+    '@wavesdean/eslint-plugin/no-secret-info': 'error',//再使用，参考官网
   },
 };
 ```
