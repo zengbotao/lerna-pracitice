@@ -1,7 +1,7 @@
 {
   "name": "@wavesdean/eslint-plugin",
   "version": "0.0.7",
-  "description": "印客教育自定义eslint插件",
+  "description": "自定义eslint插件",
   "scripts": {
     "test": "jest",
     "prepublishOnly": "npm run test"
@@ -17,7 +17,6 @@
     "eslint-plugin"
   ],
   "main": "src/index.js",
-  "author": "chenghuai",
   "homepage": "https://github.com/encode-studio-fe/fe-spec#readme",
   "license": "ISC",
   "repository": {
