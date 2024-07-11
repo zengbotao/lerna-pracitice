@@ -1,6 +1,6 @@
 const path = require('path');
 const requireAll = require('require-all');
-//参考https://eslint.org/docs/latest/extend/plugins自定义插件
+// 参考https://eslint.org/docs/latest/extend/plugins自定义插件
 // meta - 有关插件的信息。
 // configs - 包含命名配置的对象。
 // rules - 包含自定义规则定义的对象。
