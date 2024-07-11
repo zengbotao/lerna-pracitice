@@ -1,5 +1,5 @@
 {
-  "name": "@wavesdean/lint",
+  "name": "@wavesdean/cli-lint",
   "version": "1.0.0",
   "description": "印客教育前端编码规范工程化脚手架",
   "bin": "./lib/cli.js",
