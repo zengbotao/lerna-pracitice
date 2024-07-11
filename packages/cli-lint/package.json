@@ -1,6 +1,6 @@
 {
   "name": "@wavesdean/lint",
-  "version": "1.0.3",
+  "version": "1.0.0",
   "description": "印客教育前端编码规范工程化脚手架",
   "bin": "./lib/cli.js",
   "main": "./lib/index.js",
@@ -93,6 +93,9 @@
   },
   "bugs": {
     "url": "https://github.com/encode-studio-fe/fe-spec/issues"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "gitHead": "6eb5dfa5eec9d1f30d07bdcbc84b9151d4b75d05"
 }
