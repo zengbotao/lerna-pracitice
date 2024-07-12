@@ -1,5 +1,5 @@
 {
-  "name": "@wavesdean/eslint-plugin",
+  "name": "eslint-plugin-zbt",
   "version": "1.0.6",
   "description": "自定义eslint插件",
   "scripts": {
