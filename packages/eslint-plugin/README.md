@@ -1,11 +1,11 @@
-# @wavesdean/eslint-plugin
+# eslint-plugin-zbt 必须已eslint-plugin开头
 
 ## 安装
 
 除了本包，你需要同时安装 [ESlint](https://eslint.org/),注意eslint版本8.7.0
 
 ```shell
-$ npm install @wavesdean/eslint-plugin eslint --save-dev
+$ npm install eslint-plugin-zbt eslint --save-dev
 ```
 
 ## 使用
@@ -15,9 +15,9 @@ $ npm install @wavesdean/eslint-plugin eslint --save-dev
 ```js
 // .eslintrc.js
 module.exports = {
-  plugins: ['@wavesdean/eslint-plugin'],//先定义插件
+  plugins: ['eslint-plugin-zbt'],//先定义插件
   rules: {
-    '@wavesdean/eslint-plugin/no-secret-info': 'error',//再使用，参考官网
+    'eslint-plugin-zbt/no-secret-info': 'error',//再使用，参考官网
   },
 };
 ```
@@ -27,7 +27,7 @@ module.exports = {
 ```js
 // .eslintrc.js
 module.exports = {
-  extends: 'plugin:@wavesdean/eslint-plugin/recommended',
+  extends: 'plugin:eslint-plugin-zbt/recommended',
 };
 ```
 

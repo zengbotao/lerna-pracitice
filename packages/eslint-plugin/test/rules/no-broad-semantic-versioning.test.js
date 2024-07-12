@@ -8,7 +8,7 @@ ruleTester.run('no-broad-semantic-versioning', rule, {
     {
       filename: 'package.json',
       code: `module.exports = ${JSON.stringify({
-        devDependencies: { '@wavesdean/eslint-plugin': '^0.0.5' },
+        devDependencies: { 'eslint-plugin-zbt': '^0.0.5' },
       })}`,
     },
     {
@@ -21,11 +21,11 @@ ruleTester.run('no-broad-semantic-versioning', rule, {
     {
       filename: 'package.json',
       code: `module.exports = ${JSON.stringify({
-        devDependencies: { '@wavesdean/eslint-plugin': '*' },
+        devDependencies: { 'eslint-plugin-zbt': '*' },
       })}`,
       errors: [
         {
-          message: 'The "@wavesdean/eslint-plugin" is not recommended to use "*"',
+          message: 'The "eslint-plugin-zbt" is not recommended to use "*"',
         },
       ],
     },

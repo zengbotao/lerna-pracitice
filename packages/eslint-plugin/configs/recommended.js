@@ -1,7 +1,7 @@
 module.exports = {
-  plugins: ['@wavesdean/eslint-plugin'],
+  plugins: ['eslint-plugin-zbt'],
   rules: {
-    '@wavesdean/eslint-plugin/no-http-url': 'warn',
-    '@wavesdean/eslint-plugin/no-secret-info': 'error',
+    'eslint-plugin-zbt/no-http-url': 'warn',
+    'eslint-plugin-zbt/no-secret-info': 'error',
   },
 };
