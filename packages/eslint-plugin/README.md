@@ -17,7 +17,7 @@ $ npm install eslint-plugin-zbt eslint --save-dev
 module.exports = {
   plugins: ['eslint-plugin-zbt'],//先定义插件
   rules: {
-    'eslint-plugin-zbt/no-secret-info': 'error',//再使用，参考官网
+    'zbt/no-secret-info': 'error',//再使用，参考官网 eslint-plugin-省略
   },
 };
 ```
