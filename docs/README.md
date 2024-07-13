@@ -6,4 +6,4 @@
 
 ## 欢迎浏览
 
-[公安备案号：浙ICP备2022033261号-1](https://beian.miit.gov.cn/)
+[公安备案号：浙 ICP 备 2022033261 号-1](https://beian.miit.gov.cn/)

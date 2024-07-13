@@ -33,9 +33,9 @@ export interface Config {
 export interface ScanOptions {
   // lint 运行的工程目录
   cwd: string;
-  // 进行规约扫描的目录
+  // 进行规范扫描的目录
   include: string;
-  // 进行规约扫描的文件列表
+  // 进行规范扫描的文件列表
   files?: string[];
   // 仅报告错误信息
   quiet?: boolean;
@@ -45,7 +45,7 @@ export interface ScanOptions {
   fix?: boolean;
   // 生成报告文件
   outputReport?: boolean;
-  // scan 时指定 @wavesdean/lint config，优先级高于 @wavesdean/lint.config.js
+  // scan 时指定 encode-fe-lint config，优先级高于 encode-fe-lint.config.js
   config?: Config;
 }
 
@@ -74,7 +74,7 @@ export interface ScanReport {
 
 export interface InitOptions {
   cwd: string;
-  // 是否检查并升级 @wavesdean/lint 的版本
+  // 是否检查并升级 encode-fe-lint 的版本
   checkVersionUpdate: boolean;
   // 是否需要自动重写 lint 配置
   rewriteConfig?: boolean;

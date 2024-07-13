@@ -23,4 +23,4 @@ https://blog.csdn.net/qq_45487080/article/details/121345434
 Error: The deploy step encountered an error: The process '/usr/bin/git' fail
 https://blog.csdn.net/ibigboy/article/details/126402267
 
-github设置pages Custom domain
+github 设置 pages Custom domain

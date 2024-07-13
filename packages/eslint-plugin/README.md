@@ -1,8 +1,8 @@
-# eslint-plugin-zbt 必须已eslint-plugin开头
+# eslint-plugin-zbt 必须已 eslint-plugin 开头
 
 ## 安装
 
-除了本包，你需要同时安装 [ESlint](https://eslint.org/),注意eslint版本8.7.0
+除了本包，你需要同时安装 [ESlint](https://eslint.org/),注意 eslint 版本 8.7.0
 
 ```shell
 $ npm install eslint-plugin-zbt eslint --save-dev
@@ -15,9 +15,9 @@ $ npm install eslint-plugin-zbt eslint --save-dev
 ```js
 // .eslintrc.js
 module.exports = {
-  plugins: ['eslint-plugin-zbt'],//先定义插件
+  plugins: ['eslint-plugin-zbt'], //先定义插件
   rules: {
-    'zbt/no-secret-info': 'error',//再使用，参考官网 eslint-plugin-省略
+    'zbt/no-secret-info': 'error', //再使用，参考官网 eslint-plugin-省略
   },
 };
 ```

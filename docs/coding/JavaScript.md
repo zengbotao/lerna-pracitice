@@ -866,7 +866,7 @@
 
 ### 2.2. 原始类型
 
-> `JS`的数据类型包括 7 种原始类型（primitive type），即 `Boolean`, `Null`, `Undefined`, `Number`, `String`, `Symbol` (ES6 新定义), `BigInt`（ES11新定义），以及 `Object` 类型，[了解更多](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures)。这个章节主要介绍原始类型相关的规约。
+> `JS`的数据类型包括 7 种原始类型（primitive type），即 `Boolean`, `Null`, `Undefined`, `Number`, `String`, `Symbol` (ES6 新定义), `BigInt`（ES11 新定义），以及 `Object` 类型，[了解更多](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures)。这个章节主要介绍原始类型相关的规约。
 
 - 2.2.1.【强制】不要使用 `new Number/String/Boolean`。`eslint`: [no-new-wrappers](https://eslint.org/docs/rules/no-new-wrappers)
 
@@ -2080,9 +2080,9 @@
   export default Component;
   ```
 
-- 2.7.12.【参考】模块开发者选择EMS和CJS时，需要判断运行时环境：如果你的模块是只面向浏览器的则选择ESM；如果你的模块是只面向Node.js的则选择CJS，并且确定遵循[CJS命名空间规则](https://nodejs.org/api/esm.html#esm_commonjs_namespaces)；如果你的模块是2者都要兼容的，则ESM和CJS都要支持。
+- 2.7.12.【参考】模块开发者选择 EMS 和 CJS 时，需要判断运行时环境：如果你的模块是只面向浏览器的则选择 ESM；如果你的模块是只面向 Node.js 的则选择 CJS，并且确定遵循[CJS 命名空间规则](https://nodejs.org/api/esm.html#esm_commonjs_namespaces)；如果你的模块是 2 者都要兼容的，则 ESM 和 CJS 都要支持。
 
-  Node.js的模块，历史上Node.js遵循的是CommonJS，因此ES6 Module会有比较严重的兼容性问题。暂时没有特别好的解法，只能在Node.js中跟进运行时环境，判断使用模块标准。[讨论issue](https://github.com/nodejs/node/issues/33954)
+  Node.js 的模块，历史上 Node.js 遵循的是 CommonJS，因此 ES6 Module 会有比较严重的兼容性问题。暂时没有特别好的解法，只能在 Node.js 中跟进运行时环境，判断使用模块标准。[讨论 issue](https://github.com/nodejs/node/issues/33954)
 
 ### 2.8. 操作符
 
@@ -2165,7 +2165,7 @@
 
 - 2.8.6.【强制】混合使用多种操作符时，用小括号包裹分组。`eslint`: [no-mixed-operators](https://eslint.org/docs/rules/no-mixed-operators)
 
-  这可以更清晰地表达代码意图，提高可读性。四则运算符（`+`, `-`, `*`, `/`）可以不包裹，因为大多数人熟知它们的优先级。
+  这可以更清晰地表达代码意图，提高可读性。四则运算符（`+`, `-`, `*`, `/`）可以不包裹，因为  大多数人熟知它们的优先级。
 
   ```javascript
   // bad

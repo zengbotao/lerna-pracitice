@@ -98,17 +98,13 @@
   /* bad */
   .selector {
     background-color: rgba(0, 0, 0, 0.5);
-    box-shadow:
-      0px 1px 2px rgba(0, 0, 0, 0.5),
-      inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.5);
   }
 
   /* good */
   .selector {
     background-color: rgba(0, 0, 0, 0.5);
-    box-shadow:
-      0px 1px 2px rgba(0, 0, 0, 0.5),
-      inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.5);
   }
   ```
 
@@ -412,9 +408,7 @@
     border: 1px solid #e5e5e5;
 
     /* 排版 */
-    font:
-      normal 13px 'Helvetica Neue',
-      sans-serif;
+    font: normal 13px 'Helvetica Neue', sans-serif;
     line-height: 1.5;
     color: #333;
     text-align: center;

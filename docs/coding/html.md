@@ -14,7 +14,7 @@
   <html></html>
 
   <!-- good -->
-  <!doctype html>
+  <!DOCTYPE html>
   <html></html>
   ```
 
@@ -89,7 +89,7 @@
 
   ```html
   <!-- bad -->
-  <!doctype html>
+  <!DOCTYPE html>
   <html>
     <head>
       <script src="mod-a.js"></script>
@@ -105,7 +105,7 @@
   </html>
 
   <!-- good -->
-  <!doctype html>
+  <!DOCTYPE html>
   <html>
     <head>
       <style>
@@ -159,7 +159,7 @@
 - 2.1.1.【推荐】统一使用 2 个空格缩进，不要使用 4 个空格或 tab 缩进。
 
   ```html
-  <!doctype html>
+  <!DOCTYPE html>
   <html>
     <head>
       <title>zbt</title>
@@ -322,7 +322,7 @@
 根据以上规约，建议的 `HTML` 脚手架模板如下：
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8" />
