@@ -7,9 +7,11 @@
 **/public/**
 **/report/**
 **/server/**
+**/lib/**
 **/__tests__/**
 **/cli-lint/test/**
 **/eslint-plugin/test/**
+**/eslint-plugin/rules/**
 
 # 忽略文件
 **/webpack.config*.js
