@@ -9,7 +9,7 @@
 **/server/**
 **/lib/**
 **/__tests__/**
-**/cli-lint/test/**
+**/zbt-cli/test/**
 **/eslint-plugin/test/**
 **/eslint-plugin/rules/**
 
