@@ -5,10 +5,10 @@ import type { PKG } from '../../types';
  * 获取 ESLint 配置类型
  * @param cwd
  * @param pkg
- * @returns eslint-config-encode/index
- * @returns eslint-config-encode/react
- * @returns eslint-config-encode/typescript/index
- * @returns eslint-config-encode/typescript/react
+ * @returns @wavesdean/eslint-config/index
+ * @returns @wavesdean/eslint-config/react
+ * @returns @wavesdean/eslint-config/typescript/index
+ * @returns @wavesdean/eslint-config/typescript/react
  */
 export function getESLintConfigType(cwd: string, pkg: PKG): string {
   const tsFiles = glob.sync('./!(node_modules)/**/*.@(ts|tsx)', { cwd });
@@ -27,5 +27,5 @@ export function getESLintConfigType(cwd: string, pkg: PKG): string {
     dsl = 'rax';
   }
 
-  return 'eslint-config-encode/' + `${language}/${dsl}`.replace(/\/$/, '/index').replace(/^\//, '');
+  return '@wavesdean/eslint-config/' + `${language}/${dsl}`.replace(/\/$/, '/index').replace(/^\//, '');
 }
