@@ -1,7 +1,7 @@
 {
-  "name": "@wavesdean/cli-lint-init-test",
+  "name": "zbt-cli-init-test",
   "version": "1.0.0",
-  "description": "@wavesdean/cli-lint init test",
+  "description": "zbt-cli init test",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

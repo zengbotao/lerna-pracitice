@@ -1,5 +1,5 @@
 {
-  "name": "@wavesdean/cli-lint",
+  "name": "zbt-cli",
   "version": "1.0.12",
   "description": "前端编码规范工程化标准脚手架",
   "bin": {
