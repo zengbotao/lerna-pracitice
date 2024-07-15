@@ -49,7 +49,6 @@ const installDepsIfThereNo = async () => {
     execSync(`cd ${cwd} && ${npm} i`);
   }
 };
-console.log(fdfdfds);
 
 program
   .version(PKG_VERSION)
