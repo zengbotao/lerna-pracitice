@@ -89,5 +89,6 @@
   "license": "ISC",
   "repository": {
     "type": "git"
-  }
+  },
+  "gitHead": "b17792000351eb798fada4212ea188737d420871"
 }
