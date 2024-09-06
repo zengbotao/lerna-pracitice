@@ -175,8 +175,8 @@ importers:
         specifier: ^5.0.0
         version: 5.62.0(eslint@8.57.0)(typescript@4.9.5)
       '@wavesdean/commitlint-config':
-        specifier: ^1.0.3
-        version: 1.0.5
+        specifier: ^1.0.16
+        version: link:../commitlint-config
       '@wavesdean/eslint-config':
         specifier: ^1.0.7
         version: link:../eslint-config
@@ -3695,10 +3695,6 @@ packages:
       - '@vue/composition-api'
       - vue
     dev: true
-
-  /@wavesdean/commitlint-config@1.0.5:
-    resolution: {integrity: sha512-vot5gpGyFa4sd0wN9eVq1NVxV7T0HlqowBjvADHMoeLVxki31fClHf54CVIvuS0ncdPv8CLM6bjBovVTbgwaJw==}
-    dev: false
 
   /@wavesdean/markdownlint-config@1.0.4:
     resolution: {integrity: sha512-TsPsV0RrNMothlg+u2w+U8b1CtsKX+qT52r7kHYGMm6q0ceCkFz7UJODy4eSWitxPwrXXl88HE7JAfSEItjcAw==}
