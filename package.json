@@ -8,6 +8,7 @@
     "docs:build": "vuepress build docs",
     "deploy": "bash deploy.sh",
     "publish": "lerna publish",
+    "build-cli": "pnpm -r --filter=zbt-cli run build",
     "markdownlint": "markdownlint README.md",
     "eslint": "eslint --fix --ext .js packages",
     "prettier": "prettier --write ."
