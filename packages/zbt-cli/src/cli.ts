@@ -2,10 +2,10 @@
 import path from 'path';
 import fs from 'fs-extra';
 import ora from 'ora';
-import glob from 'glob';//一个用于从文件系统中检索匹配特定模式的文件集合的工具
+import glob from 'glob'; //一个用于从文件系统中检索匹配特定模式的文件集合的工具
 import { program } from 'commander';
-import spawn from 'cross-spawn';//是一个包装器，用于 child_process 模块，它提供了一种跨平台的方式来解析和执行命令。这意味着无论您在哪个操作系统上运行 Node.js 应用程序，cross-spawn 都能以相同的方式处理命令。
-import { execSync } from 'child_process';//Node.js 的一个内置模块，它允许您创建子进程来执行系统命令。这个模块提供了多种方法来启动和管理子进程，例如 spawn(), exec(), 和 fork()。
+import spawn from 'cross-spawn'; //是一个包装器，用于 child_process 模块，它提供了一种跨平台的方式来解析和执行命令。这意味着无论您在哪个操作系统上运行 Node.js 应用程序，cross-spawn 都能以相同的方式处理命令。
+import { execSync } from 'child_process'; //Node.js 的一个内置模块，它允许您创建子进程来执行系统命令。这个模块提供了多种方法来启动和管理子进程，例如 spawn(), exec(), 和 fork()。
 import init from './actions/init';
 import scan from './actions/scan';
 import update from './actions/update';
@@ -33,7 +33,7 @@ const installDepsIfThereNo = async () => {
     glob.sync('.stylelintrc?(.@(js|yaml|yml|json))', { cwd }),
     glob.sync('.markdownlint(.@(yaml|yml|json))', { cwd }),
   );
-  
+
   // 获取 node_modules 目录的绝对路径
   const nodeModulesPath = path.resolve(cwd, 'node_modules');
 
@@ -41,10 +41,10 @@ const installDepsIfThereNo = async () => {
   if (!fs.existsSync(nodeModulesPath) && lintConfigFiles.length > 0) {
     // 获取项目的默认包管理器（npm 或 yarn）
     const npm = await npmType;
-    
+
     // 记录日志，告知用户项目尚未安装依赖，正在进行安装
     log.info(`使用项目 Lint 配置，检测到项目未安装依赖，将进行安装（执行 ${npm} install）`);
-    
+
     // 在项目目录中执行安装命令
     execSync(`cd ${cwd} && ${npm} i`);
   }
@@ -112,7 +112,7 @@ program
   .description('commit message 检查: git commit 时对 commit message 进行检查')
   .action(() => {
     const result = spawn.sync('commitlint', ['-E', 'HUSKY_GIT_PARAMS'], { stdio: 'inherit' });
-    // 同步方法可能会阻塞主线程，直到子进程完成或发生错误。在生产环境中，通常建议使用异步方法，如 spawn() 函数，以避免阻塞主线程。
+    // 同步方法可能会阻塞主线程，直到子进程完成或发生错误。在生产环境中，通常建议使用异步方法，如 spawn() 函数，以避免阻塞主线程
     if (result.status !== 0) {
       process.exit(result.status);
     }
