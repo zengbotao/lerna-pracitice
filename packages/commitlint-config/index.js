@@ -1,5 +1,5 @@
 /*
- * @Description: 
+ * @Description:
  * @Autor: zengbotao@myhexin.com
  * @Date: 2024-09-07 15:46:30
  * @LastEditTime: 2024-09-07 15:55:56
@@ -31,6 +31,6 @@ module.exports = {
       2,
       'always',
       /^\d{6} (feat|fix|docs|style|test|refactor|chore|revert) .+$/,
-    ]
+    ],
   },
 };
