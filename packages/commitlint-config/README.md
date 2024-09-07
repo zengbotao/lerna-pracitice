@@ -58,6 +58,7 @@ npx husky add .husky/commit-msg
 npx --no -- commitlint --edit
 ```
 
+conventional-changelog-conventionalcommits暂时取消了该预设
 chore: run tests on travis ci
 fix(server): send cors headers
 更多信息可参考 [commitlint 文档](https://commitlint.js.org/#/guides-local-setup?id=install-husky)。
