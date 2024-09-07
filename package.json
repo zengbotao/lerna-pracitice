@@ -29,5 +29,8 @@
     "rimraf": "^3.0.2",
     "vue": "^3.4.31",
     "vuepress": "2.0.0-rc.14"
+  },
+  "dependencies": {
+    "@wavesdean/commitlint-config": "^1.0.17"
   }
 }
