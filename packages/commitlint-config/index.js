@@ -21,5 +21,10 @@ module.exports = {
       'always',
       /^\d{6} (feat|fix|docs|style|test|refactor|chore|revert) .+$/,
     ],
+    'body-case': [
+      2,
+      'always',
+      /^\d{6} (feat|fix|docs|style|test|refactor|chore|revert) .+$/,
+    ],
   },
 };
