@@ -1,3 +1,9 @@
+<!--
+ * @Description: 
+ * @Autor: zengbotao@myhexin.com
+ * @Date: 2024-09-07 15:46:30
+ * @LastEditTime: 2024-09-08 23:44:28
+-->
 ## self create
 
 ```bash
@@ -36,6 +42,9 @@ module.exports ={
 }
 
 ```
+commit规范必须是 6位数字的任务号 type 描述
+type包含feat|fix|docs|style|test|refactor|chore|revert
+
 
 # 设置 git hook
 

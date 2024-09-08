@@ -17,7 +17,7 @@ pnpm add -D conventional-changelog-conventionalcommits --filter commitlint-confi
 ```
 
 ```bash
-pnpm i -save-dev  @wavesdean/commitlint-config @commitlint/cli conventional-changelog-conventionalcommits
+pnpm i -save-dev  @wavesdean/commitlint-config @commitlint/cli@16.0.0 conventional-changelog-conventionalcommits
 
 ```
 
