@@ -9,7 +9,7 @@
 **/server/**
 **/lib/**
 **/__tests__/**
-**/zbt-cli/test/**
+**/zbt-cli/__test__/**
 **/eslint-plugin/test/**
 **/eslint-plugin/rules/**
 
@@ -18,3 +18,4 @@
 **/tsconfig.json
 **/.eslintrc.js
 **/eslint.config.js
+**/jest.config.js

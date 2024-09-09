@@ -53,7 +53,7 @@ const installDepsIfThereNo = async () => {
 program
   .version(PKG_VERSION)
   .description(
-    `${PKG_NAME} 是 前端编码规范工程化 的配套 Lint 工具，提供简单的 CLI 和 Node.js API，让项目能够一键接入、一键扫描、一键修复、一键升级，并为项目配置 git commit 卡点，降低项目实施规范的成本`,
+    `${PKG_NAME} 是 前端编码规范工程化 的配套 Lint 工具，并为项目配置 git commit 卡点，降低项目实施规范的成本`,
   );
 
 program
@@ -80,7 +80,7 @@ program
   .option('-i, --include <dirpath>', '指定要进行规范扫描的目录')
   .option('--no-ignore', '忽略 eslint 的 ignore 配置文件和 ignore 规则')
   .action(async (cmd) => {
-    await installDepsIfThereNo();
+    await installDepsIfThereNo(); //安装依赖
 
     const checking = ora();
     checking.start(`执行 ${PKG_NAME} 代码检查`);
@@ -123,7 +123,7 @@ program
   .description('代码提交检查: git commit 时对提交代码进行规范问题扫描')
   .option('-s, --strict', '严格模式，对 warn 和 error 问题都卡口，默认仅对 error 问题卡口')
   .action(async (cmd) => {
-    await installDepsIfThereNo();
+    await installDepsIfThereNo();//安装依赖
 
     // git add 检查
     const files = await getAmendFiles();

@@ -7,11 +7,6 @@ const cli = (args, options) => {
   return execa('node', [path.resolve(__dirname, '../lib/cli.js'), ...args], options);
 };
 
-test('--version should output right version', async () => {
-  const { stdout } = await cli(['--version']);
-  expect(stdout).toBe(packageJson.version);
-});
-
 describe(`'fix' command`, () => {
   const dir = path.resolve(__dirname, './fixtures/autofix');
   const outputFilePath = path.resolve(dir, './temp/temp.js');

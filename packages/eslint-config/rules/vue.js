@@ -80,6 +80,9 @@ module.exports = {
 
     // 检查指令的合法性
     'vue/valid-template-root': 'error',
+
+    // 支持setup语法
+    'vue/script-setup-uses-vars': 'error',
     'vue/valid-v-bind': 'error',
     'vue/valid-v-cloak': 'error',
     'vue/valid-v-else-if': 'error',

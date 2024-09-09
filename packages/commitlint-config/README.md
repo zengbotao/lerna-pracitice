@@ -8,7 +8,7 @@
 
 ```bash
 lerna create commitlint-config
-pnpm add -D conventional-changelog-conventionalcommits --filter commitlint-config
+pnpm add -D --filter commitlint-config
 #添加名为index.json的config，修改packsge.json中的name,main.publishConfig,repository
 ```
 
@@ -23,14 +23,14 @@ pnpm add -D conventional-changelog-conventionalcommits --filter commitlint-confi
 ```
 
 ```bash
-pnpm i -save-dev  @wavesdean/commitlint-config @commitlint/cli conventional-changelog-conventionalcommits
+pnpm i -save-dev  @wavesdean/commitlint-config @commitlint/cli
 
 ```
 
 ## Usage
 
 ```js
-pnpm i -save-dev  @wavesdean/commitlint-config @commitlint/cli conventional-changelog-conventionalcommits
+pnpm i -save-dev  @wavesdean/commitlint-config @commitlint/cli
 
 "@commitlint/cli": "^19.3.0",
 "conventional-changelog-conventionalcommits": "^8.0.0",

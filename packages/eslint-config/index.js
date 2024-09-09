@@ -20,4 +20,8 @@ module.exports = {
     },
   },
   root: true,
+  rules: {
+    'no-tabs': ['error', { allowIndentationTabs: true }],
+    'no-irregular-whitespace': 'off',
+  },
 };

@@ -26,12 +26,12 @@ export const PKG_VERSION: string = pkg.version;
  */
 export const PROJECT_TYPES: Array<{ name: string; value: string }> = [
   {
-    name: '未使用 React、Vue、Node.js 的项目（JavaScript）',
-    value: 'index',
+    name: 'Vue 项目（JavaScript）',
+    value: 'vue',
   },
   {
-    name: '未使用 React、Vue、Node.js 的项目（TypeScript）',
-    value: 'typescript',
+    name: 'Vue 项目（TypeScript）',
+    value: 'typescript/vue',
   },
   {
     name: 'React 项目（JavaScript）',
@@ -42,22 +42,6 @@ export const PROJECT_TYPES: Array<{ name: string; value: string }> = [
     value: 'typescript/react',
   },
   {
-    name: 'Rax 项目（JavaScript）',
-    value: 'rax',
-  },
-  {
-    name: 'Rax 项目（TypeScript）',
-    value: 'typescript/rax',
-  },
-  {
-    name: 'Vue 项目（JavaScript）',
-    value: 'vue',
-  },
-  {
-    name: 'Vue 项目（TypeScript）',
-    value: 'typescript/vue',
-  },
-  {
     name: 'Node.js 项目（JavaScript）',
     value: 'node',
   },
@@ -66,8 +50,12 @@ export const PROJECT_TYPES: Array<{ name: string; value: string }> = [
     value: 'typescript/node',
   },
   {
-    name: '使用 ES5 及之前版本 JavaScript 的老项目',
-    value: 'es5',
+    name: '未使用 React、Vue、Node.js 的项目（JavaScript）',
+    value: 'index',
+  },
+  {
+    name: '未使用 React、Vue、Node.js 的项目（TypeScript）',
+    value: 'typescript',
   },
 ];
 

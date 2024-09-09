@@ -8,9 +8,9 @@
   "main": "./lib/index.js",
   "scripts": {
     "dev": "npm run copyfiles && tsc -w",
-    "build": "rd /s /q lib && npm run copyfiles && tsc",
+    "build": "npm run copyfiles && tsc",
     "copyfiles": "copyfiles -a -u 1 \"src/config/**\" lib",
-    "test": "npm run build && jest",
+    "test": "npx jest",
     "coverage": "nyc jest --silent --forceExit"
   },
   "files": [

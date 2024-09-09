@@ -9,7 +9,6 @@ import type { PKG } from '../types';
 // 精确移除依赖
 const packageNamesToRemove = [
   '@babel/eslint-parser',
-  '@commitlint/cli',
   '@iceworks/spec',
   'babel-eslint',
   'eslint',
@@ -22,7 +21,6 @@ const packageNamesToRemove = [
 
 // 按前缀移除依赖
 const packagePrefixesToRemove = [
-  '@commitlint/',
   '@typescript-eslint/',
   'eslint-',
   'stylelint-',
@@ -57,23 +55,38 @@ const checkReWriteConfig = (cwd: string) => {
     .filter((filename) => fs.existsSync(path.resolve(cwd, filename)));
 };
 
+/**
+ * 检查并清理项目中的冲突依赖和配置。
+ * 该函数会检查项目中的package.json，识别并移除与指定包冲突的依赖和配置文件。
+ * 
+ * @param cwd 项目根目录路径。
+ * @param rewriteConfig 是否重写配置文件，如果未提供，将提示用户确认。
+ * @returns 修改后的package.json内容。
+ */
 export default async (cwd: string, rewriteConfig?: boolean) => {
+  // 解析项目中的package.json文件路径
   const pkgPath = path.resolve(cwd, 'package.json');
+  // 读取并解析package.json文件内容
   const pkg: PKG = fs.readJSONSync(pkgPath);
+  // 获取所有依赖包名称，包括dependencies和devDependencies
   const dependencies = [].concat(
     Object.keys(pkg.dependencies || {}),
     Object.keys(pkg.devDependencies || []),
   );
+  // 过滤出需要移除的依赖包
   const willRemovePackage = dependencies.filter(
     (name) =>
       packageNamesToRemove.includes(name) ||
       packagePrefixesToRemove.some((prefix) => name.startsWith(prefix)),
   );
+  // 检查并获取无用的配置文件列表
   const uselessConfig = checkUselessConfig(cwd);
+  // 检查并获取需要重写的配置文件列表
   const reWriteConfig = checkReWriteConfig(cwd);
+  // 计算需要更改的项的总数
   const willChangeCount = willRemovePackage.length + uselessConfig.length + reWriteConfig.length;
 
-  // 提示是否移除原配置
+  // 如果存在需要更改的项，提示用户确认
   if (willChangeCount > 0) {
     log.warn(`检测到项目中存在可能与 ${PKG_NAME} 冲突的依赖和配置，为保证正常运行将`);
 
@@ -100,12 +113,12 @@ export default async (cwd: string, rewriteConfig?: boolean) => {
       });
 
       if (!isOverWrite) process.exit(0);
-    } else if (!reWriteConfig) {
+    } else if (!rewriteConfig) {
       process.exit(0);
     }
   }
 
-  // 删除配置文件
+  // 删除无用的配置文件
   for (const name of uselessConfig) {
     fs.removeSync(path.resolve(cwd, name));
   }
@@ -118,6 +131,7 @@ export default async (cwd: string, rewriteConfig?: boolean) => {
     delete (pkg.dependencies || {})[name];
     delete (pkg.devDependencies || {})[name];
   }
+  // 将修改后的package.json写回文件
   fs.writeFileSync(path.resolve(cwd, 'package.json'), JSON.stringify(pkg, null, 2), 'utf8');
 
   return pkg;

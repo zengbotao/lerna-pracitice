@@ -45,7 +45,7 @@ export interface ScanOptions {
   fix?: boolean;
   // 生成报告文件
   outputReport?: boolean;
-  // scan 时指定zbt-lint config，优先级高于 zbt-lint.config.js
+  // scan 时指定zbt-cli.config.js
   config?: Config;
 }
 
