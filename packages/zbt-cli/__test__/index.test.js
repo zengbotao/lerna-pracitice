@@ -1,37 +1,49 @@
 const path = require('path');
 const fs = require('fs-extra');
-const encodeFeLint = require('../lib/index');
+const execa = require('execa');
+const packageJson = require('../package.json');
 
-const { init } = encodeFeLint;
+const cli = (args, options) => {
+  return execa('node', [path.resolve(__dirname, '../lib/cli.js'), ...args], options);
+};
 
-describe('init', () => {
-  const templatePath = path.resolve(__dirname, './fixtures/template/init');
-  const outputPath = path.resolve(__dirname, './fixtures/template/temp');
+describe(`'fix' command`, () => {
+  const dir = path.resolve(__dirname, './fixtures/autofix');
+  const outputFilePath = path.resolve(dir, './temp/temp.js');
+  const errorFileContent = fs.readFileSync(path.resolve(dir, './semi-error.js'), 'utf8');
+  const expectedFileContent = fs.readFileSync(path.resolve(dir, './semi-expected.js'), 'utf8');
 
   beforeEach(() => {
-    fs.copySync(templatePath, outputPath);
-    fs.renameSync(`${outputPath}/_vscode`, `${outputPath}/.vscode`);
+    fs.outputFileSync(outputFilePath, errorFileContent, 'utf8');
   });
 
-  test('node api init should work as expected', async () => {
-    await init({
-      cwd: outputPath,
-      checkVersionUpdate: false,
-      eslintType: 'index',
-      enableStylelint: true,
-      enableMarkdownlint: true,
-      enablePrettier: true,
+  test('should autofix problematic code', async () => {
+    await cli(['fix'], {
+      cwd: path.dirname(`${dir}/result`),
     });
-
-    const pkg = require(`${outputPath}/package.json`);
-    const settings = require(`${outputPath}/.vscode/settings.json`);
-
-    expect(settings['editor.defaultFormatter']).toBe('esbenp.prettier-vscode');
-    expect(settings['eslint.validate'].includes('233')).toBeTruthy();
-    expect(settings.test).toBeTruthy();
+    expect(fs.readFileSync(outputFilePath, 'utf8')).toEqual(expectedFileContent);
   });
 
   afterEach(() => {
-    fs.removeSync(outputPath);
+    fs.removeSync(`${dir}/temp`);
+  });
+});
+
+describe(`'exec' command`, () => {
+  const semverRegex = /(\d+)\.(\d+)\.(\d+)/;
+
+  test(`'exec eslint' should work as expected`, async () => {
+    const { stdout } = await cli(['exec', 'eslint', '--version']);
+    expect(stdout).toMatch(semverRegex);
+  });
+
+  test(`'exec stylelint' should work as expected`, async () => {
+    const { stdout } = await cli(['exec', 'stylelint', '--version']);
+    expect(stdout).toMatch(semverRegex);
+  });
+
+  test(`'exec commitlint' should work as expected`, async () => {
+    const { stdout } = await cli(['exec', 'commitlint', '--version']);
+    expect(stdout).toMatch(semverRegex);
   });
 });

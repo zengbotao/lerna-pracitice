@@ -8,10 +8,8 @@
 **/report/**
 **/server/**
 **/lib/**
-**/__tests__/**
-**/zbt-cli/__test__/**
-**/eslint-plugin/test/**
-**/eslint-plugin/rules/**
+**/__test__/**
+
 
 # 忽略文件
 **/webpack.config*.js
