@@ -17,3 +17,4 @@
 **/.eslintrc.js
 **/eslint.config.js
 **/jest.config.js
+**/no-secret-info.js
