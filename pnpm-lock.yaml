@@ -184,7 +184,7 @@ importers:
         specifier: ^1.0.3
         version: 1.0.4
       '@wavesdean/stylelint-config':
-        specifier: ^1.0.28
+        specifier: ^1.1.0
         version: link:../stylelint-config
       chalk:
         specifier: ^4.1.0
