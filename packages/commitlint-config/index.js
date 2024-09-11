@@ -2,7 +2,7 @@
  * @Description:https://commitlint.js.org/reference/plugins.html
  * @Autor: zengbotao@myhexin.com
  * @Date: 2024-09-07 15:46:30
- * @LastEditTime: 2024-09-08 23:54:01
+ * @LastEditTime: 2024-09-11 21:35:41
  */
 module.exports = {
   // parserPreset: 'conventional-changelog-conventionalcommits',
@@ -21,7 +21,7 @@ module.exports = {
         'ths-rule': (config) => {
           const types = ['feat', 'fix', 'docs', 'style', 'test', 'refactor', 'chore', 'revert'];
           let [taskNum, type, msg] = config?.header.split(' ');
-          if (config?.header.indexOf('chore(release): publish') > -1) return [true, 'commit规范审核通过'];
+          if (config?.header.indexOf('chore(release): publish') > -1) return [true, 'lerna通过'];
           if (!/\d{6}/.exec(taskNum)) return [false, '未输入正确的任务号，任务号为6位数字'];
           if (!types.includes(type)) return [false, '未输入正确修改类型(feat|fix|docs|style|test|refactor|chore|revert)'];
           if (!msg.length) return [false, '未输入描述信息'];
