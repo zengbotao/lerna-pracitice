@@ -2,9 +2,7 @@
 
 `zbt-cli` 是 前端编码规范工程化的配套 Lint 工具，可以为项目一键接入规约、一键扫描和修复规约问题，保障项目的编码规范和代码质量。
 
-## 背景
-
-引入了多个业界流行的 Linter 作为《阿里巴巴前端规约》的配套，并根据规约内容定制了规则包，它们包括：
+### 背景
 
 | 规约                                                              | Lint 工具                                                  | npm 包                                                                                       |
 | ----------------------------------------------------------------- | ---------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
@@ -15,9 +13,7 @@
 
 可以看到这些 `Linter` 和规则包众多且零散，全部安装它们会给项目增加十几个依赖，接入和升级成本都比较高。
 
-`zbt-cli` 收敛屏蔽了这些依赖和配置细节，提供简单的 CLI 和 Node.js API，让项目能够一键接入、一键扫描、一键修复、一键升级，并为项目配置 git commit 卡口，降低项目接入规约的成本。
-
-## CLI 使用
+`zbt-cli` 收敛屏蔽了这些依赖和配置细节，让项目能够一键接入、一键扫描、一键修复、一键升级，并为项目配置 git commit 卡口，降低项目接入规约的成本。
 
 ### 安装
 
@@ -31,7 +27,7 @@ npm install zbt-cli -g
 
 ### 使用
 
-#### `zbt-cli init`：一键接入
+#### 一键接入
 
 在项目根目录执行 `zbt-cli init`，即可一键接入规约，为项目安装规约 `Lint` 所需的依赖和配置。
 
@@ -54,48 +50,21 @@ npm install zbt-cli -g
 >
 > 注 2：如果项目的 .vscode/ 目录被 .gitignore 忽略，可以在拉取项目后单独执行 `zbt-cli init --vscode` 命令写入 `.vscode/extensions.json` 和 `.vscode/settings.json` 配置文件
 
-## Node.js API 使用
-
-### 安装
-
-```bash
-npm install zbt-cli --save
-```
-
-### API
-
-#### init：初始化
-
-- zbt-cli.init(config)：将项目一键接入规约，效果等同于 `zbt-cli init`
-
-示例：
+#### 一键扫描
 
 ```js
-(await encode) -
-  fe -
-  lint.init({
-    eslintType: 'react',
-    enableESLint: true,
-    enableStylelint: true,
-    enableMarkdownlint: true,
-    enablePrettier: true,
-    disableNpmInstall: false,
-  });
+zbt-cli scan
 ```
 
-config 参数如下：
+#### 一键修复
 
-| 参数               | 类型       | 默认值 | 说明                                                                                                                |
-| ------------------ | ---------- | ------ | ------------------------------------------------------------------------------------------------------------------- |
-| cwd                | string     | -      | 项目绝对路径                                                                                                        |
-| eslintType         | ESLintType | -      | 语言和框架类型，如果不配置，等同于 zbt-cli init，控制台会出现选择器，如果配置，控制台就不会出现选择器        |
-| enableESLint       | boolean    | true   | 是否启用 ESLint，如果不配置默认值为 true，即默认启用 ESLint                                                         |
-| enableStylelint    | boolean    | -      | 是否启用 stylelint，如果不配置，等同于 zbt-cli init，控制台会出现选择器，如果配置，控制台就不会出现选择器    |
-| enableMarkdownlint | boolean    | -      | 是否启用 markdownlint，如果不配置，等同于 zbt-cli init，控制台会出现选择器，如果配置，控制台就不会出现选择器 |
-| enablePrettier     | boolean    | -      | 是否启用 Prettier                                                                                                   |
-| disableNpmInstall  | boolean    | false  | 是否禁用自动在初始化完成后安装依赖                                                                                  |
+```js
+zbt-cli fix
+```
 
-##### ESLintType
+
+
+#### ESLintType
 
 - `default`: JavaScript 项目（未使用 React 和 Vue 的 JS 项目）
 - `react`: JavaScript + React 项目
@@ -105,7 +74,7 @@ config 参数如下：
 - `typescript/vue`: TypeScript + Vue 项目
 - `es5`: ES5 及之前版本的 JavaScript 老项目
 
-## 配置
+### 配置
 
 `zbt-cli` 基于一份配置进行扫描（但你也可以零配置使用），支持的配置参数有：
 
@@ -129,3 +98,6 @@ module.exports = {
   enablePrettier: true,
 };
 ```
+
+### 常见问题
+

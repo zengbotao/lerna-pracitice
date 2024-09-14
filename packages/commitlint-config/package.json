@@ -18,8 +18,5 @@
   "bugs": {
     "url": "https://github.com/zengbotao/lerna-pracitice/issues"
   },
-  "devDependencies": {
-    "conventional-changelog-conventionalcommits": "^8.0.0"
-  },
   "gitHead": ""
 }
