@@ -82,7 +82,7 @@ module.exports = {
     'vue/valid-template-root': 'error',
 
     // 支持setup语法
-    'vue/script-setup-uses-vars': 'off',
+    'vue/script-setup-uses-vars': 'off',//很重要
     'vue/valid-v-bind': 'error',
     'vue/valid-v-cloak': 'error',
     'vue/valid-v-else-if': 'error',

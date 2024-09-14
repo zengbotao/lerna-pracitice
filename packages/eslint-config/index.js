@@ -23,5 +23,6 @@ module.exports = {
   rules: {
     'no-tabs': ['error', { allowIndentationTabs: true }],
     'no-irregular-whitespace': 'off',
+    "no-useless-concat":'off',
   },
 };

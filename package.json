@@ -20,7 +20,6 @@
     "@commitlint/cli": "^19.3.0",
     "@vuepress/bundler-vite": "2.0.0-rc.14",
     "@vuepress/theme-default": "2.0.0-rc.37",
-    "conventional-changelog-conventionalcommits": "^8.0.0",
     "eslint": "^8.7.0",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-zbt": "^1.0.9",
