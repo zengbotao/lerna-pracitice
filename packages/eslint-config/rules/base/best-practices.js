@@ -243,7 +243,7 @@ module.exports = {
     'no-useless-catch': 'error',
 
     // 禁止不必要的字符串拼接
-    'no-useless-concat': 'error',
+    'no-useless-concat': 'off',
 
     // 禁止不必要的转义字符
     'no-useless-escape': 'error',

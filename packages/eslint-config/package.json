@@ -4,7 +4,6 @@
   "main": "index.js",
   "description": "@wavesdean/eslint-config JavaScript TypeScript Node 规范",
   "keywords": [
-    "encode",
     "javaScript",
     "typescript",
     "node",

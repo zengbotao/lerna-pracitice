@@ -11,20 +11,10 @@
     "README.md"
   ],
   "keywords": [
-    "encode",
     "eslint",
     "eslint-plugin"
   ],
   "main": "index.js",
-  "homepage": "https://github.com/encode-studio-fe/fe-spec#readme",
-  "license": "ISC",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/encode-studio-fe/fe-spec.git"
-  },
-  "bugs": {
-    "url": "https://github.com/encode-studio-fe/fe-spec/issues"
-  },
   "dependencies": {
     "fs-extra": "^9.0.1",
     "require-all": "^3.0.0"
