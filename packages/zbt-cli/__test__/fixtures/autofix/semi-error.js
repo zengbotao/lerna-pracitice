@@ -1,4 +1,4 @@
-const hello = (name) => {
+const hello= (name) => {
   return `hello, ${name}`;
 };
 

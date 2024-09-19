@@ -5,13 +5,14 @@ import type { Config, PKG, ScanOptions, ScanReport, ScanResult } from '../types'
 import { PKG_NAME } from '../utils/constants';
 
 export default async (options: ScanOptions): Promise<ScanReport> => {
-  const { cwd, fix, outputReport, config: scanConfig } = options;
+  const { cwd, fix, config: scanConfig } = options;
 
   const readConfigFile = (pth: string): any => {
     const localPath = path.resolve(cwd, pth);
     return fs.existsSync(localPath) ? require(localPath) : {};
   };
   const pkg: PKG = readConfigFile('package.json');
+  //获取本地配置
   const config: Config = scanConfig || readConfigFile(`${PKG_NAME}.config.js`);
   const runErrors: Error[] = [];
   let results: ScanResult[] = [];
@@ -51,11 +52,6 @@ export default async (options: ScanOptions): Promise<ScanReport> => {
     }
   }
 
-  // 生成报告报告文件
-  if (outputReport) {
-    const reportPath = path.resolve(process.cwd(), `./${PKG_NAME}-report.json`);
-    fs.outputFile(reportPath, JSON.stringify(results, null, 2), () => {});
-  }
 
   return {
     results,

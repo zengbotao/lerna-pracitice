@@ -27,5 +27,5 @@ export function getESLintConfigType(cwd: string, pkg: PKG): string {
     dsl = 'rax';
   }
 
-  return '@wavesdean/eslint-config/' + `${language}/${dsl}`.replace(/\/$/, '/index').replace(/^\//, '');
+  return `@wavesdean/eslint-config/${  `${language}/${dsl}`.replace(/\/$/, '/index').replace(/^\//, '')}`;
 }

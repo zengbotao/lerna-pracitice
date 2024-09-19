@@ -43,8 +43,6 @@ export interface ScanOptions {
   ignore?: boolean;
   // 自动修复
   fix?: boolean;
-  // 生成报告文件
-  outputReport?: boolean;
   // scan 时指定zbt-cli.config.js
   config?: Config;
 }

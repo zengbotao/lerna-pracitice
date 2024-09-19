@@ -1,11 +1,6 @@
 const path = require('path');
 const fs = require('fs-extra');
-const execa = require('execa');
-const packageJson = require('../package.json');
-
-const cli = (args, options) => {
-  return execa('node', [path.resolve(__dirname, '../lib/cli.js'), ...args], options);
-};
+const API=require('../lib/index.js')
 
 describe(`'fix' command`, () => {
   const dir = path.resolve(__dirname, './fixtures/autofix');
@@ -18,9 +13,13 @@ describe(`'fix' command`, () => {
   });
 
   test('should autofix problematic code', async () => {
-    await cli(['fix'], {
-      cwd: path.dirname(`${dir}/result`),
-    });
+    await API.scan({
+      cwd:process.cwd(),
+      fix: true,
+      files:[outputFilePath],
+      config:{enablePrettier:true},
+      include: path.resolve(dir, './temp'),
+    })
     expect(fs.readFileSync(outputFilePath, 'utf8')).toEqual(expectedFileContent);
   });
 

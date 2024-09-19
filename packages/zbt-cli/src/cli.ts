@@ -2,10 +2,10 @@
 import path from 'path';
 import fs from 'fs-extra';
 import ora from 'ora';
-import glob from 'glob'; //一个用于从文件系统中检索匹配特定模式的文件集合的工具
+import glob from 'glob'; // 一个用于从文件系统中检索匹配特定模式的文件集合的工具
 import { program } from 'commander';
-import spawn from 'cross-spawn'; //是一个包装器，用于 child_process 模块，它提供了一种跨平台的方式来解析和执行命令。这意味着无论您在哪个操作系统上运行 Node.js 应用程序，cross-spawn 都能以相同的方式处理命令。
-import { execSync } from 'child_process'; //Node.js 的一个内置模块，它允许您创建子进程来执行系统命令。这个模块提供了多种方法来启动和管理子进程，例如 spawn(), exec(), 和 fork()。
+import spawn from 'cross-spawn'; // 是一个包装器，用于 child_process 模块，它提供了一种跨平台的方式来解析和执行命令。这意味着无论您在哪个操作系统上运行 Node.js 应用程序，cross-spawn 都能以相同的方式处理命令。
+import { execSync } from 'child_process'; // Node.js 的一个内置模块，它允许您创建子进程来执行系统命令。这个模块提供了多种方法来启动和管理子进程，例如 spawn(), exec(), 和 fork()。
 import init from './actions/init';
 import scan from './actions/scan';
 import update from './actions/update';
@@ -13,7 +13,6 @@ import log from './utils/log';
 import printReport from './utils/print-report';
 import npmType from './utils/npm-type';
 import { getCommitFiles, getAmendFiles } from './utils/git';
-import generateTemplate from './utils/generate-template';
 import { PKG_NAME, PKG_VERSION } from './utils/constants';
 
 const cwd = process.cwd();
@@ -74,7 +73,7 @@ program
   .option('-i, --include <dirpath>', '指定要进行规范扫描的目录')
   .option('--no-ignore', '忽略 eslint 的 ignore 配置文件和 ignore 规则')
   .action(async (cmd) => {
-    await installDepsIfThereNo(); //安装依赖
+    await installDepsIfThereNo(); // 安装依赖
 
     const checking = ora();
     checking.start(`执行 ${PKG_NAME} 代码检查`);
@@ -84,7 +83,6 @@ program
       fix: false,
       include: cmd.include || cwd,
       quiet: Boolean(cmd.quiet),
-      outputReport: Boolean(cmd.outputReport),
       ignore: cmd.ignore, // 对应 --no-ignore
     });
     let type = 'succeed';
@@ -105,6 +103,7 @@ program
   .command('commit-msg-scan')
   .description('commit message 检查: git commit 时对 commit message 进行检查')
   .action(() => {
+    //https://commitlint.js.org/reference/cli.html
     const result = spawn.sync('commitlint', ['-E', 'HUSKY_GIT_PARAMS'], { stdio: 'inherit' });
     // 同步方法可能会阻塞主线程，直到子进程完成或发生错误。在生产环境中，通常建议使用异步方法，如 spawn() 函数，以避免阻塞主线程
     if (result.status !== 0) {
@@ -117,7 +116,7 @@ program
   .description('代码提交检查: git commit 时对提交代码进行规范问题扫描')
   .option('-s, --strict', '严格模式，对 warn 和 error 问题都卡口，默认仅对 error 问题卡口')
   .action(async (cmd) => {
-    await installDepsIfThereNo();//安装依赖
+    await installDepsIfThereNo();// 安装依赖
 
     // git add 检查
     const files = await getAmendFiles();

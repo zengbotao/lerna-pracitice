@@ -9,7 +9,6 @@ import type { PKG } from '../types';
 // 精确移除依赖
 const packageNamesToRemove = [
   '@babel/eslint-parser',
-  '@iceworks/spec',
   'babel-eslint',
   'eslint',
   'husky',
@@ -40,8 +39,7 @@ const checkUselessConfig = (cwd: string): string[] => {
     .concat(
       glob.sync('.prettierrc?(.@(cjs|config.js|config.cjs|yaml|yml|json|json5|toml))', { cwd }),
     )
-    .concat(glob.sync('tslint.@(yaml|yml|json)', { cwd }))
-    .concat(glob.sync('.kylerc?(.@(yaml|yml|json))', { cwd }));
+    .concat(glob.sync('tslint.@(yaml|yml|json)', { cwd }));
 };
 
 /**

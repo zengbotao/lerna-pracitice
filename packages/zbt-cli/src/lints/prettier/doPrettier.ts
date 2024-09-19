@@ -6,7 +6,7 @@ import { ScanOptions } from '../../types'; // 导入扫描选项类型
 import { PRETTIER_FILE_EXT, PRETTIER_IGNORE_PATTERN } from '../../utils/constants'; // 导入常量
 
 // 定义DoPrettierOptions类型接口，继承ScanOptions类型接口
-export interface DoPrettierOptions extends ScanOptions {}
+export type DoPrettierOptions = ScanOptions
 
 // 执行Prettier格式化的函数
 export async function doPrettier(options: DoPrettierOptions) {

@@ -1,14 +1,25 @@
 {
+  // 这是 TypeScript 编译器的配置选项
   "compilerOptions": {
+    // 输出文件的目录。在这里，输出文件将放置在 ./lib 目录下
     "outDir": "./lib",
+    // 目标 JavaScript 版本。在这里，我们设置为 ES5 版本
     "target": "ES5",
+    // 模块系统。在这里，我们选择了 commonjs 作为模块系统
     "module": "commonjs",
+    // 启用 ES 模块交互。这意味着你可以导入和导出 ES 模块
     "esModuleInterop": true,
+    // 从输出文件中删除注释
     "removeComments": true,
+    // 允许 import .json 文件作为模块
     "resolveJsonModule": true,
+    // 生成相应的 .d.ts 文件
     "declaration": true,
+    // 启用对旧版 JavaScript 的向后兼容
     "downlevelIteration": true,
+    // 添加全局类型声明，这里我们添加了 "node" 类型
     "types": ["node"]
   },
+  // 需要包含的文件或者目录。在这里，只有 src 目录中的文件将被编译
   "include": ["src"]
 }

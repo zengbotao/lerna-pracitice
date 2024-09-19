@@ -29,7 +29,7 @@ export default (cwd: string, data: Record<string, any>) => {
     const filepath = path.resolve(cwd, name.replace(/\.ejs$/, '').replace(/^_/, '.'));
     
     // 使用EJS模板引擎渲染模板
-    let content = ejs.render(fs.readFileSync(path.resolve(templatePath, name), 'utf8'), {
+    const content = ejs.render(fs.readFileSync(path.resolve(templatePath, name), 'utf8'), {
       eslintIgnores: ESLINT_IGNORE_PATTERN,
       stylelintExt: STYLELINT_FILE_EXT,
       stylelintIgnores: STYLELINT_IGNORE_PATTERN,

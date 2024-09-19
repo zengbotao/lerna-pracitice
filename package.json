@@ -10,6 +10,7 @@
     "publish": "lerna publish",
     "build-cli": "pnpm -r --filter=zbt-cli run build",
     "test-cli": "pnpm -r --filter=zbt-cli run test",
+    "test-plugin": "pnpm -r --filter=eslint-plugin-zbt run test",
     "markdownlint": "markdownlint README.md",
     "eslint": "eslint --fix --ext .js packages",
     "prettier": "prettier --write ."

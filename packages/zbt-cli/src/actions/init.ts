@@ -10,6 +10,7 @@ import generateTemplate from '../utils/generate-template';
 import { PROJECT_TYPES, PKG_NAME } from '../utils/constants';
 import type { InitOptions, PKG } from '../types';
 import ora from 'ora';
+
 let step = 0;
 
 /**
